@@ -1,0 +1,299 @@
+{
+  "categories": {
+    "person": "人物"
+  },
+
+  "data": {
+    "nodes": [
+      {
+        "label": "苍崎青子",
+        "image": "imgs/MahouTsukaiNoYoru/qingzi.png",
+        "id": 1,
+        "categories": [
+          "person"
+        ],
+        "info": "世界上仅存的五个魔法使的其中之一，苍崎橙子的妹妹，苍崎家的继承人，第五魔法的使用者。",
+        "link": "https://zh.moegirl.org.cn/%E8%8B%8D%E5%B4%8E%E9%9D%92%E5%AD%90"
+      },
+      {
+        "label": "久远寺有珠",
+        "image": "imgs/MahouTsukaiNoYoru/youzhu.png",
+        "id": 2,
+        "categories": [
+          "person"
+        ],
+        "info": "出生在英国的纯正的魔女，青子的同居人，久远寺宅的主人，游戏魔法使之夜中开头语山上的大屋中住着魔女，就是指久远寺和她家族的房产了。",
+        "link": "https://zh.moegirl.org.cn/%E4%B9%85%E8%BF%9C%E5%AF%BA%E6%9C%89%E7%8F%A0"
+      },
+      {
+        "label": "静希草十郎",
+        "image": "imgs/MahouTsukaiNoYoru/caoshilang.png",
+        "id": 3,
+        "categories": [
+          "person"
+        ],
+        "info": "静希草十郎是《魔法使之夜》的男主角，虽说是男主角但由于游戏本身是一般向全年龄(虽然写着十五岁以上推荐)所以并不会出现什么哔—的内容。典型的草食系男主角。",
+        "link": "https://zh.moegirl.org.cn/%E9%9D%99%E5%B8%8C%E8%8D%89%E5%8D%81%E9%83%8E"
+      },
+      {
+        "label": "苍崎橙子",
+        "image": "imgs/MahouTsukaiNoYoru/chengzi.png",
+        "id": 4,
+        "categories": [
+          "person"
+        ],
+        "info": "最高位的人形（人偶）师，虽然身份是魔术师却有接近魔法使的实力。个性相当奇怪，以眼镜做为人格转换的开关，戴着眼镜时语气婉柔，放下眼镜时会变成冷冷的语调。",
+        "link": "https://zh.moegirl.org.cn/%E8%8B%8D%E5%B4%8E%E6%A9%99%E5%AD%90"
+      },
+      {
+        "label": "槻司鸢丸",
+        "image": "imgs/MahouTsukaiNoYoru/yuanwan.png",
+        "id": 5,
+        "categories": [
+          "person"
+        ],
+        "info": "私立三咲高等学校学生会副会长，三咲市名门槻司家的私生子。",
+        "link": "https://zh.moegirl.org.cn/%E6%A7%BB%E5%8F%B8%E9%B8%A2%E4%B8%B8"
+      },
+      {
+        "label": "木乃美芳助",
+        "image": "imgs/MahouTsukaiNoYoru/munaimei.png",
+        "id": 6,
+        "categories": [
+          "person"
+        ],
+        "info": "草十郎的同班同学，也是草十郎打工的前辈。",
+        "link": "https://zh.moegirl.org.cn/%E6%9C%A8%E4%B9%83%E7%BE%8E%E8%8A%B3%E5%8A%A9"
+      },
+      {
+        "label": "久万梨金鹿",
+        "image": "imgs/MahouTsukaiNoYoru/jinlu.png",
+        "id": 7,
+        "categories": [
+          "person"
+        ],
+        "info": "私立三咲高等学校2年D班学生，学生会会计。",
+        "link": "https://zh.moegirl.org.cn/%E4%B9%85%E4%B8%87%E6%A2%A8%E9%87%91%E9%B9%BF"
+      },
+      {
+        "label": "鲁格·贝奥武夫",
+        "image": "https://img.moegirl.org.cn/common/thumb/a/a8/Ev%E3%83%99%E3%82%AA%E6%B1%8E%E7%94%A802c1.jpg/280px-Ev%E3%83%99%E3%82%AA%E6%B1%8E%E7%94%A802c1.jpg",
+        "id": 8,
+        "categories": [
+          "person"
+        ],
+        "info": "传说中的人狼，金色的神秘。",
+        "link": "https://zh.moegirl.org.cn/%E9%B2%81%E6%A0%BC%C2%B7%E8%B4%9D%E5%A5%A5%E6%AD%A6%E5%A4%AB"
+      },
+      {
+        "label": "文柄咏梨",
+        "image": "imgs/MahouTsukaiNoYoru/yongli.png",
+        "id": 9,
+        "categories": [
+          "person"
+        ],
+        "info": "自称合田教会的代理祭司，实际是圣堂教会派来监督灵脉管理者的人。",
+        "link": "https://zh.moegirl.org.cn/%E6%96%87%E6%9F%84%E5%92%8F%E6%A2%A8"
+      },
+      {
+        "label": "周濑唯架",
+        "image": "imgs/MahouTsukaiNoYoru/weijia.png",
+        "id": 10,
+        "categories": [
+          "person"
+        ],
+        "info": "三咲市合田教会的修女，周濑律架的妹妹。",
+        "link": "https://zh.moegirl.org.cn/%E5%91%A8%E6%BF%91%E5%94%AF%E6%9E%B6"
+      },
+      {
+        "label": "周濑律架",
+        "image": "imgs/MahouTsukaiNoYoru/lvjia.png",
+        "id": 11,
+        "categories": [
+          "person"
+        ],
+        "info": "周濑律架本身是魔术协会的间谍，用以监视苍崎家的魔法研究，自身拥有高超的变装技巧。是橙子和青子的前辈，橙子也在重回三咲町与其打照面。",
+        "link": "https://zh.moegirl.org.cn/%E5%91%A8%E6%BF%91%E5%BE%8B%E6%9E%B6"
+      },
+      {
+        "label": "梅·莉黛尔·阿切洛特",
+        "image": "imgs/MahouTsukaiNoYoru/meili.png",
+        "id": 12,
+        "categories": [
+          "person"
+        ],
+        "info": "“超级☆英国美少女”和“日理万机、追求者甚多、史上第一个粉丝过亿的魔女、举世公认协会第一的偶像”。（自称）",
+        "link": "https://zh.moegirl.org.cn/%E6%A2%85%C2%B7%E8%8E%89%E9%BB%9B%E5%B0%94%C2%B7%E9%98%BF%E5%88%87%E6%B4%9B%E7%89%B9"
+      },
+      {
+        "label": "山城和树",
+        "image": "imgs/MahouTsukaiNoYoru/shancheng.png",
+        "id": 13,
+        "categories": [
+          "person"
+        ],
+        "info": "私立三咲高等学校教师，2年C班班主任兼学生会顾问。",
+        "link": "https://typemoon.wiki.cre.jp/wiki/%E5%B1%B1%E5%9F%8E%E5%92%8C%E6%A8%B9"
+      },
+      {
+        "label": "土桔由里彦",
+        "image": "imgs/MahouTsukaiNoYoru/tuju.png",
+        "id": 14,
+        "categories": [
+          "person"
+        ],
+        "info": "一位住在三咲市的老人，「土桔製パン株式会社」「やしろぎブレッド＆キッツィーランド」的前经营者。",
+        "link": "https://typemoon.wiki.cre.jp/wiki/%E5%9C%9F%E6%A1%94%E7%94%B1%E9%87%8C%E5%BD%A6"
+      }
+    ],
+    "edges": [
+      {
+        "id": 1000,
+        "label": "同居人",
+        "from": 1,
+        "to": 2
+      },
+      {
+        "id": 1001,
+        "label": "同居人",
+        "from": 1,
+        "to": 3
+      },
+      {
+        "id": 1002,
+        "label": "同居人",
+        "from": 2,
+        "to": 3
+      },
+      {
+        "id": 1003,
+        "label": "姐姐",
+        "from": 4,
+        "to": 1,
+        "direction": true
+      },
+      {
+        "id": 1004,
+        "label": "同学",
+        "from": 5,
+        "to": 1
+      },
+      {
+        "id": 1005,
+        "label": "朋友",
+        "from": 5,
+        "to": 3
+      },
+      {
+        "id": 1006,
+        "label": "同学",
+        "from": 3,
+        "to": 7
+      },
+      {
+        "id": 1007,
+        "label": "同学",
+        "from": 5,
+        "to": 6
+      },
+      {
+        "id": 1008,
+        "label": "暗恋",
+        "from": 7,
+        "to": 5,
+        "direction": true
+      },
+      {
+        "id": 1009,
+        "label": "同学",
+        "from": 6,
+        "to": 7
+      },
+      {
+        "id": 1010,
+        "label": "同学",
+        "from": 6,
+        "to": 1
+      },
+      {
+        "id": 1011,
+        "label": "朋友",
+        "from": 6,
+        "to": 3
+      },
+      {
+        "id": 1012,
+        "label": "同学",
+        "from": 1,
+        "to": 7
+      },
+      {
+        "id": 1013,
+        "label": "使魔",
+        "from": 8,
+        "to": 4,
+        "direction": true
+      },
+      {
+        "id": 1014,
+        "label": "初恋对象",
+        "from": 9,
+        "to": 4,
+        "direction": true
+      },
+      {
+        "id": 1015,
+        "label": "同事",
+        "from": 9,
+        "to": 10
+      },
+      {
+        "id": 1016,
+        "label": "同事",
+        "from": 9,
+        "to": 11
+      },
+      {
+        "id": 1017,
+        "label": "妹妹",
+        "from": 10,
+        "to": 11,
+        "direction": true
+      },
+      {
+        "id": 1018,
+        "label": "打工",
+        "from": 3,
+        "to": 9,
+        "direction": true
+      },
+      {
+        "id": 1019,
+        "label": "朋友",
+        "from": 12,
+        "to": 2
+      },
+      {
+        "id": 1020,
+        "label": "关心",
+        "from": 14,
+        "to": 5,
+        "direction": true
+      },
+      {
+        "id": 1021,
+        "label": "笔友",
+        "from": 14,
+        "to": 2
+      },
+      {
+        "id": 1022,
+        "label": "班主任",
+        "from": 13,
+        "to": 1,
+        "direction": true
+      }
+    ]
+  }
+
+}

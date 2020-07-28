@@ -1,0 +1,74 @@
+header div {
+  display: block;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.page-title {
+  padding: 40px 0 20px 0;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+}
+
+.page-title p h1 {
+  margin-left: 1em;
+}
+
+.page-title .sub {
+  font-size: 1.4em;
+  margin-block-end: 0;
+}
+
+.page-title h1 {
+  margin-block-start: 0.2em;
+}
+
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.cards {
+  display: table;
+  margin-top: 2em;
+}
+
+.cards .card {
+  float: left;
+  margin: 1em;
+  border: 1px solid #BFBFBF;
+}
+
+.cards .card .name {
+  margin-left: 0.5em;
+  font-weight: bold;
+  color: black;
+}
+
+.cards .card:hover {
+  box-shadow: 3px 4px 2.5px #aaaaaa;
+}
+
+.cards .titleImg {
+  background-color: #aaaaaa;
+  width: 220px;
+  height: 250px;
+}

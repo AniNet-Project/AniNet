@@ -1,0 +1,86 @@
+.netView {
+  margin-block-start: 1em;
+}
+
+.netView canvas {
+  max-width: 99.7%;
+  min-height: 30em;
+  border: 1px solid #BFBFBF;
+}
+
+canvas {
+  outline: none;
+}
+
+.toolbar {
+  height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+button:focus {outline:0;}
+button:active {
+  box-shadow: 0 1px #666;
+  transform: translateY(1px);
+}
+
+button {
+  color: #24292e;
+  background-color: #fafbfc;
+  border-color: rgba(27,31,35,.15);
+  padding: 3px 12px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.toolbar .rightside {
+  float: right;
+}
+
+.toolbar button {
+  margin-left: 1em;
+}
+
+.canvas-wrap {
+  position:relative
+}
+
+.infoBoard {
+  background-color: #ababab;
+  width: 250px;
+  height: 260px;
+  position:absolute;
+  box-shadow: 3px 4px 2.5px #aaaaaa;
+  opacity: 0.7;
+}
+
+.infoBoard .content {
+  padding: 10px;
+}
+
+.infoBoard .name {
+  font-weight: bold; 
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.infoBoard .describe {
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.infoBoard img {
+  display: block;
+  max-width: 200px;
+  max-height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infoBoard .link {
+  font-size: 15px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
