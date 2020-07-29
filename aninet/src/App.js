@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom'
 import './App.css';
-import NetView from './NetView.js'
+import NetPage from './NetPage.js'
 import Header from './Header.js'
 
 
@@ -91,7 +91,7 @@ class App extends React.Component {
           <Route key="home" exact path="/" component={() => <Home items={items}/>} />
           {items.map(item => (
             <Route key={item.name} path={"/network/"+item.name}
-                   component={() => <NetView item={item}/>} />
+                   component={() => <NetPage item={item}/>} />
           ))}
         </Router>
       );
