@@ -1,20 +1,22 @@
 import React from 'react'
 import './NetView.css'
-import Header from './Header.js'
-import { exportToJson } from './utils.js'
-import NetView from './NetView.js'
+import Header from './Header'
+import { exportToJson } from './utils'
+import NetView from './NetView'
+import {NetItem, ItemInfo} from './datatypes'
 
-function buildFileSelector(parent) {
+
+function buildFileSelector(parent: React.Component) {
   const fileSelector = document.createElement('input');
   fileSelector.setAttribute('type', 'file');
   fileSelector.setAttribute('multiple', 'multiple');
   fileSelector.setAttribute('accept', '.json')
   fileSelector.addEventListener('change', (event) => {
-    const fileList = event.target.files;
-    let file = fileList[0]
+    const target = event.target as HTMLInputElement
+    let file: File = (target.files as FileList)[0]
     let reader = new FileReader()
     reader.onload = () => {
-      parent.setState({'data': JSON.parse(reader.result)})
+      parent.setState({'data': JSON.parse(reader.result as string)})
     }
     if (file !== undefined) {
       reader.readAsText(file)
@@ -23,14 +25,24 @@ function buildFileSelector(parent) {
   return fileSelector;
 }
 
-class UploadBtn extends React.Component {
+type UploadBtnProps = {
+  parent: NetPage,
+}
+
+type UploadBtnState = {
+  fileSelector: HTMLInputElement,
+}
+
+class UploadBtn extends React.Component<UploadBtnProps, UploadBtnState> {
   componentDidMount(){
-    this.fileSelector = buildFileSelector(this.props.parent);
+    this.setState({
+      fileSelector: buildFileSelector(this.props.parent)
+    })
   }
   
-  handleFileSelect = (e) => {
+  handleFileSelect = (e: React.MouseEvent) => {
     e.preventDefault();
-    this.fileSelector.click();
+    this.state.fileSelector.click();
   }
   
   render(){
@@ -38,8 +50,12 @@ class UploadBtn extends React.Component {
   }
 }
 
+type ToolBarProps = {
+  parent: NetPage
+}
 
-class ToolBar extends React.Component {
+
+class ToolBar extends React.Component<ToolBarProps, object> {
   render() {
     let parent = this.props.parent
     return (
@@ -47,7 +63,7 @@ class ToolBar extends React.Component {
         <div className="container">
           <div className="rightside">
             <UploadBtn parent={parent}/>
-            <button onClick={() => {exportToJson(parent.state.info, "export.json")}}>Download JSON</button>
+            <button onClick={() => {exportToJson(parent.state.data, "export.json")}}>Download JSON</button>
           </div>
         </div>
       </div>
@@ -56,13 +72,24 @@ class ToolBar extends React.Component {
 }
 
 
-class NetPage extends React.Component {
-  constructor(props) {
+type NetPageProps = {
+  item: NetItem
+}
+
+type NetPageState = {
+  error: null | Error,
+  isLoaded: boolean,
+  data: ItemInfo | null,
+}
+
+
+class NetPage extends React.Component<NetPageProps, NetPageState> {
+  constructor(props: NetPageProps) {
     super(props)
     this.state = {
       error: null,
       isLoaded: false,
-      data: {},
+      data: null,
     }
   }
 

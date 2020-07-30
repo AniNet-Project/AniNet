@@ -1,6 +1,10 @@
 import React from 'react'
 
-export default class Header extends React.Component {
+export interface Props {
+  title: string;
+}
+
+export default class Header extends React.Component<Props, object> {
   render() {
     return (
       <header>

@@ -4,8 +4,8 @@ import {
   Route
 } from 'react-router-dom'
 import './App.css';
-import NetPage from './NetPage.js'
-import Header from './Header.js'
+import NetPage from './NetPage'
+import Header from './Header'
 
 
 class Card extends React.Component {
