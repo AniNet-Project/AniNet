@@ -1,5 +1,5 @@
 
-function exportToJson(objectData, fileName) {
+function exportToJson(objectData: any, fileName: string) {
   let contentType = "application/json;charset=utf-8;";
   if (window.navigator && window.navigator.msSaveOrOpenBlob) {
     var blob = new Blob([decodeURIComponent(encodeURI(JSON.stringify(objectData)))], { type: contentType });
@@ -17,17 +17,18 @@ function exportToJson(objectData, fileName) {
 
 
 /// copy from https://www.w3schools.com/howto/howto_js_draggable.asp
-function dragElement(elmnt) {
+function dragElement(elmnt: HTMLElement) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "header")) {
     // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    let elm = document.getElementById(elmnt.id + "header") as HTMLElement
+    elm.onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
   }
 
-  function dragMouseDown(e) {
+  function dragMouseDown(e: MouseEvent) {
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
@@ -38,7 +39,7 @@ function dragElement(elmnt) {
     document.onmousemove = elementDrag;
   }
 
-  function elementDrag(e) {
+  function elementDrag(e: MouseEvent) {
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:

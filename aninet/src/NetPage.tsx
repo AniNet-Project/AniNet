@@ -124,7 +124,7 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
         <div>
           <Header title={item.name}/>
           <ToolBar parent={this}/>
-          <NetView data={data}/>
+          <NetView data={data as ItemInfo}/>
         </div>
       )
     }

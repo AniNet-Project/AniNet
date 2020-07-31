@@ -6,9 +6,13 @@ import {
 import './App.css';
 import NetPage from './NetPage'
 import Header from './Header'
+import { NetItem } from './datatypes';
 
+type CardProps = {
+  item: NetItem
+}
 
-class Card extends React.Component {
+class Card extends React.Component<CardProps, object> {
   render() {
     let item = this.props.item
     return (
@@ -22,7 +26,11 @@ class Card extends React.Component {
   }
 }
 
-class Cards extends React.Component {
+type CardsProps = {
+  items: Array<NetItem>
+}
+
+class Cards extends React.Component<CardsProps, object> {
   render() {
     let items = this.props.items
     return (
@@ -35,7 +43,11 @@ class Cards extends React.Component {
   }
 }
 
-class Home extends React.Component {
+type HomeProps = {
+  items: Array<NetItem>
+}
+
+class Home extends React.Component<HomeProps, object> {
   render() {
     let items = this.props.items
     return (
@@ -51,9 +63,15 @@ class Home extends React.Component {
   }
 }
 
+type AppProps = {}
+type AppState = {
+  error: Error | null,
+  isLoaded: boolean,
+  items: Array<NetItem>
+}
 
-class App extends React.Component {
-  constructor(props) {
+class App extends React.Component<AppProps, AppState> {
+  constructor(props: AppProps) {
     super(props)
     this.state = {
       error: null,

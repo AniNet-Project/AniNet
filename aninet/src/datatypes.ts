@@ -7,23 +7,23 @@ export type NetItem = {
 export type NodeType = {
   label: string,
   image: string,
-  id: Number,
-  categories: [string],
+  id: number,
+  categories: Array<string>,
   info: string,
   link: string,
 }
 
 export type EdgeType = {
-  id: Number,
+  id: number,
   label: string,
-  from: Number,
-  to: Number
+  from: number,
+  to: number
 }
 
 export type ItemInfo = {
   categories: object,
   data: {
-    nodes: [NodeType],
-    edges: [EdgeType],
+    nodes: Array<NodeType>,
+    edges: Array<EdgeType>,
   }
 }

@@ -1,8 +1,9 @@
 import React from 'react'
 import { Network, Node, Edge } from 'react-vis-network'
-import { dragElement } from './utils.js'
+import { dragElement } from './utils'
+import { ItemInfo, NodeType } from './datatypes'
 
-function createInfoBoard(pos, node) {
+function createInfoBoard(pos: Pos2d, node: NodeType) {
   let board = document.createElement("div")
   board.setAttribute("class", "infoBoard")
   board.setAttribute("style", "top:"+pos.y+"px; left:"+pos.x+"px")
@@ -23,26 +24,38 @@ function createInfoBoard(pos, node) {
   return board
 }
 
+type NetViewPorps = {
+  data: ItemInfo
+}
 
-export default class NetView extends React.Component {
-  constructor(props) {
+type NetViewState = {
+  infoBoard: HTMLDivElement | null
+}
+
+type Pos2d = {
+  x: number,
+  y: number
+}
+
+export default class NetView extends React.Component<NetViewPorps, NetViewState> {
+  constructor(props: NetViewPorps) {
     super(props)
     this.state = {
       infoBoard: null,
     }
   }
 
-  handlePopup(params) {
+  handlePopup(params: any) {
     let board = this.state.infoBoard
     const select_node = (params.nodes.length > 0)
-    let pos = params.pointer.DOM
-    const _pading = {x: 30, y: -30}
+    let pos: Pos2d = params.pointer.DOM
+    const _pading: Pos2d = {x: 30, y: -30}
     pos = {x: pos.x+_pading.x, y: pos.y+_pading.y}
 
     let create_board = () => {
       let node_id = params.nodes[0]
       let node = this.props.data.data.nodes.find((n) => (n.id == node_id))
-      return createInfoBoard(pos, node)
+      return createInfoBoard(pos, node as NodeType)
     }
 
     if (select_node && (board === null)) {
@@ -65,7 +78,7 @@ export default class NetView extends React.Component {
         <div className="container">
           <div className="canvas-wrap">
             <Network
-              onClick={(params) => {this.handlePopup(params)}}
+              onClick={(params: any) => {this.handlePopup(params)}}
             >
               {info.data.nodes.map(n => (
                 <Node key={n.id}

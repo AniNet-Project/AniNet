@@ -1,10 +1,10 @@
 import React from 'react'
 
-export interface Props {
+type HeaderProps = {
   title: string;
 }
 
-export default class Header extends React.Component<Props, object> {
+export default class Header extends React.Component<HeaderProps, object> {
   render() {
     return (
       <header>
