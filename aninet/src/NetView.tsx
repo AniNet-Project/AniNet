@@ -1,15 +1,15 @@
 import React from 'react'
 import { Network, Node, Edge } from 'react-vis-network'
 import { dragElement } from './utils'
-import { ItemInfo, NodeType } from './datatypes'
+import { ItemInfo, NodeType, EdgeType, CatType } from './datatypes'
 
-function createInfoBoard(pos: Pos2d, node: NodeType) {
+const createInfoBoard = (pos: Pos2d, node: NodeType) => {
   let board = document.createElement("div")
   board.setAttribute("class", "infoBoard")
   board.setAttribute("style", "top:"+pos.y+"px; left:"+pos.x+"px")
   board.innerHTML = `
   <div class="content">
-    <img src="${('image' in node) ? node.image : ''}" alt="Image Not Found"/>
+    <img src="${('image' in node) ? node.image : ''}" alt=""/>
     <div class="name">
       ${node.label}
     </div>
@@ -37,6 +37,41 @@ type Pos2d = {
   y: number
 }
 
+const DefaultNetStyle = {
+  NodeColor: "#66bbff",
+  NodeBorderWidth: 3,
+}
+
+
+const createNode = (n: NodeType, catgories: Record<string, CatType>) => {
+  let cat = catgories[n.categorie]
+  let color;
+  if (cat) {
+    color = cat.color
+  } else {
+    color = DefaultNetStyle.NodeColor
+  }
+  return (
+    <Node key={n.id}
+      id={n.id} label={n.label}
+      shape="circularImage"
+      image={n.image}
+      color={color}
+      borderWidth={DefaultNetStyle.NodeBorderWidth}
+    />
+  )
+}
+
+const createEdge = (e: EdgeType) => {
+  let arrows = ""
+  if (('direction' in e) && (e['direction'] === true)) { arrows = "to" }
+  return (
+    <Edge key={e.id} id={e.id} arrows={arrows}
+          from={e.from} to={e.to} label={e.label}
+    />
+  )
+}
+
 export default class NetView extends React.Component<NetViewPorps, NetViewState> {
   constructor(props: NetViewPorps) {
     super(props)
@@ -54,7 +89,7 @@ export default class NetView extends React.Component<NetViewPorps, NetViewState>
 
     let create_board = () => {
       let node_id = params.nodes[0]
-      let node = this.props.data.data.nodes.find((n) => (n.id == node_id))
+      let node = this.props.data.data.nodes.find((n) => (n.id === node_id))
       return createInfoBoard(pos, node as NodeType)
     }
 
@@ -80,21 +115,8 @@ export default class NetView extends React.Component<NetViewPorps, NetViewState>
             <Network
               onClick={(params: any) => {this.handlePopup(params)}}
             >
-              {info.data.nodes.map(n => (
-                <Node key={n.id}
-                  id={n.id} label={n.label}
-                  shape="circularImage"
-                  image={n.image}
-                />
-              ))}
-              {info.data.edges.map((e) => { 
-                let arrows = ""
-                if (('direction' in e) && (e['direction'] === true)) { arrows = "to" }
-                return (
-                    <Edge key={e.id} id={e.id} arrows={arrows}
-                          from={e.from} to={e.to} label={e.label} />
-                )
-              })}
+              {info.data.nodes.map(n => createNode(n, info.categories))}
+              {info.data.edges.map((e) => createEdge(e))}
             </Network>
           </div>
         </div>

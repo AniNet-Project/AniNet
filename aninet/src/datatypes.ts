@@ -8,7 +8,7 @@ export type NodeType = {
   label: string,
   image: string,
   id: number,
-  categories: Array<string>,
+  categorie: string,
   info: string,
   link: string,
 }
@@ -21,9 +21,14 @@ export type EdgeType = {
 }
 
 export type ItemInfo = {
-  categories: object,
+  categories: Record<string, CatType>,
   data: {
     nodes: Array<NodeType>,
     edges: Array<EdgeType>,
   }
+}
+
+export type CatType = {
+  name: string,
+  color: string
 }
