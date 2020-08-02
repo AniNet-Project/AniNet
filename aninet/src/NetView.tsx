@@ -3,15 +3,21 @@ import { Network, Node, Edge } from 'react-vis-network'
 import { dragElement } from './utils'
 import { ItemInfo, NodeType, EdgeType, CatType } from './datatypes'
 
-const createInfoBoard = (pos: Pos2d, node: NodeType) => {
+const createInfoBoard = (pos: Pos2d, node: NodeType, cats: Record<string, CatType>) => {
   let board = document.createElement("div")
   board.setAttribute("class", "infoBoard")
   board.setAttribute("style", "top:"+pos.y+"px; left:"+pos.x+"px")
+  let cat = cats[node.categorie]
   board.innerHTML = `
   <div class="content">
     <img src="${('image' in node) ? node.image : ''}" alt=""/>
-    <div class="name">
-      ${node.label}
+    <div class="title">
+      <div class="name">
+        ${node.label}
+      </div>
+      <div class="categorie" style="${(cat !== undefined) && ('color' in cat) ? 'color:'+ cat.color : ''}">
+        ${(cat !== undefined) ? cat.label : ""}
+      </div>
     </div>
     <div class="describe">
       ${node.info}
@@ -90,7 +96,7 @@ export default class NetView extends React.Component<NetViewPorps, NetViewState>
     let create_board = () => {
       let node_id = params.nodes[0]
       let node = this.props.data.data.nodes.find((n) => (n.id === node_id))
-      return createInfoBoard(pos, node as NodeType)
+      return createInfoBoard(pos, node as NodeType, this.props.data.categories)
     }
 
     if (select_node && (board === null)) {

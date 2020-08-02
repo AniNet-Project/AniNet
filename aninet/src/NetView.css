@@ -51,17 +51,27 @@ button {
   height: 260px;
   position:absolute;
   box-shadow: 3px 4px 2.5px #aaaaaa;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .infoBoard .content {
   padding: 10px;
 }
 
+.infoBoard .title {
+  margin-top: 10px;
+}
+
 .infoBoard .name {
   font-weight: bold; 
   font-size: 20px;
-  margin-top: 10px;
+  display: inline;
+}
+
+.infoBoard .categorie {
+  font-weight: bold;
+  font-size: 12px;
+  display: inline;
 }
 
 .infoBoard .describe {

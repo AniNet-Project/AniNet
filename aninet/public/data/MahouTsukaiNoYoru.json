@@ -2,7 +2,7 @@
   "categories": {
     "person": {
       "label": "人物",
-      "color": "#66ccff"
+      "color": "#66bbff"
     },
     "organization": {
       "label": "组织",
@@ -33,14 +33,14 @@
         "image": "imgs/MahouTsukaiNoYoru/caoshilang.png",
         "id": 3,
         "categorie": "person",
-        "info": "静希草十郎是《魔法使之夜》的男主角，虽说是男主角但由于游戏本身是一般向全年龄(虽然写着十五岁以上推荐)所以并不会出现什么哔—的内容。典型的草食系男主角。",
+        "info": "从小生活在深山里，典型的草食系男主角。",
         "link": "https://zh.moegirl.org.cn/%E9%9D%99%E5%B8%8C%E8%8D%89%E5%8D%81%E9%83%8E"
       },
       {
         "label": "苍崎橙子",
         "image": "imgs/MahouTsukaiNoYoru/chengzi.png",
         "id": 4,
-        "categories": "person",
+        "categorie": "person",
         "info": "最高位的人形（人偶）师，虽然身份是魔术师却有接近魔法使的实力。个性相当奇怪，以眼镜做为人格转换的开关，戴着眼镜时语气婉柔，放下眼镜时会变成冷冷的语调。",
         "link": "https://zh.moegirl.org.cn/%E8%8B%8D%E5%B4%8E%E6%A9%99%E5%AD%90"
       },
@@ -48,7 +48,7 @@
         "label": "槻司鸢丸",
         "image": "imgs/MahouTsukaiNoYoru/yuanwan.png",
         "id": 5,
-        "categories": "person",
+        "categorie": "person",
         "info": "私立三咲高等学校学生会副会长，三咲市名门槻司家的私生子。",
         "link": "https://zh.moegirl.org.cn/%E6%A7%BB%E5%8F%B8%E9%B8%A2%E4%B8%B8"
       },
@@ -129,7 +129,7 @@
         "image": "imgs/MahouTsukaiNoYoru/hetianjiaohui.jpg",
         "id": 15,
         "categorie": "organization",
-        "info": "教会"
+        "info": "位于三咲市的一家教会。"
       },
       {
         "label": "魔术协会",

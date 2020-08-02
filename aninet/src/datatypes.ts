@@ -29,6 +29,6 @@ export type ItemInfo = {
 }
 
 export type CatType = {
-  name: string,
+  label: string,
   color: string
 }
