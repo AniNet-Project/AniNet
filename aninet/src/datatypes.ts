@@ -1,7 +1,7 @@
 export type NetItem = {
   name: string,
   title_img: string,
-  data: string
+  url: string
 }
 
 export type NodeType = {

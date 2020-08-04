@@ -6,7 +6,8 @@ import './NetView.css'
 import Header from './Header'
 import { exportToJson } from './utils'
 import NetView from './NetView'
-import {NetItem, ItemInfo} from './datatypes'
+import {NetItem, ItemInfo, NodeType} from './datatypes'
+import EditGrid from './EditGrid'
 
 
 function buildFileSelector(parent: React.Component) {
@@ -49,7 +50,7 @@ class UploadBtn extends React.Component<UploadBtnProps, UploadBtnState> {
   }
   
   render(){
-    return <button onClick={this.handleFileSelect}>Upload JSON</button>
+    return <button onClick={this.handleFileSelect}>上传 JSON 配置</button>
   }
 }
 
@@ -65,7 +66,7 @@ class ToolBar extends React.Component<ToolBarProps, object> {
       <div className="toolbar">
         <div className="rightside">
           <UploadBtn parent={parent}/>
-          <button onClick={() => {exportToJson(parent.state.data, "export.json")}}>Download JSON</button>
+          <button onClick={() => {exportToJson(parent.state.data, "export.json")}}>下载 JSON 配置</button>
         </div>
       </div>
     )
@@ -92,11 +93,12 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
       isLoaded: false,
       data: null,
     }
+    this.setNodes = this.setNodes.bind(this)
   }
 
   componentDidMount() {
     let item = this.props.item
-    let url = "data/" + item.data
+    let url = item.url
     fetch(url)
       .then(res => res.json())
       .then((data) => {
@@ -111,6 +113,14 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
           error
         })
       })
+  }
+
+  setNodes(nodes: Array<NodeType>) {
+    let data = this.state.data
+    if (data !== null) {
+      data.data.nodes = nodes
+      this.setState({data: data})
+    }
   }
 
   render() {
@@ -135,7 +145,7 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
               <NetView data={data as ItemInfo}/>
             </TabPanel>
             <TabPanel>
-              Table
+              <EditGrid nodes={(data as ItemInfo).data.nodes} setNodes={this.setNodes}/>
             </TabPanel>
           </Tabs>
           </div>
