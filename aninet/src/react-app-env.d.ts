@@ -5,3 +5,10 @@ declare module "react-vis-network" {
     let Node: any;
     let Edge: any;
 }
+
+declare module "react-tabs" {
+    let Tab: any;
+    let Tabs: any;
+    let TabList: any;
+    let TabPanel: any;
+}

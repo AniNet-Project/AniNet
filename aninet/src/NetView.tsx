@@ -116,15 +116,13 @@ export default class NetView extends React.Component<NetViewPorps, NetViewState>
     let info = this.props.data
     return (
       <div className="netView">
-        <div className="container">
-          <div className="canvas-wrap">
-            <Network
-              onClick={(params: any) => {this.handlePopup(params)}}
-            >
-              {info.data.nodes.map(n => createNode(n, info.categories))}
-              {info.data.edges.map((e) => createEdge(e))}
-            </Network>
-          </div>
+        <div className="canvas-wrap">
+          <Network
+            onClick={(params: any) => {this.handlePopup(params)}}
+          >
+            {info.data.nodes.map(n => createNode(n, info.categories))}
+            {info.data.edges.map((e) => createEdge(e))}
+          </Network>
         </div>
       </div>
     )

@@ -1,4 +1,7 @@
 import React from 'react'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import 'react-tabs/style/react-tabs.css'
+
 import './NetView.css'
 import Header from './Header'
 import { exportToJson } from './utils'
@@ -60,11 +63,9 @@ class ToolBar extends React.Component<ToolBarProps, object> {
     let parent = this.props.parent
     return (
       <div className="toolbar">
-        <div className="container">
-          <div className="rightside">
-            <UploadBtn parent={parent}/>
-            <button onClick={() => {exportToJson(parent.state.data, "export.json")}}>Download JSON</button>
-          </div>
+        <div className="rightside">
+          <UploadBtn parent={parent}/>
+          <button onClick={() => {exportToJson(parent.state.data, "export.json")}}>Download JSON</button>
         </div>
       </div>
     )
@@ -123,8 +124,21 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
       return (
         <div>
           <Header title={item.name}/>
+          <div className="container">
           <ToolBar parent={this}/>
-          <NetView data={data as ItemInfo}/>
+          <Tabs>
+            <TabList>
+              <Tab>Network</Tab>
+              <Tab>Table</Tab>
+            </TabList>
+            <TabPanel>
+              <NetView data={data as ItemInfo}/>
+            </TabPanel>
+            <TabPanel>
+              Table
+            </TabPanel>
+          </Tabs>
+          </div>
         </div>
       )
     }
