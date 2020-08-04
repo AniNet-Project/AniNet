@@ -128,8 +128,8 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
           <ToolBar parent={this}/>
           <Tabs>
             <TabList>
-              <Tab>Network</Tab>
-              <Tab>Table</Tab>
+              <Tab>网络视图</Tab>
+              <Tab>编辑</Tab>
             </TabList>
             <TabPanel>
               <NetView data={data as ItemInfo}/>
