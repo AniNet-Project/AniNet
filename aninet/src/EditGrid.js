@@ -303,13 +303,13 @@ const NodeGrid = createGrid(
   (props, changedRows) => {props.setNodes(changedRows)}
 )
 
-const edgeDireBool2Str = (edges) => edges.map((e_) => {
+const reprEdges = (edges) => edges.map((e_) => {
   let e = Object.assign({}, e_)
   e.direction = String(e.direction)
   return e
 })
 
-const edgeDireStr2Bool = (edges) => edges.map((e_) => {
+const recoverEdges = (rows) => rows.map((e_) => {
   let e = Object.assign({}, e_)
   e.direction = (e.direction === "false") ? false : true
   return e
@@ -323,7 +323,7 @@ const EdgeGrid = createGrid(
     { name: 'label', title: '标签' },
     { name: 'direction', title: '有向？' }
   ],
-  (props) => edgeDireBool2Str(props.edges),
+  (props) => reprEdges(props.edges),
   [
     { columnName: 'id', width: 100 },
     { columnName: 'from', width: 100 },
@@ -339,8 +339,50 @@ const EdgeGrid = createGrid(
     image: "",
     link: ""
   },
-  (props, changedRows) => {props.setEdges(edgeDireStr2Bool(changedRows))}
+  (props, changedRows) => {props.setEdges(recoverEdges(changedRows))}
 )
 
+const reprCats = (cats) => {
+  let rows = []
+  for (const [k, v] of Object.entries(cats)) {
+    let row = Object.assign({id: k}, v)
+    rows.push(row)
+  }
+  return rows
+}
 
-export { NodeGrid, EdgeGrid }
+const recoverCats = (rows) => {
+  let cats = {}
+  for (const r of rows) {
+    let v = Object.assign({}, r)
+    delete v.id
+    cats[r.id] = v
+  }
+  return cats
+}
+
+const CatGrid = createGrid(
+  [
+    { name: 'id', title: 'ID' },
+    { name: 'label', title: '标签' },
+    { name: 'color', title: '颜色' }
+  ],
+  (props) => reprCats(props.cats),
+  [
+    { columnName: 'id', width: 200 },
+    { columnName: 'label', width: 200 },
+    { columnName: 'color', width: 200},
+  ],
+  ['id', 'label', 'color'],
+  {
+    id: 0,
+    label: "",
+    color: "#aaaaaa"
+  },
+  (props, changedRows) => {
+    availableValues.categorie = changedRows.map((r) => r.id)
+    props.setCats(recoverCats(changedRows))
+  }
+)
+
+export { NodeGrid, EdgeGrid, CatGrid }

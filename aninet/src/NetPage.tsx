@@ -6,8 +6,8 @@ import './NetView.css'
 import Header from './Header'
 import { exportToJson } from './utils'
 import NetView from './NetView'
-import {NetItem, ItemInfo, NodeType, EdgeType} from './datatypes'
-import { NodeGrid, EdgeGrid } from './EditGrid'
+import {NetItem, ItemInfo, NodeType, EdgeType, CatType} from './datatypes'
+import { NodeGrid, EdgeGrid, CatGrid } from './EditGrid'
 
 
 function buildFileSelector(parent: React.Component) {
@@ -144,6 +144,14 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
     }
   }
 
+  setCategories(categories: Record<string, CatType>) {
+    let info = this.state.info
+    if (info != null) {
+      info.categories = categories
+      this.setState({info: info})
+    }
+  }
+
   render() {
     let item = this.props.item
     const { error, isLoaded, info } = this.state
@@ -162,7 +170,7 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
               <Tab>网络视图</Tab>
               <Tab>节点(Nodes)</Tab>
               <Tab>边(Edges)</Tab>
-              <Tab>类别</Tab>
+              <Tab>节点类别</Tab>
             </TabList>
             <TabPanel>
               <NetView info={info as ItemInfo}/>
@@ -172,6 +180,9 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
             </TabPanel>
             <TabPanel>
               <EdgeGrid edges={(info as ItemInfo).data.edges} setEdges={this.setEdges.bind(this)}/>
+            </TabPanel>
+            <TabPanel>
+              <CatGrid cats={(info as ItemInfo).categories} setCats={this.setCategories.bind(this)}/>
             </TabPanel>
           </Tabs>
           </div>
