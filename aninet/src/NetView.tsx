@@ -31,7 +31,7 @@ const createInfoBoard = (pos: Pos2d, node: NodeType, cats: Record<string, CatTyp
 }
 
 type NetViewPorps = {
-  data: ItemInfo
+  info: ItemInfo
 }
 
 type NetViewState = {
@@ -95,8 +95,8 @@ export default class NetView extends React.Component<NetViewPorps, NetViewState>
 
     let create_board = () => {
       let node_id = params.nodes[0]
-      let node = this.props.data.data.nodes.find((n) => (n.id === node_id))
-      return createInfoBoard(pos, node as NodeType, this.props.data.categories)
+      let node = this.props.info.data.nodes.find((n) => (n.id === node_id))
+      return createInfoBoard(pos, node as NodeType, this.props.info.categories)
     }
 
     if (select_node && (board === null)) {
@@ -113,7 +113,7 @@ export default class NetView extends React.Component<NetViewPorps, NetViewState>
   }
 
   render() {
-    let info = this.props.data
+    let info = this.props.info
     return (
       <div className="netView">
         <div className="canvas-wrap">

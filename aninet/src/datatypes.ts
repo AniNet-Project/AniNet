@@ -17,7 +17,8 @@ export type EdgeType = {
   id: number,
   label: string,
   from: number,
-  to: number
+  to: number,
+  direction?: boolean,
 }
 
 export type ItemInfo = {

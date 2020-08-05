@@ -1,3 +1,8 @@
+// Implement the Table style editor of nodes, edges and categories
+//
+// This file is copy then modified from devexetreme-reactive demo:
+//   https://devexpress.github.io/devextreme-reactive/react/grid/demos/featured/data-editing/
+
 import React, { useState } from 'react';
 import {
   SortingState, EditingState, PagingState, SummaryState,
@@ -102,6 +107,7 @@ const Command = ({ id, onExecute }) => {
 
 const availableValues = {
   categorie: ["person", "organization"],
+  direction: ["true", "false"]
 };
 
 const LookupEditCellBase = ({
@@ -143,137 +149,198 @@ const EditCell = (props) => {
 
 const getRowId = row => row.id;
 
-export default (props) => {
-  const [columns] = useState([
+
+/**
+ * Generate an Editable Grid object
+ */
+const createGrid = (colDef, getParentState, widthDef, colOrder, defaultDef, setParentState) => {
+
+  const TheGrid = (props) => {
+    const [columns] = useState(colDef);
+    const [rows, setRows] = useState(getParentState(props));
+    const [tableColumnExtensions] = useState(widthDef);
+    const [sorting, getSorting] = useState([]);
+    const [editingRowIds, getEditingRowIds] = useState([]);
+    const [addedRows, setAddedRows] = useState([]);
+    const [rowChanges, setRowChanges] = useState({});
+    const [currentPage, setCurrentPage] = useState(0);
+    const [pageSize, setPageSize] = useState(5);
+    const [pageSizes] = useState([5, 10, 0]);
+    const [columnOrder, setColumnOrder] = useState(colOrder);
+    const [leftFixedColumns] = useState([TableEditColumn.COLUMN_TYPE]);
+    const [totalSummaryItems] = useState([ ]);
+
+    const changeAddedRows = value => setAddedRows(
+      value.map(row => (Object.keys(row).length ? row : defaultDef)),
+    );
+
+    const deleteRows = (deletedIds) => {
+      const rowsForDelete = rows.slice();
+      deletedIds.forEach((rowId) => {
+        const index = rowsForDelete.findIndex(row => row.id === rowId);
+        if (index > -1) {
+          rowsForDelete.splice(index, 1);
+        }
+      });
+      return rowsForDelete;
+    };
+
+    const commitChanges = ({ added, changed, deleted }) => {
+      let changedRows;
+      if (added) {
+        const startingAddedId = rows.length > 0 ? rows[rows.length - 1].id + 1 : 0;
+        changedRows = [
+          ...rows,
+          ...added.map((row, index) => ({
+            id: startingAddedId + index,
+            ...row,
+          })),
+        ];
+      }
+      if (changed) {
+        changedRows = rows.map(row => (changed[row.id] ? { ...row, ...changed[row.id] } : row));
+      }
+      if (deleted) {
+        changedRows = deleteRows(deleted);
+      }
+      setRows(changedRows);
+      // change the state of parent component
+      setParentState(props, changedRows)
+    };
+
+    return (
+      <Paper>
+        <Grid
+          rows={rows}
+          columns={columns}
+          getRowId={getRowId}
+        >
+          <SortingState
+            sorting={sorting}
+            onSortingChange={getSorting}
+          />
+          <PagingState
+            currentPage={currentPage}
+            onCurrentPageChange={setCurrentPage}
+            pageSize={pageSize}
+            onPageSizeChange={setPageSize}
+          />
+          <EditingState
+            editingRowIds={editingRowIds}
+            onEditingRowIdsChange={getEditingRowIds}
+            rowChanges={rowChanges}
+            onRowChangesChange={setRowChanges}
+            addedRows={addedRows}
+            onAddedRowsChange={changeAddedRows}
+            onCommitChanges={commitChanges}
+          />
+          <SummaryState
+            totalItems={totalSummaryItems}
+          />
+
+          <IntegratedPaging />
+
+
+          <Table
+            columnExtensions={tableColumnExtensions}
+          />
+          <TableColumnReordering
+            order={columnOrder}
+            onOrderChange={setColumnOrder}
+          />
+          <TableHeaderRow showSortingControls />
+          <TableEditRow
+            cellComponent={EditCell}
+          />
+          <TableEditColumn
+            width={150}
+            showAddCommand={!addedRows.length}
+            showEditCommand
+            showDeleteCommand
+            commandComponent={Command}
+          />
+          <TableFixedColumns
+            leftColumns={leftFixedColumns}
+          />
+          <PagingPanel
+            pageSizes={pageSizes}
+          />
+        </Grid>
+      </Paper>
+    );
+  }
+
+  return TheGrid
+
+}
+
+const NodeGrid = createGrid(
+  [
     { name: 'id', title: 'ID' },
     { name: 'label', title: '标签' },
     { name: 'categorie', title: '类别' },
     { name: 'info', title: '信息' },
     { name: 'image', title: '图片' },
     { name: 'link', title: '链接' },
-  ]);
-  const [rows, setRows] = useState(props.nodes);
-  const [tableColumnExtensions] = useState([
-    { columnName: 'id', width: 100 },
+  ],
+  (props) => props.nodes,
+  [
+    { columnName: 'id', width: 80 },
     { columnName: 'label', width: 100 },
     { columnName: 'categorie', width: 100},
-    { columnName: 'info', width: 200 },
+    { columnName: 'info', width: 300 },
     { columnName: 'image', width: 200 },
     { columnName: 'link', width: 200 },
-  ]);
-  const [sorting, getSorting] = useState([]);
-  const [editingRowIds, getEditingRowIds] = useState([]);
-  const [addedRows, setAddedRows] = useState([]);
-  const [rowChanges, setRowChanges] = useState({});
-  const [currentPage, setCurrentPage] = useState(0);
-  const [pageSize, setPageSize] = useState(5);
-  const [pageSizes] = useState([5, 10, 0]);
-  const [columnOrder, setColumnOrder] = useState(['id', 'label', 'categorie', 'info', 'image', 'link']);
-  const [leftFixedColumns] = useState([TableEditColumn.COLUMN_TYPE]);
-  const [totalSummaryItems] = useState([ ]);
+  ],
+  ['id', 'label', 'categorie', 'info', 'image', 'link'],
+  {
+    label: "",
+    categorie: availableValues.categorie[0],
+    info: "",
+    image: "",
+    link: ""
+  },
+  (props, changedRows) => {props.setNodes(changedRows)}
+)
 
-  const changeAddedRows = value => setAddedRows(
-    value.map(row => (Object.keys(row).length ? row : {
-      label: "",
-      categorie: availableValues.categorie[0],
-      info: "",
-      image: "",
-      link: ""
-    })),
-  );
+const edgeDireBool2Str = (edges) => edges.map((e_) => {
+  let e = Object.assign({}, e_)
+  e.direction = String(e.direction)
+  return e
+})
 
-  const deleteRows = (deletedIds) => {
-    const rowsForDelete = rows.slice();
-    deletedIds.forEach((rowId) => {
-      const index = rowsForDelete.findIndex(row => row.id === rowId);
-      if (index > -1) {
-        rowsForDelete.splice(index, 1);
-      }
-    });
-    return rowsForDelete;
-  };
+const edgeDireStr2Bool = (edges) => edges.map((e_) => {
+  let e = Object.assign({}, e_)
+  e.direction = (e.direction === "false") ? false : true
+  return e
+})
 
-  const commitChanges = ({ added, changed, deleted }) => {
-    let changedRows;
-    if (added) {
-      const startingAddedId = rows.length > 0 ? rows[rows.length - 1].id + 1 : 0;
-      changedRows = [
-        ...rows,
-        ...added.map((row, index) => ({
-          id: startingAddedId + index,
-          ...row,
-        })),
-      ];
-    }
-    if (changed) {
-      changedRows = rows.map(row => (changed[row.id] ? { ...row, ...changed[row.id] } : row));
-    }
-    if (deleted) {
-      changedRows = deleteRows(deleted);
-    }
-    setRows(changedRows);
-    props.setNodes(changedRows)
-    console.log(rows)
-  };
-
-  return (
-    <Paper>
-      <Grid
-        rows={rows}
-        columns={columns}
-        getRowId={getRowId}
-      >
-        <SortingState
-          sorting={sorting}
-          onSortingChange={getSorting}
-        />
-        <PagingState
-          currentPage={currentPage}
-          onCurrentPageChange={setCurrentPage}
-          pageSize={pageSize}
-          onPageSizeChange={setPageSize}
-        />
-        <EditingState
-          editingRowIds={editingRowIds}
-          onEditingRowIdsChange={getEditingRowIds}
-          rowChanges={rowChanges}
-          onRowChangesChange={setRowChanges}
-          addedRows={addedRows}
-          onAddedRowsChange={changeAddedRows}
-          onCommitChanges={commitChanges}
-        />
-        <SummaryState
-          totalItems={totalSummaryItems}
-        />
-
-        <IntegratedPaging />
+const EdgeGrid = createGrid(
+  [
+    { name: 'id', title: 'ID' },
+    { name: 'from', title: 'from' },
+    { name: 'to', title: 'to' },
+    { name: 'label', title: '标签' },
+    { name: 'direction', title: '有向？' }
+  ],
+  (props) => edgeDireBool2Str(props.edges),
+  [
+    { columnName: 'id', width: 100 },
+    { columnName: 'from', width: 100 },
+    { columnName: 'to', width: 100},
+    { columnName: 'label', width: 120 },
+    { columnName: 'direction', width: 100 },
+  ],
+  ['id', 'from', 'to', 'label', 'direction'],
+  {
+    label: "",
+    categorie: availableValues.direction[0],
+    info: "",
+    image: "",
+    link: ""
+  },
+  (props, changedRows) => {props.setEdges(edgeDireStr2Bool(changedRows))}
+)
 
 
-        <Table
-          columnExtensions={tableColumnExtensions}
-        />
-        <TableColumnReordering
-          order={columnOrder}
-          onOrderChange={setColumnOrder}
-        />
-        <TableHeaderRow showSortingControls />
-        <TableEditRow
-          cellComponent={EditCell}
-        />
-        <TableEditColumn
-          width={150}
-          showAddCommand={!addedRows.length}
-          showEditCommand
-          showDeleteCommand
-          commandComponent={Command}
-        />
-        <TableFixedColumns
-          leftColumns={leftFixedColumns}
-        />
-        <PagingPanel
-          pageSizes={pageSizes}
-        />
-      </Grid>
-    </Paper>
-  );
-};
+export { NodeGrid, EdgeGrid }

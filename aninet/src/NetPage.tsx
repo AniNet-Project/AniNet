@@ -6,8 +6,8 @@ import './NetView.css'
 import Header from './Header'
 import { exportToJson } from './utils'
 import NetView from './NetView'
-import {NetItem, ItemInfo, NodeType} from './datatypes'
-import EditGrid from './EditGrid'
+import {NetItem, ItemInfo, NodeType, EdgeType} from './datatypes'
+import { NodeGrid, EdgeGrid } from './EditGrid'
 
 
 function buildFileSelector(parent: React.Component) {
@@ -50,7 +50,7 @@ class UploadBtn extends React.Component<UploadBtnProps, UploadBtnState> {
   }
   
   render(){
-    return <button onClick={this.handleFileSelect}>上传 JSON 配置</button>
+    return <button onClick={this.handleFileSelect}>上传数据 (JSON)</button>
   }
 }
 
@@ -66,11 +66,24 @@ class ToolBar extends React.Component<ToolBarProps, object> {
       <div className="toolbar">
         <div className="rightside">
           <UploadBtn parent={parent}/>
-          <button onClick={() => {exportToJson(parent.state.data, "export.json")}}>下载 JSON 配置</button>
+          <button onClick={() => {exportToJson(parent.state.info, "export.json")}}>下载数据 (JSON)</button>
         </div>
       </div>
     )
   }
+}
+
+
+const preProcessInfo = (info: ItemInfo) => {
+  let new_edges: Array<EdgeType> = []
+  for (let e of info.data.edges) {
+    if (!('direction' in e)) {
+      e.direction = false
+    }
+    new_edges.push(e)
+  }
+  info.data.edges = new_edges
+  return info
 }
 
 
@@ -81,7 +94,7 @@ type NetPageProps = {
 type NetPageState = {
   error: null | Error,
   isLoaded: boolean,
-  data: ItemInfo | null,
+  info: ItemInfo | null,
 }
 
 
@@ -91,9 +104,8 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
     this.state = {
       error: null,
       isLoaded: false,
-      data: null,
+      info: null,
     }
-    this.setNodes = this.setNodes.bind(this)
   }
 
   componentDidMount() {
@@ -102,9 +114,10 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
     fetch(url)
       .then(res => res.json())
       .then((data) => {
+        let info = preProcessInfo(data)
         this.setState({
           isLoaded: true,
-          data: data
+          info: info
         })
       },
       (error) => {
@@ -116,16 +129,24 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
   }
 
   setNodes(nodes: Array<NodeType>) {
-    let data = this.state.data
-    if (data !== null) {
-      data.data.nodes = nodes
-      this.setState({data: data})
+    let info = this.state.info
+    if (info !== null) {
+      info.data.nodes = nodes
+      this.setState({info: info})
+    }
+  }
+
+  setEdges(edges: Array<EdgeType>) {
+    let info = this.state.info
+    if (info !== null) {
+      info.data.edges = edges
+      this.setState({info: info})
     }
   }
 
   render() {
     let item = this.props.item
-    const { error, isLoaded, data } = this.state
+    const { error, isLoaded, info } = this.state
     if (error) {
       return <div>Error: {error.message}</div>
     } else if (!isLoaded) {
@@ -139,13 +160,18 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
           <Tabs>
             <TabList>
               <Tab>网络视图</Tab>
-              <Tab>编辑</Tab>
+              <Tab>节点(Nodes)</Tab>
+              <Tab>边(Edges)</Tab>
+              <Tab>类别</Tab>
             </TabList>
             <TabPanel>
-              <NetView data={data as ItemInfo}/>
+              <NetView info={info as ItemInfo}/>
             </TabPanel>
             <TabPanel>
-              <EditGrid nodes={(data as ItemInfo).data.nodes} setNodes={this.setNodes}/>
+              <NodeGrid nodes={(info as ItemInfo).data.nodes} setNodes={this.setNodes.bind(this)}/>
+            </TabPanel>
+            <TabPanel>
+              <EdgeGrid edges={(info as ItemInfo).data.edges} setEdges={this.setEdges.bind(this)}/>
             </TabPanel>
           </Tabs>
           </div>
