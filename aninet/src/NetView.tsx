@@ -30,14 +30,6 @@ const createInfoBoard = (pos: Pos2d, node: NodeType, cats: Record<string, CatTyp
   return board
 }
 
-type NetViewPorps = {
-  info: ItemInfo
-}
-
-type NetViewState = {
-  infoBoard: HTMLDivElement | null
-}
-
 type Pos2d = {
   x: number,
   y: number
@@ -78,12 +70,32 @@ const createEdge = (e: EdgeType) => {
   )
 }
 
+type NetViewPorps = {
+  info: ItemInfo
+}
+
+type NetViewState = {
+  infoBoard: HTMLDivElement | null,
+  netRef: any
+}
+
 export default class NetView extends React.Component<NetViewPorps, NetViewState> {
   constructor(props: NetViewPorps) {
     super(props)
     this.state = {
       infoBoard: null,
+      netRef: React.createRef()
     }
+  }
+
+  createNetwork() {
+    let info = this.props.info
+    return (
+      <Network ref={this.state.netRef} onClick={(params: any) => {this.handlePopup(params)}} >
+        {info.data.nodes.map(n => createNode(n, info.categories))}
+        {info.data.edges.map((e) => createEdge(e))}
+      </Network>
+    )
   }
 
   handlePopup(params: any) {
@@ -112,17 +124,43 @@ export default class NetView extends React.Component<NetViewPorps, NetViewState>
     }
   }
 
+  componentDidMount() {
+    let network = this.state.netRef.current.network
+    network.setOptions({
+      autoResize: false,
+      nodes: {
+        shape: "dot",
+      },
+      physics: {
+        stabilization: false,
+        solver: 'forceAtlas2Based',
+        forceAtlas2Based: {
+          gravitationalConstant: -20,
+          centralGravity: 0.002,
+          springLength: 100,
+          springConstant: 0.01
+        },
+      },
+      edges: {
+        width: 0.3,
+        arrows: {
+          scaleFactor: 0.5
+        },
+        alpha: 0.6
+      },
+      interaction: {
+        hideEdgesOnDrag: (this.props.info.data.nodes.length > 20),
+        hover: true,
+      }
+    })
+    network.moveTo([100, 0])
+  }
+
   render() {
-    let info = this.props.info
     return (
       <div className="netView">
         <div className="canvas-wrap">
-          <Network
-            onClick={(params: any) => {this.handlePopup(params)}}
-          >
-            {info.data.nodes.map(n => createNode(n, info.categories))}
-            {info.data.edges.map((e) => createEdge(e))}
-          </Network>
+          {this.createNetwork()}
         </div>
       </div>
     )
