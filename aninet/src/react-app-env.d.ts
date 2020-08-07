@@ -12,3 +12,4 @@ declare module "react-tabs" {
     let TabList: any;
     let TabPanel: any;
 }
+

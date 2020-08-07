@@ -1,4 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import FullscreenIcon from '@material-ui/icons/Fullscreen'
+import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
+import { FullScreen, FullScreenHandle, useFullScreenHandle } from 'react-full-screen'
+
 import { Network, Node, Edge } from 'react-vis-network'
 import { dragElement } from './utils'
 import { ItemInfo, NodeType, EdgeType, CatType } from './datatypes'
@@ -70,36 +74,71 @@ const createEdge = (e: EdgeType) => {
   )
 }
 
+type ViewControlProps = {
+  fullScreenHandle: FullScreenHandle
+}
+
+const ViewControl = (props: ViewControlProps) => {
+  const [fullScreenMode, setFullScreenMode] = useState(false)
+  let oriHeight = 300
+
+  const enterFullScreen = () => {
+    props.fullScreenHandle.enter()
+    let canvas = document.getElementsByTagName("canvas")[0]
+    oriHeight = canvas.clientHeight
+    canvas.style.height = window.screen.height + "px";
+    setFullScreenMode(true)
+    document.addEventListener('fullscreenchange', (event) => {
+      if (!(document.fullscreenElement)) {
+        turnBackSize()
+        setFullScreenMode(false)
+      }
+    });
+  }
+
+  const turnBackSize = () => {
+    let canvas = document.getElementsByTagName("canvas")[0]
+    canvas.style.height = oriHeight + "px"
+  }
+
+  const exitFullScreen = () => {
+    props.fullScreenHandle.exit()
+    turnBackSize()
+    setFullScreenMode(false)
+  }
+
+  return (
+    <div className="viewControl">
+      {fullScreenMode
+      ? <FullscreenExitIcon onClick={exitFullScreen}/>
+      : <FullscreenIcon onClick={enterFullScreen}/>
+      }
+    </div>
+  )
+}
+
 type NetViewPorps = {
   info: ItemInfo
 }
 
-type NetViewState = {
-  infoBoard: HTMLDivElement | null,
-  netRef: any
-}
 
-export default class NetView extends React.Component<NetViewPorps, NetViewState> {
-  constructor(props: NetViewPorps) {
-    super(props)
-    this.state = {
-      infoBoard: null,
-      netRef: React.createRef()
-    }
-  }
+export default (props: NetViewPorps) => {
+  const [infoBoard, setInfoBoard] = useState<HTMLDivElement | null>(null)
+  const [netRef, setNetRef] = useState<any>(React.createRef)
+  const fullScreenHandle = useFullScreenHandle()
 
-  createNetwork() {
-    let info = this.props.info
+  const createNetwork = () => {
+    let info = props.info
     return (
-      <Network ref={this.state.netRef} onClick={(params: any) => {this.handlePopup(params)}} >
+      <Network ref={netRef} onClick={(params: any) => {handlePopup(params)}} >
         {info.data.nodes.map(n => createNode(n, info.categories))}
         {info.data.edges.map((e) => createEdge(e))}
       </Network>
     )
   }
 
-  handlePopup(params: any) {
-    let board = this.state.infoBoard
+  const handlePopup = (params: any) => {
+    let board = infoBoard
     const select_node = (params.nodes.length > 0)
     let pos: Pos2d = params.pointer.DOM
     const _pading: Pos2d = {x: 30, y: -30}
@@ -107,25 +146,25 @@ export default class NetView extends React.Component<NetViewPorps, NetViewState>
 
     let create_board = () => {
       let node_id = params.nodes[0]
-      let node = this.props.info.data.nodes.find((n) => (n.id === node_id))
-      return createInfoBoard(pos, node as NodeType, this.props.info.categories)
+      let node = props.info.data.nodes.find((n) => (n.id === node_id))
+      return createInfoBoard(pos, node as NodeType, props.info.categories)
     }
 
     if (select_node && (board === null)) {
       board = create_board()
-      this.setState({'infoBoard': board})
+      setInfoBoard(board)
     } else if (select_node && (board !== null)) {
       board.remove()
       board = create_board()
-      this.setState({'infoBoard': board})
+      setInfoBoard(board)
     } else if (board !== null) {
       board.remove()
-      this.setState({'infoBoard': null})
+      setInfoBoard(null)
     }
   }
 
-  componentDidMount() {
-    let network = this.state.netRef.current.network
+  useEffect(() => {
+    let network = netRef.current.network
     network.setOptions({
       autoResize: false,
       nodes: {
@@ -149,20 +188,21 @@ export default class NetView extends React.Component<NetViewPorps, NetViewState>
         alpha: 0.6
       },
       interaction: {
-        hideEdgesOnDrag: (this.props.info.data.nodes.length > 20),
+        hideEdgesOnDrag: (props.info.data.nodes.length > 20),
         hover: true,
       }
     })
     network.moveTo([100, 0])
-  }
+  })
 
-  render() {
-    return (
-      <div className="netView">
+  return (
+    <div className="netView">
+      <FullScreen handle={fullScreenHandle}>
         <div className="canvas-wrap">
-          {this.createNetwork()}
+          {createNetwork()}
+          <ViewControl fullScreenHandle={fullScreenHandle}/>
         </div>
-      </div>
-    )
-  }
+      </FullScreen>
+    </div>
+  )
 }

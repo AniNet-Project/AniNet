@@ -6,6 +6,7 @@
 
 canvas {
   outline: none;
+  background-color: white;
 }
 
 .toolbar {
@@ -97,4 +98,23 @@ button {
 
 .react-tabs__tab-list {
   margin-bottom: 0;
+}
+
+.viewControl {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.viewControl .MuiSvgIcon-root {
+  font-size: 1.6rem;
+}
+
+.viewControl:hover {
+  color: #48b3e9;
+  transform: translateY(-0.5px);
+}
+
+.viewControl:active {
+  transform: translateY(0.5px);
 }
