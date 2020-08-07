@@ -1,6 +1,14 @@
 import React, { useState } from 'react'
 import FullscreenIcon from '@material-ui/icons/Fullscreen'
 import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
+import EditIcon from '@material-ui/icons/Edit';
+import Tooltip from '@material-ui/core/Tooltip';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 
 import { Network, Node, Edge } from 'react-vis-network'
 import { dragElement } from './utils'
@@ -73,8 +81,106 @@ const createEdge = (e: EdgeType) => {
   )
 }
 
+type EditOptionsDialogProps = {
+  setOpt: (opt: any) => void,
+  getOpt: () => any,
+}
 
-const ViewControl = () => {
+type EditOptionsDialogState = {
+  open: boolean,
+  content: string,
+}
+
+class EditOptionsDialog extends React.Component<EditOptionsDialogProps, EditOptionsDialogState> {
+  constructor(props: EditOptionsDialogProps) {
+    super(props)
+    this.state = {
+      open: false,
+      content: ""
+    }
+  }
+
+  handleClickOpen() {
+    this.setState({open: true})
+    this.setTextArea()
+  };
+
+  handleClose() {
+    this.setState({open: false})
+  };
+
+  setTextArea() {
+    let opt = this.props.getOpt()
+    let content = JSON.stringify(opt, null, 2)
+    this.setState({content: content})
+  }
+
+  textChanged(event: any) {
+    this.setState({
+      content: event.target.value
+    })
+  }
+
+  handleClickConfirm() {
+    let options;
+    try {
+      options = JSON.parse(this.state.content)
+      this.props.setOpt(options)
+      this.setState({open: false})
+    } catch(err) {
+      console.log(err)
+      let ta = document.getElementById("edit-options-content")
+      if (ta !== null) {
+        ta.style.border = "2px solid #ff3333"
+      }
+      let tip = document.getElementById("edit-options-tips")
+      console.log(tip)
+      if (tip !== null) {
+        tip.innerHTML = "JSON 解析失败，请检查。"
+        tip.style.color = "#ff3333"
+        tip.style.fontSize = "10px"
+      }
+    }
+  }
+
+  render() {
+    return (
+      <div className="EditOptionsDialog">
+        <EditIcon onClick={() => {this.handleClickOpen()}}/>
+        <Dialog open={this.state.open} onClose={() => {this.handleClose()}} aria-labelledby="form-dialog-title">
+          <DialogTitle id="form-dialog-title">编辑网络视图配置</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              直接通过 JSON 对网络视图进行配置，可配置项目细节可以参考
+              <a href="https://visjs.github.io/vis-network/docs/network/">vis-network 文档</a> 。
+            </DialogContentText>
+            <p id="edit-options-tips"> </p>
+            <textarea id="edit-options-content"
+              rows={18} cols={72}
+              value={this.state.content}
+              onChange={(e) => {this.textChanged(e)}}
+              />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={() => {this.handleClose()}} color="primary">
+              取消
+            </Button>
+            <Button onClick={() => {this.handleClickConfirm()}} color="primary">
+              确定
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </div>
+    );
+  }
+}
+
+type ViewControlProps = {
+  setOpt: (opt: any) => void,
+  getOpt: () => any
+}
+
+const ViewControl = (props: ViewControlProps) => {
   const [fullScreenMode, setFullScreenMode] = useState(false)
   let oriHeight = 300
 
@@ -106,9 +212,12 @@ const ViewControl = () => {
 
   return (
     <div className="viewControl">
+      <Tooltip title="编辑视图配置" placement="top">
+        <EditOptionsDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
+      </Tooltip>
       {fullScreenMode
-      ? <FullscreenExitIcon onClick={exitFullScreen}/>
-      : <FullscreenIcon onClick={enterFullScreen}/>
+      ? <Tooltip title="退出全屏" placement="top"><FullscreenExitIcon onClick={exitFullScreen}/></Tooltip>
+      : <Tooltip title="全屏" placement="top"><FullscreenIcon onClick={enterFullScreen}/></Tooltip>
       }
     </div>
   )
@@ -145,6 +254,7 @@ type NetViewProps = {
 type NetViewState = {
   infoBoard: HTMLDivElement | null,
   netRef: any,
+  netOptions: any,
 }
 
 export default class NetView extends React.Component<NetViewProps, NetViewState> {
@@ -152,7 +262,8 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     super(props)
     this.state = {
       infoBoard: null,
-      netRef: React.createRef()
+      netRef: React.createRef(),
+      netOptions: null
     }
   }
 
@@ -180,9 +291,18 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     }
   }
 
-  componentDidMount() {
+  setNetOptions(options: any) {
     let network = this.state.netRef.current.network
-    network.setOptions(DEFAULT_NETWORK_OPTIONS)
+    network.setOptions(options)
+    this.setState({netOptions: options})
+  }
+
+  getNetOptions() {
+    return this.state.netOptions
+  }
+
+  componentDidMount() {
+    this.setNetOptions(DEFAULT_NETWORK_OPTIONS)
   }
 
   createNetwork() {
@@ -200,7 +320,10 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
       <div className="netView">
         <div className="canvas-wrap" id="full-screen-region">
           {this.createNetwork()}
-          <ViewControl/>
+          <ViewControl
+            setOpt={this.setNetOptions.bind(this)}
+            getOpt={this.getNetOptions.bind(this)}
+          />
         </div>
       </div>
     )

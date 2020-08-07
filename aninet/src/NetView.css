@@ -39,7 +39,7 @@ button {
 }
 
 .canvas-wrap {
-  position:relative
+  position: relative
 }
 
 .infoBoard {
@@ -108,13 +108,24 @@ button {
 
 .viewControl .MuiSvgIcon-root {
   font-size: 1.6rem;
+  color: #666;
+  padding-right: 0.2em;
 }
 
-.viewControl:hover {
+.viewControl .MuiSvgIcon-root:hover {
   color: #48b3e9;
   transform: translateY(-0.5px);
 }
 
-.viewControl:active {
+.viewControl .MuiSvgIcon-root:active {
   transform: translateY(0.5px);
+}
+
+.EditOptionsDialog {
+  display: inline;
+}
+
+#edit-options-content {
+  font-size: 1.1em;
+  resize: none;
 }
