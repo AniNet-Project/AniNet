@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import FullscreenIcon from '@material-ui/icons/Fullscreen'
 import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
-import { FullScreen, FullScreenHandle, useFullScreenHandle } from 'react-full-screen'
 
 import { Network, Node, Edge } from 'react-vis-network'
 import { dragElement } from './utils'
@@ -74,17 +73,15 @@ const createEdge = (e: EdgeType) => {
   )
 }
 
-type ViewControlProps = {
-  fullScreenHandle: FullScreenHandle
-}
 
-const ViewControl = (props: ViewControlProps) => {
+const ViewControl = () => {
   const [fullScreenMode, setFullScreenMode] = useState(false)
   let oriHeight = 300
 
   const enterFullScreen = () => {
-    props.fullScreenHandle.enter()
     let canvas = document.getElementsByTagName("canvas")[0]
+    let fullRegion = document.getElementById("full-screen-region")
+    fullRegion?.requestFullscreen()
     oriHeight = canvas.clientHeight
     canvas.style.height = window.screen.height + "px";
     setFullScreenMode(true)
@@ -102,7 +99,7 @@ const ViewControl = (props: ViewControlProps) => {
   }
 
   const exitFullScreen = () => {
-    props.fullScreenHandle.exit()
+    document.exitFullscreen()
     turnBackSize()
     setFullScreenMode(false)
   }
@@ -117,92 +114,95 @@ const ViewControl = (props: ViewControlProps) => {
   )
 }
 
-type NetViewPorps = {
+const DEFAULT_NETWORK_OPTIONS = {
+  autoResize: false,
+  nodes: {
+    shape: "dot",
+  },
+  physics: {
+    stabilization: false,
+    solver: 'forceAtlas2Based',
+    forceAtlas2Based: {
+      gravitationalConstant: -20,
+      centralGravity: 0.002,
+      springLength: 100,
+      springConstant: 0.01
+    },
+  },
+  edges: {
+    width: 0.3,
+  },
+  interaction: {
+    hideEdgesOnDrag: false,
+    hover: true,
+  }
+}
+
+type NetViewProps = {
   info: ItemInfo
 }
 
+type NetViewState = {
+  infoBoard: HTMLDivElement | null,
+  netRef: any,
+}
 
-export default (props: NetViewPorps) => {
-  const [infoBoard, setInfoBoard] = useState<HTMLDivElement | null>(null)
-  const [netRef, setNetRef] = useState<any>(React.createRef)
-  const fullScreenHandle = useFullScreenHandle()
+export default class NetView extends React.Component<NetViewProps, NetViewState> {
+  constructor(props: NetViewProps) {
+    super(props)
+    this.state = {
+      infoBoard: null,
+      netRef: React.createRef()
+    }
+  }
 
-  const createNetwork = () => {
-    let info = props.info
+  handlePopup (params: any) {
+    const select_node = (params.nodes.length > 0)
+    let pos: Pos2d = params.pointer.DOM
+    const _pading: Pos2d = {x: 30, y: -30}
+    pos = {x: pos.x+_pading.x, y: pos.y+_pading.y}
+
+    const create_board = () => {
+      let node_id = params.nodes[0]
+      let node = this.props.info.data.nodes.find((n) => (n.id === node_id))
+      return createInfoBoard(pos, node as NodeType, this.props.info.categories)
+    }
+
+    let board = this.state.infoBoard
+    if (select_node && (board === null)) {
+      this.setState({infoBoard: create_board()})
+    } else if (select_node && (board !== null)) {
+      (board as HTMLDivElement).remove()
+      this.setState({infoBoard: create_board()})
+    } else if (board !== null ) {
+      board.remove()
+      this.setState({infoBoard: null})
+    }
+  }
+
+  componentDidMount() {
+    let network = this.state.netRef.current.network
+    network.setOptions(DEFAULT_NETWORK_OPTIONS)
+  }
+
+  createNetwork() {
+    let info = this.props.info
     return (
-      <Network ref={netRef} onClick={(params: any) => {handlePopup(params)}} >
+      <Network ref={this.state.netRef} onClick={(params: any) => {this.handlePopup(params)}} >
         {info.data.nodes.map(n => createNode(n, info.categories))}
         {info.data.edges.map((e) => createEdge(e))}
       </Network>
     )
   }
 
-  const handlePopup = (params: any) => {
-    let board = infoBoard
-    const select_node = (params.nodes.length > 0)
-    let pos: Pos2d = params.pointer.DOM
-    const _pading: Pos2d = {x: 30, y: -30}
-    pos = {x: pos.x+_pading.x, y: pos.y+_pading.y}
-
-    let create_board = () => {
-      let node_id = params.nodes[0]
-      let node = props.info.data.nodes.find((n) => (n.id === node_id))
-      return createInfoBoard(pos, node as NodeType, props.info.categories)
-    }
-
-    if (select_node && (board === null)) {
-      board = create_board()
-      setInfoBoard(board)
-    } else if (select_node && (board !== null)) {
-      board.remove()
-      board = create_board()
-      setInfoBoard(board)
-    } else if (board !== null) {
-      board.remove()
-      setInfoBoard(null)
-    }
-  }
-
-  useEffect(() => {
-    let network = netRef.current.network
-    network.setOptions({
-      autoResize: false,
-      nodes: {
-        shape: "dot",
-      },
-      physics: {
-        stabilization: false,
-        solver: 'forceAtlas2Based',
-        forceAtlas2Based: {
-          gravitationalConstant: -20,
-          centralGravity: 0.002,
-          springLength: 100,
-          springConstant: 0.01
-        },
-      },
-      edges: {
-        width: 0.3,
-        arrows: {
-          scaleFactor: 0.5
-        },
-        alpha: 0.6
-      },
-      interaction: {
-        hideEdgesOnDrag: (props.info.data.nodes.length > 20),
-        hover: true,
-      }
-    })
-    network.moveTo([100, 0])
-  })
-
-  return (
-    <div className="netView">
-      <FullScreen handle={fullScreenHandle}>
-        <div className="canvas-wrap">
-          {createNetwork()}
-          <ViewControl fullScreenHandle={fullScreenHandle}/>
+  render() {
+    return (
+      <div className="netView">
+        <div className="canvas-wrap" id="full-screen-region">
+          {this.createNetwork()}
+          <ViewControl/>
         </div>
-      </FullScreen>
-    </div>
-  )
+      </div>
+    )
+  }
 }
