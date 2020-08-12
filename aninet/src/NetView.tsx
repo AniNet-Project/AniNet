@@ -146,7 +146,9 @@ class EditOptionsDialog extends React.Component<EditOptionsDialogProps, EditOpti
   render() {
     return (
       <div className="EditOptionsDialog">
-        <EditIcon onClick={() => {this.handleClickOpen()}}/>
+        <Tooltip title="编辑视图配置" placement="top">
+          <EditIcon onClick={() => {this.handleClickOpen()}}/>
+        </Tooltip>
         <Dialog open={this.state.open} onClose={() => {this.handleClose()}} aria-labelledby="form-dialog-title">
           <DialogTitle id="form-dialog-title">编辑网络视图配置</DialogTitle>
           <DialogContent>
@@ -212,9 +214,7 @@ const ViewControl = (props: ViewControlProps) => {
 
   return (
     <div className="viewControl">
-      <Tooltip title="编辑视图配置" placement="top">
-        <EditOptionsDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
-      </Tooltip>
+      <EditOptionsDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
       {fullScreenMode
       ? <Tooltip title="退出全屏" placement="top"><FullscreenExitIcon onClick={exitFullScreen}/></Tooltip>
       : <Tooltip title="全屏" placement="top"><FullscreenIcon onClick={enterFullScreen}/></Tooltip>

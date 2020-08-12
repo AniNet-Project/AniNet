@@ -172,16 +172,16 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
               <Tab>边(Edges)</Tab>
               <Tab>节点类别</Tab>
             </TabList>
-            <TabPanel>
+            <TabPanel forceRender={true}>
               <NetView info={info as ItemInfo}/>
             </TabPanel>
-            <TabPanel>
+            <TabPanel forceRender={true}>
               <NodeGrid nodes={(info as ItemInfo).data.nodes} setNodes={this.setNodes.bind(this)}/>
             </TabPanel>
-            <TabPanel>
+            <TabPanel forceRender={true}>
               <EdgeGrid edges={(info as ItemInfo).data.edges} setEdges={this.setEdges.bind(this)}/>
             </TabPanel>
-            <TabPanel>
+            <TabPanel forceRender={true}>
               <CatGrid cats={(info as ItemInfo).categories} setCats={this.setCategories.bind(this)}/>
             </TabPanel>
           </Tabs>
