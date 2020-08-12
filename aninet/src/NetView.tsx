@@ -9,10 +9,15 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 
 import { Network, Node, Edge } from 'react-vis-network'
 import { dragElement } from './utils'
 import { ItemInfo, NodeType, EdgeType, CatType } from './datatypes'
+
+
+const getCanvas = () => document.getElementsByTagName("canvas")[0]
+
 
 const createInfoBoard = (pos: Pos2d, node: NodeType, cats: Record<string, CatType>) => {
   let board = document.createElement("div")
@@ -179,7 +184,8 @@ class EditOptionsDialog extends React.Component<EditOptionsDialogProps, EditOpti
 
 type ViewControlProps = {
   setOpt: (opt: any) => void,
-  getOpt: () => any
+  getOpt: () => any,
+  captureImg: () => void,
 }
 
 const ViewControl = (props: ViewControlProps) => {
@@ -187,7 +193,7 @@ const ViewControl = (props: ViewControlProps) => {
   let oriHeight = 300
 
   const enterFullScreen = () => {
-    let canvas = document.getElementsByTagName("canvas")[0]
+    let canvas = getCanvas()
     let fullRegion = document.getElementById("full-screen-region")
     fullRegion?.requestFullscreen()
     oriHeight = canvas.clientHeight
@@ -202,7 +208,7 @@ const ViewControl = (props: ViewControlProps) => {
   }
 
   const turnBackSize = () => {
-    let canvas = document.getElementsByTagName("canvas")[0]
+    let canvas = getCanvas()
     canvas.style.height = oriHeight + "px"
   }
 
@@ -214,6 +220,7 @@ const ViewControl = (props: ViewControlProps) => {
 
   return (
     <div className="viewControl">
+      <Tooltip title="截图" placement="top"><PhotoCameraIcon onClick={() => props.captureImg()}/></Tooltip>
       <EditOptionsDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
       {fullScreenMode
       ? <Tooltip title="退出全屏" placement="top"><FullscreenExitIcon onClick={exitFullScreen}/></Tooltip>
@@ -315,6 +322,30 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     )
   }
 
+  captureImg() {
+    let canvas = getCanvas()
+    // Fill the canvas background, see: 
+    //   https://stackoverflow.com/questions/50104437/set-background-color-to-save-canvas-chart
+    let context = canvas.getContext('2d')
+    if (context !== null) {
+      context.save()
+      context.globalCompositeOperation = 'destination-over'
+      context.fillStyle = "#ffffff"
+      context.fillRect(0, 0, canvas.width, canvas.height)
+      context.restore()
+    }
+
+    let img = canvas.toDataURL("image/png", 1.0)
+    let url = img.replace(/^data:image\/[^;]/, 'data:application/octet-stream')
+    let a = document.createElement('a');
+    a.download = "network.png";
+    a.href = url
+    a.target = '_blank';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
   render() {
     return (
       <div className="netView">
@@ -323,6 +354,7 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
           <ViewControl
             setOpt={this.setNetOptions.bind(this)}
             getOpt={this.getNetOptions.bind(this)}
+            captureImg={this.captureImg.bind(this)}
           />
         </div>
       </div>
