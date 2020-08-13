@@ -10,6 +10,9 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
+import SearchIcon from '@material-ui/icons/Search';
+import InputBase from '@material-ui/core/InputBase';
+import IconButton from '@material-ui/core/IconButton';
 
 import { Network, Node, Edge } from 'react-vis-network'
 import { dragElement } from './utils'
@@ -182,10 +185,72 @@ class EditOptionsDialog extends React.Component<EditOptionsDialogProps, EditOpti
   }
 }
 
+type SearchDialogProps = {
+  queryAndFocus: (q: string) => void,
+}
+
+type SearchDialogState = {
+  open: boolean,
+  queryText: string,
+}
+
+class SearchDialog extends React.Component<SearchDialogProps, SearchDialogState> {
+  constructor(props: SearchDialogProps) {
+    super(props)
+    this.state = {
+      open: false,
+      queryText: "",
+    }
+  }
+
+  handleClickOpen() {
+    this.setState({open: true})
+  };
+
+  handleClose() {
+    this.setState({open: false})
+  };
+
+  handleClickSearch() {
+    const q = this.state.queryText
+    this.props.queryAndFocus(q)
+    this.setState({open: false, queryText: ""})
+  }
+
+  textChanged(event: any) {
+    this.setState({
+      queryText: event.target.value
+    })
+  }
+
+  render() {
+    return (
+      <>
+        <Tooltip title="搜索" placement="top">
+          <SearchIcon onClick={() => this.handleClickOpen()}/>
+        </Tooltip>
+        <Dialog open={this.state.open} onClose={() => {this.handleClose()}} aria-labelledby="form-dialog-title">
+          <DialogContent id="searchDialog">
+            <InputBase
+              value={this.state.queryText}
+              onChange={(e) => this.textChanged(e)}
+              placeholder="输入节点标签（如，label:苍崎青子）或ID（如，id:1）"
+            />
+            <IconButton type="submit" onClick={() => this.handleClickSearch()} >
+              <SearchIcon/>
+            </IconButton>
+          </DialogContent>
+        </Dialog>
+      </>
+    )
+  }
+}
+
 type ViewControlProps = {
   setOpt: (opt: any) => void,
   getOpt: () => any,
   captureImg: () => void,
+  queryAndFocus: (q: string) => void,
 }
 
 const ViewControl = (props: ViewControlProps) => {
@@ -220,6 +285,7 @@ const ViewControl = (props: ViewControlProps) => {
 
   return (
     <div className="viewControl">
+      <SearchDialog queryAndFocus={props.queryAndFocus}/>
       <Tooltip title="截图" placement="top"><PhotoCameraIcon onClick={() => props.captureImg()}/></Tooltip>
       <EditOptionsDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
       {fullScreenMode
@@ -323,10 +389,10 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
   }
 
   captureImg() {
-    let canvas = getCanvas()
+    const canvas = getCanvas()
     // Fill the canvas background, see: 
     //   https://stackoverflow.com/questions/50104437/set-background-color-to-save-canvas-chart
-    let context = canvas.getContext('2d')
+    const context = canvas.getContext('2d')
     if (context !== null) {
       context.save()
       context.globalCompositeOperation = 'destination-over'
@@ -335,8 +401,8 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
       context.restore()
     }
 
-    let img = canvas.toDataURL("image/png", 1.0)
-    let url = img.replace(/^data:image\/[^;]/, 'data:application/octet-stream')
+    const img = canvas.toDataURL("image/png", 1.0)
+    const url = img.replace(/^data:image\/[^;]/, 'data:application/octet-stream')
     let a = document.createElement('a');
     a.download = "network.png";
     a.href = url
@@ -344,6 +410,59 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
+  }
+
+  queryNodes(q:string) {
+    let query_type = "label"
+    let query_text = ""
+    const items = q.split(":")
+    if (items.length === 1) {
+      query_text = items[0]
+    } else if (items.length === 2) {
+      query_type = items[0]
+      query_text = items[1].trim()
+    } else {
+      return []
+    }
+    let res = []
+    const nodes = this.props.info.data.nodes
+    const pattern = new RegExp(query_text)
+    for (let n of nodes) {
+      if (!(query_type in n)) {continue}
+      const val = (n as any)[query_type]
+      if (query_type === "id") {
+        if (val === parseInt(query_text)) {
+          res.push(n)
+        }
+      } else {
+        if (pattern.test(String(val))) {
+          res.push(n)
+        }
+      }
+    }
+    return res
+  }
+
+  focusOn(x: number, y: number) {
+    console.log("focus on: " + x + "," + y)
+    const canvas = getCanvas()
+    const context = canvas.getContext('2d')
+    if (context !== null) {
+      context.scale(2,2)
+    }
+  }
+
+  queryNodesAndFocus(q:string) {
+    const nodes = this.queryNodes(q)
+    if (nodes.length === 0) {return}
+    const network = this.state.netRef.current.network
+    const nodes_id = nodes.map(n => n.id)
+    network.selectNodes(nodes_id)
+    if (nodes.length > 1) {
+      network.fit(nodes_id, {animation: true})
+    } else {
+      network.focus(nodes_id[0], {scale: 1, animation: true})
+    }
   }
 
   render() {
@@ -355,6 +474,7 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
             setOpt={this.setNetOptions.bind(this)}
             getOpt={this.getNetOptions.bind(this)}
             captureImg={this.captureImg.bind(this)}
+            queryAndFocus={this.queryNodesAndFocus.bind(this)}
           />
         </div>
       </div>
