@@ -223,6 +223,12 @@ class SearchDialog extends React.Component<SearchDialogProps, SearchDialogState>
     })
   }
 
+  handlePressEnter(event: any) {
+    if (event.key === "Enter") {
+      this.handleClickSearch()
+    }
+  }
+
   render() {
     return (
       <>
@@ -234,6 +240,7 @@ class SearchDialog extends React.Component<SearchDialogProps, SearchDialogState>
             <InputBase
               value={this.state.queryText}
               onChange={(e) => this.textChanged(e)}
+              onKeyPress={(e) => this.handlePressEnter(e)}
               placeholder="输入节点标签（如，label:苍崎青子）或ID（如，id:1）"
             />
             <IconButton type="submit" onClick={() => this.handleClickSearch()} >
@@ -302,6 +309,7 @@ const DEFAULT_NETWORK_OPTIONS = {
     shape: "dot",
   },
   physics: {
+    enabled: true,
     stabilization: false,
     solver: 'forceAtlas2Based',
     forceAtlas2Based: {
@@ -443,26 +451,18 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     return res
   }
 
-  focusOn(x: number, y: number) {
-    console.log("focus on: " + x + "," + y)
-    const canvas = getCanvas()
-    const context = canvas.getContext('2d')
-    if (context !== null) {
-      context.scale(2,2)
-    }
-  }
-
   queryNodesAndFocus(q:string) {
     const nodes = this.queryNodes(q)
-    if (nodes.length === 0) {return}
+    if (nodes.length <= 0) {return}
     const network = this.state.netRef.current.network
+    network.selectNodes([])
     const nodes_id = nodes.map(n => n.id)
-    network.selectNodes(nodes_id)
     if (nodes.length > 1) {
-      network.fit(nodes_id, {animation: true})
+      network.fit({nodes: nodes_id, animation: true})
     } else {
       network.focus(nodes_id[0], {scale: 1, animation: true})
     }
+    network.selectNodes(nodes_id)
   }
 
   render() {
