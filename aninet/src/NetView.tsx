@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Draggable from 'react-draggable';
 import FullscreenIcon from '@material-ui/icons/Fullscreen'
 import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
 import EditIcon from '@material-ui/icons/Edit';
@@ -13,40 +14,57 @@ import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 
+import { shorterString } from './utils'
 import { Network, Node, Edge } from 'react-vis-network'
-import { dragElement } from './utils'
 import { ItemInfo, NodeType, EdgeType, CatType } from './datatypes'
 
 
 const getCanvas = () => document.getElementsByTagName("canvas")[0]
 
+type infoBoardProps = {
+  pos: Pos2d,
+  node: NodeType,
+  cats: Record<string, CatType>,
+  close: () => void,
+}
 
-const createInfoBoard = (pos: Pos2d, node: NodeType, cats: Record<string, CatType>) => {
-  let board = document.createElement("div")
-  board.setAttribute("class", "infoBoard")
-  board.setAttribute("style", "top:"+pos.y+"px; left:"+pos.x+"px")
-  let cat = cats[node.categorie]
-  board.innerHTML = `
-  <div class="content">
-    <img src="${('image' in node) ? node.image : ''}" alt=""/>
-    <div class="title">
-      <div class="name">
-        ${node.label}
+const InfoBoard = (props: infoBoardProps) => {
+  const node = props.node
+  const pos = props.pos
+  let cat = props.cats[node.categorie]
+  const boardStyle = {
+    top: pos.y + "px",
+    left: pos.x + "px",
+  }
+  const catStyle = 'color' in cat ? {color: cat.color} : {}
+  return (
+    <Draggable>
+      <div className="infoBoard" style={boardStyle}>
+        <CloseIcon className="closeButton" onClick={() => props.close()} />
+        <div className="content">
+          <img src={('image' in node) ? node.image : ''} alt=""/>
+          <div className="title">
+            <div className="name">
+              {node.label}
+            </div>
+            <div className="categorie" style={catStyle}>
+              {(cat !== undefined) ? cat.label : ""}
+            </div>
+          </div>
+          <div className="describe">
+            { shorterString(node.info, 80) }
+          </div>
+          {
+            'link' in node ?
+            <a className="link" href={node.link}>链接</a> :
+            null
+          }
+        </div>
       </div>
-      <div class="categorie" style="${(cat !== undefined) && ('color' in cat) ? 'color:'+ cat.color : ''}">
-        ${(cat !== undefined) ? cat.label : ""}
-      </div>
-    </div>
-    <div class="describe">
-      ${node.info}
-    </div>
-    ${'link' in node ? '<a class="link" href="'+node.link+'">' + "链接</a>": ""}
-  </div>
-  `
-  dragElement(board)
-  document.getElementsByClassName("canvas-wrap")[0].appendChild(board)
-  return board
+    </Draggable>
+  )
 }
 
 type Pos2d = {
@@ -333,7 +351,7 @@ type NetViewProps = {
 }
 
 type NetViewState = {
-  infoBoard: HTMLDivElement | null,
+  infoBoard: JSX.Element | null,
   netRef: any,
   netOptions: any,
 }
@@ -357,17 +375,17 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     const create_board = () => {
       let node_id = params.nodes[0]
       let node = this.props.info.data.nodes.find((n) => (n.id === node_id))
-      return createInfoBoard(pos, node as NodeType, this.props.info.categories)
+      return <InfoBoard pos={pos} node={node as NodeType}
+                        cats={this.props.info.categories}
+                        close={() => (this.setState({infoBoard: null}))}/>
     }
 
     let board = this.state.infoBoard
     if (select_node && (board === null)) {
       this.setState({infoBoard: create_board()})
     } else if (select_node && (board !== null)) {
-      (board as HTMLDivElement).remove()
       this.setState({infoBoard: create_board()})
     } else if (board !== null ) {
-      board.remove()
       this.setState({infoBoard: null})
     }
   }
@@ -470,6 +488,7 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
       <div className="netView">
         <div className="canvas-wrap" id="full-screen-region">
           {this.createNetwork()}
+          {this.state.infoBoard}
           <ViewControl
             setOpt={this.setNetOptions.bind(this)}
             getOpt={this.getNetOptions.bind(this)}

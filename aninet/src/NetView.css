@@ -53,6 +53,22 @@ button {
 
 .infoBoard .content {
   padding: 10px;
+  padding-top: 18px;
+}
+
+.infoBoard .closeButton {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+.infoBoard .closeButton:hover {
+  color: #666666;
+  transform: translateY(-0.5px);
+}
+
+.infoBoard .closeButton:active {
+  transform: translateY(0.5px);
 }
 
 .infoBoard .title {
@@ -82,6 +98,14 @@ button {
   max-height: 130px;
   margin-left: auto;
   margin-right: auto;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 
 .infoBoard .link {

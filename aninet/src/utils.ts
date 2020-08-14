@@ -1,5 +1,5 @@
 
-function exportToJson(objectData: any, fileName: string) {
+const exportToJson = (objectData: any, fileName: string) => {
   let contentType = "application/json;charset=utf-8;";
   if (window.navigator && window.navigator.msSaveOrOpenBlob) {
     var blob = new Blob([decodeURIComponent(encodeURI(JSON.stringify(objectData)))], { type: contentType });
@@ -16,48 +16,14 @@ function exportToJson(objectData: any, fileName: string) {
 }
 
 
-/// copy from https://www.w3schools.com/howto/howto_js_draggable.asp
-function dragElement(elmnt: HTMLElement) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    let elm = document.getElementById(elmnt.id + "header") as HTMLElement
-    elm.onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
+const shorterString = (str: string, limit: number) => {
+  let res = "" + str
+  if (str.length > limit) {
+    res = str.slice(0, limit) 
+    res += "..."
   }
-
-  function dragMouseDown(e: MouseEvent) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e: MouseEvent) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
+  return res
 }
 
 
-export {exportToJson, dragElement}
+export {exportToJson, shorterString}
