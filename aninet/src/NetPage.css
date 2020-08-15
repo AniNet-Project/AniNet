@@ -154,7 +154,7 @@ img {
 }
 
 
-#searchDialog {
+#searchDialog, #filterDialog {
   padding-left: 16px;
   padding-right: 8px;
   padding-bottom: 8px;
@@ -162,5 +162,9 @@ img {
 }
 
 #searchDialog input {
+  width: 25em;
+}
+
+#filterDialog > div > input {
   width: 25em;
 }

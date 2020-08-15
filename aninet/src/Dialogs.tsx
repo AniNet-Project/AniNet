@@ -10,6 +10,9 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
+import FilterListIcon from '@material-ui/icons/FilterList';
+import AutorenewIcon from '@material-ui/icons/Autorenew';
+import Checkbox from '@material-ui/core/Checkbox';
 
 
 type EditOptionsDialogProps = {
@@ -178,4 +181,96 @@ class SearchDialog extends React.Component<SearchDialogProps, SearchDialogState>
 }
 
 
-export { EditOptionsDialog, SearchDialog }
+type FilterDialogProps = {
+  queryAndFilter: (q: string, reverse: boolean) => void,
+  reset: () => void,
+}
+
+type FilterDialogState = {
+  open: boolean,
+  queryText: string,
+  reverse: boolean,
+}
+
+class FilterDialog extends React.Component<FilterDialogProps, FilterDialogState> {
+  constructor(props: FilterDialogProps) {
+    super(props)
+    this.state = {
+      open: false,
+      queryText: "",
+      reverse: true,
+    }
+  }
+
+  handleClickOpen() {
+    this.setState({open: true})
+  };
+
+  handleClose() {
+    this.setState({open: false})
+  };
+
+  handleClickFilter() {
+    const q = this.state.queryText
+    this.props.queryAndFilter(q, this.state.reverse)
+    this.setState({open: false, queryText: ""})
+  }
+
+  handleClickReset() {
+      this.props.reset()
+      this.setState({open: false, queryText: ""})
+  }
+
+  textChanged(event: any) {
+    this.setState({
+      queryText: event.target.value
+    })
+  }
+
+  handlePressEnter(event: any) {
+    if (event.key === "Enter") {
+      this.handleClickFilter()
+    }
+  }
+
+  handleChangeReverse(event: any) {
+    this.setState({
+      reverse: event.target.checked
+    })
+  }
+
+  render() {
+    return (
+      <>
+        <Tooltip title="筛选" placement="top">
+          <FilterListIcon onClick={() => this.handleClickOpen()}/>
+        </Tooltip>
+        <Dialog open={this.state.open} onClose={() => {this.handleClose()}} aria-labelledby="form-dialog-title">
+          <DialogContent id="filterDialog">
+            <InputBase
+              value={this.state.queryText}
+              onChange={(e) => this.textChanged(e)}
+              onKeyPress={(e) => this.handlePressEnter(e)}
+              placeholder="用于筛选的属性和正则表达式（如：categorie:person）"
+            />
+            <IconButton type="submit" onClick={() => this.handleClickFilter()} >
+              <Tooltip title="筛选" placement="top">
+                <FilterListIcon/>
+              </Tooltip>
+            </IconButton>
+            <IconButton type="submit" onClick={() => this.handleClickReset()} >
+              <Tooltip title="重置" placement="top">
+                <AutorenewIcon/>
+              </Tooltip>
+            </IconButton>
+            <Tooltip title="反选" placement="top">
+              <Checkbox checked={this.state.reverse} onChange={(e) => this.handleChangeReverse(e)}/>
+            </Tooltip>
+          </DialogContent>
+        </Dialog>
+      </>
+    )
+  }
+}
+
+export { EditOptionsDialog, SearchDialog, FilterDialog }

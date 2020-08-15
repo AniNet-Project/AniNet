@@ -173,7 +173,7 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
               <Tab>节点类别</Tab>
             </TabList>
             <TabPanel forceRender={true}>
-              <NetView info={info as ItemInfo}/>
+              <NetView info={info as ItemInfo} setNodes={this.setNodes.bind(this)} />
             </TabPanel>
             <TabPanel forceRender={true}>
               <NodeGrid nodes={(info as ItemInfo).data.nodes} setNodes={this.setNodes.bind(this)}/>

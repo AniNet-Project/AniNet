@@ -6,7 +6,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 import CloseIcon from '@material-ui/icons/Close';
 
-import { EditOptionsDialog, SearchDialog } from './Dialogs'
+import { EditOptionsDialog, SearchDialog, FilterDialog } from './Dialogs'
 import { shorterString } from './utils'
 import { Network, Node, Edge } from 'react-vis-network'
 import { ItemInfo, NodeType, EdgeType, CatType } from './datatypes'
@@ -104,6 +104,8 @@ type ViewControlProps = {
   getOpt: () => any,
   captureImg: () => void,
   queryAndFocus: (q: string) => void,
+  queryAndFilter: (q: string, reverse: boolean) => void,
+  reset: () => void,
 }
 
 const ViewControl = (props: ViewControlProps) => {
@@ -139,6 +141,7 @@ const ViewControl = (props: ViewControlProps) => {
   return (
     <div className="viewControl">
       <SearchDialog queryAndFocus={props.queryAndFocus}/>
+      <FilterDialog queryAndFilter={props.queryAndFilter} reset={props.reset}/>
       <Tooltip title="截图" placement="top"><PhotoCameraIcon onClick={() => props.captureImg()}/></Tooltip>
       <EditOptionsDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
       {fullScreenMode
@@ -175,13 +178,15 @@ const DEFAULT_NETWORK_OPTIONS = {
 }
 
 type NetViewProps = {
-  info: ItemInfo
+  info: ItemInfo,
+  setNodes: (nodes: Array<NodeType>) => void,
 }
 
 type NetViewState = {
   infoBoard: JSX.Element | null,
   netRef: any,
   netOptions: any,
+  oldNodes: Array<NodeType>,
 }
 
 export default class NetView extends React.Component<NetViewProps, NetViewState> {
@@ -190,7 +195,8 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     this.state = {
       infoBoard: null,
       netRef: React.createRef(),
-      netOptions: null
+      netOptions: null,
+      oldNodes: props.info.data.nodes,
     }
   }
 
@@ -266,7 +272,7 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     document.body.removeChild(a);
   }
 
-  queryNodes(q:string) {
+  queryNodes(q:string, reverse:boolean = false) {
     let query_type = "label"
     let query_text = ""
     const items = q.split(":")
@@ -280,21 +286,27 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     }
     let res = []
     const nodes = this.props.info.data.nodes
-    const pattern = new RegExp(query_text)
-    for (let n of nodes) {
-      if (!(query_type in n)) {continue}
-      const val = (n as any)[query_type]
-      if (query_type === "id") {
-        if (val === parseInt(query_text)) {
-          res.push(n)
-        }
-      } else {
-        if (pattern.test(String(val))) {
-          res.push(n)
+    const toggle = (cond: boolean) => reverse ? (!cond) : cond
+    try {
+      const pattern = new RegExp(query_text)
+      for (let n of nodes) {
+        if (!(query_type in n)) {continue}
+        const val = (n as any)[query_type]
+        if (query_type === "id") {
+          if (toggle(val === parseInt(query_text))) {
+            res.push(n)
+          }
+        } else {
+          if (toggle(pattern.test(String(val)))) {
+            res.push(n)
+          }
         }
       }
+      return res
+    } catch(e) {
+      console.log(e)
+      return []
     }
-    return res
   }
 
   queryNodesAndFocus(q:string) {
@@ -311,6 +323,15 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     network.selectNodes(nodes_id)
   }
 
+  queryNodesAndFilter(q:string, reverse:boolean) {
+    const nodes = this.queryNodes(q, reverse)
+    this.props.setNodes(nodes)
+  }
+
+  resetNodes() {
+    this.props.setNodes(this.state.oldNodes)
+  }
+
   render() {
     return (
       <div className="netView">
@@ -322,6 +343,8 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
             getOpt={this.getNetOptions.bind(this)}
             captureImg={this.captureImg.bind(this)}
             queryAndFocus={this.queryNodesAndFocus.bind(this)}
+            queryAndFilter={this.queryNodesAndFilter.bind(this)}
+            reset={this.resetNodes.bind(this)}
           />
         </div>
       </div>
