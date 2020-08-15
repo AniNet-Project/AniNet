@@ -6,7 +6,7 @@
 import React, { useState } from 'react';
 import {
   SortingState, EditingState, PagingState, SummaryState,
-  IntegratedPaging, IntegratedSorting, IntegratedSummary,
+  IntegratedPaging, 
 } from '@devexpress/dx-react-grid';
 import {
   Grid,

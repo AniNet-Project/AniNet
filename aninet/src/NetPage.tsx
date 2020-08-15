@@ -2,7 +2,7 @@ import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css'
 
-import './NetView.css'
+import './NetPage.css'
 import Header from './Header'
 import { exportToJson } from './utils'
 import NetView from './NetView'

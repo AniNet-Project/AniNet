@@ -18,7 +18,7 @@ class Card extends React.Component<CardProps, object> {
     return (
       <a href={"#/network/"+item.name}>
       <div className="card">
-        <img className="titleImg" src={item.title_img}></img>
+        <img className="titleImg" src={item.title_img} alt={item.name}></img>
         <p className="name">{item.name}</p>
       </div>
       </a>
