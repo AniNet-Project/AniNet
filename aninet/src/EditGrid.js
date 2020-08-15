@@ -6,7 +6,7 @@
 import React, { useState } from 'react';
 import {
   SortingState, EditingState, PagingState, SummaryState,
-  IntegratedPaging, 
+  IntegratedPaging, IntegratedSorting,
 } from '@devexpress/dx-react-grid';
 import {
   Grid,
@@ -149,33 +149,40 @@ const EditCell = (props) => {
 
 const getRowId = row => row.id;
 
-
 /**
  * Generate an Editable Grid object
  */
 const createGrid = (colDef, getParentState, widthDef, colOrder, defaultDef, setParentState) => {
 
-  const TheGrid = (props) => {
-    const [columns] = useState(colDef);
-    const [rows, setRows] = useState(getParentState(props));
-    const [tableColumnExtensions] = useState(widthDef);
-    const [sorting, getSorting] = useState([]);
-    const [editingRowIds, getEditingRowIds] = useState([]);
-    const [addedRows, setAddedRows] = useState([]);
-    const [rowChanges, setRowChanges] = useState({});
-    const [currentPage, setCurrentPage] = useState(0);
-    const [pageSize, setPageSize] = useState(5);
-    const [pageSizes] = useState([5, 10, 0]);
-    const [columnOrder, setColumnOrder] = useState(colOrder);
-    const [leftFixedColumns] = useState([TableEditColumn.COLUMN_TYPE]);
-    const [totalSummaryItems] = useState([ ]);
+  class TheGrid extends React.Component {
+    
+    constructor(props) {
+      super(props)
+      this.state = {
+        columns: colDef,
+        rows: getParentState(props),
+        tableColumnExtensions: widthDef,
+        sorting: [],
+        editingRowIds: [],
+        addedRows: [],
+        rowChanges: {},
+        currentPage: 0,
+        pageSize: 5,
+        pageSizes: [5, 10, 0],
+        columnOrder: colOrder,
+        leftFixedColumns: [TableEditColumn.COLUMN_TYPE],
+        totalSummaryItems: []
+      }
+    }
 
-    const changeAddedRows = value => setAddedRows(
-      value.map(row => (Object.keys(row).length ? row : defaultDef)),
-    );
+    changeAddedRows(value) {
+      this.setState({
+        addedRows: value.map(row => (Object.keys(row).length ? row : defaultDef))
+      })
+    }
 
-    const deleteRows = (deletedIds) => {
-      const rowsForDelete = rows.slice();
+    deleteRows(deletedIds) {
+      const rowsForDelete = this.state.rows.slice();
       deletedIds.forEach((rowId) => {
         const index = rowsForDelete.findIndex(row => row.id === rowId);
         if (index > -1) {
@@ -183,9 +190,10 @@ const createGrid = (colDef, getParentState, widthDef, colOrder, defaultDef, setP
         }
       });
       return rowsForDelete;
-    };
+    }
 
-    const commitChanges = ({ added, changed, deleted }) => {
+    commitChanges({ added, changed, deleted }) {
+      const rows = this.state.rows
       let changedRows;
       if (added) {
         const startingAddedId = rows.length > 0 ? rows[rows.length - 1].id + 1 : 0;
@@ -201,73 +209,78 @@ const createGrid = (colDef, getParentState, widthDef, colOrder, defaultDef, setP
         changedRows = rows.map(row => (changed[row.id] ? { ...row, ...changed[row.id] } : row));
       }
       if (deleted) {
-        changedRows = deleteRows(deleted);
+        changedRows = this.deleteRows(deleted);
       }
-      setRows(changedRows);
+      this.setState({
+        rows: changedRows
+      })
       // change the state of parent component
-      setParentState(props, changedRows)
+      setParentState(this.props, changedRows)
     };
 
-    return (
-      <Paper>
-        <Grid
-          rows={rows}
-          columns={columns}
-          getRowId={getRowId}
-        >
-          <SortingState
-            sorting={sorting}
-            onSortingChange={getSorting}
-          />
-          <PagingState
-            currentPage={currentPage}
-            onCurrentPageChange={setCurrentPage}
-            pageSize={pageSize}
-            onPageSizeChange={setPageSize}
-          />
-          <EditingState
-            editingRowIds={editingRowIds}
-            onEditingRowIdsChange={getEditingRowIds}
-            rowChanges={rowChanges}
-            onRowChangesChange={setRowChanges}
-            addedRows={addedRows}
-            onAddedRowsChange={changeAddedRows}
-            onCommitChanges={commitChanges}
-          />
-          <SummaryState
-            totalItems={totalSummaryItems}
-          />
+    render() {
+      return (
+        <Paper>
+          <Grid
+            rows={this.state.rows}
+            columns={this.state.columns}
+            getRowId={getRowId}
+          >
+            <SortingState
+              sorting={this.state.sorting}
+              onSortingChange={(s) => {this.setState({sorting: s})}}
+            />
+            <PagingState
+              currentPage={this.state.currentPage}
+              onCurrentPageChange={(c) => this.setState({currentPage: c})}
+              pageSize={this.state.pageSize}
+              onPageSizeChange={(s) => this.setState({pageSize: s})}
+            />
+            <EditingState
+              editingRowIds={this.state.editingRowIds}
+              onEditingRowIdsChange={(ids) => {this.setState({editingRowIds: ids})}}
+              rowChanges={this.state.rowChanges}
+              onRowChangesChange={(c) => {this.setState({rowChanges: c})}}
+              addedRows={this.state.addedRows}
+              onAddedRowsChange={this.changeAddedRows}
+              onCommitChanges={this.commitChanges}
+            />
+            <SummaryState
+              totalItems={this.state.totalSummaryItems}
+            />
 
-          <IntegratedPaging />
+            <IntegratedSorting />
+            <IntegratedPaging />
 
+            <Table
+              columnExtensions={this.state.tableColumnExtensions}
+            />
+            <TableColumnReordering
+              order={this.state.columnOrder}
+              onOrderChange={(c) => this.setState({columnOrder: c})}
+            />
+            <TableHeaderRow showSortingControls />
+            <TableEditRow
+              cellComponent={EditCell}
+            />
+            <TableEditColumn
+              width={150}
+              showAddCommand={!this.state.addedRows.length}
+              showEditCommand
+              showDeleteCommand
+              commandComponent={Command}
+            />
+            <TableFixedColumns
+              leftColumns={this.state.leftFixedColumns}
+            />
+            <PagingPanel
+              pageSizes={this.state.pageSizes}
+            />
+          </Grid>
+        </Paper>
+      );
+    }
 
-          <Table
-            columnExtensions={tableColumnExtensions}
-          />
-          <TableColumnReordering
-            order={columnOrder}
-            onOrderChange={setColumnOrder}
-          />
-          <TableHeaderRow showSortingControls />
-          <TableEditRow
-            cellComponent={EditCell}
-          />
-          <TableEditColumn
-            width={150}
-            showAddCommand={!addedRows.length}
-            showEditCommand
-            showDeleteCommand
-            commandComponent={Command}
-          />
-          <TableFixedColumns
-            leftColumns={leftFixedColumns}
-          />
-          <PagingPanel
-            pageSizes={pageSizes}
-          />
-        </Grid>
-      </Paper>
-    );
   }
 
   return TheGrid
