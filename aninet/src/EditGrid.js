@@ -242,8 +242,8 @@ const createGrid = (colDef, getParentState, widthDef, colOrder, defaultDef, setP
               rowChanges={this.state.rowChanges}
               onRowChangesChange={(c) => {this.setState({rowChanges: c})}}
               addedRows={this.state.addedRows}
-              onAddedRowsChange={this.changeAddedRows}
-              onCommitChanges={this.commitChanges}
+              onAddedRowsChange={this.changeAddedRows.bind(this)}
+              onCommitChanges={this.commitChanges.bind(this)}
             />
             <SummaryState
               totalItems={this.state.totalSummaryItems}
