@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import EditIcon from '@material-ui/icons/Edit';
 import Tooltip from '@material-ui/core/Tooltip';
 import Button from '@material-ui/core/Button';
@@ -13,13 +13,17 @@ import IconButton from '@material-ui/core/IconButton';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import AutorenewIcon from '@material-ui/icons/Autorenew';
 import Checkbox from '@material-ui/core/Checkbox';
+import TuneIcon from '@material-ui/icons/Tune';
+import Slider from '@material-ui/core/Slider';
+import Typography from '@material-ui/core/Typography';
+import Switch from '@material-ui/core/Switch';
+import { withStyles } from '@material-ui/core/styles';
 
 
 type EditOptionsDialogProps = {
   setOpt: (opt: any) => void,
   getOpt: () => any,
 }
-
 type EditOptionsDialogState = {
   open: boolean,
   content: string,
@@ -115,7 +119,6 @@ class EditOptionsDialog extends React.Component<EditOptionsDialogProps, EditOpti
 type SearchDialogProps = {
   queryAndFocus: (q: string) => void,
 }
-
 type SearchDialogState = {
   open: boolean,
   queryText: string,
@@ -185,7 +188,6 @@ type FilterDialogProps = {
   queryAndFilter: (q: string, reverse: boolean) => void,
   reset: () => void,
 }
-
 type FilterDialogState = {
   open: boolean,
   queryText: string,
@@ -273,4 +275,188 @@ class FilterDialog extends React.Component<FilterDialogProps, FilterDialogState>
   }
 }
 
-export { EditOptionsDialog, SearchDialog, FilterDialog }
+
+const defaultOpt = (oldOpt: any) => {
+  const opt = Object.assign({}, oldOpt)
+  if (!("physics" in opt)) { opt.physics = {} }
+  opt.physics.solver = "forceAtlas2Based"
+  let atlas;
+  if (!("forceAtlas2Based" in opt.physics)) {
+    atlas = {}
+    opt.physics.forceAtlas2Based = atlas
+  } else {
+    atlas = opt.physics.forceAtlas2Based
+  }
+  const defaults = {
+    gravitationalConstant: -20,
+    centralGravity: 0.002,
+    springLength: 100,
+    springConstant: 0.01,
+  }
+  for (const [k, v] of Object.entries(defaults)) {
+    if (!(k in atlas)) {
+      atlas[k] = v
+    }
+  }
+  return opt
+}
+
+
+type sliderProps = {
+  setOpt: (opt: any) => void,
+  getOpt: () => any,
+}
+
+const GravitationalConstantSlider = (props: sliderProps) => {
+  const opt = defaultOpt(props.getOpt())
+  let atlas = opt.physics.forceAtlas2Based
+  const [value, setValue] = useState(atlas.gravitationalConstant)
+
+  const handleChange = (event: any, newValue: number | number[]) => {
+    atlas.gravitationalConstant = newValue
+    setValue(newValue)
+    props.setOpt(opt)
+  }
+
+  return (
+    <>
+      <Typography gutterBottom>
+        引力常数
+      </Typography>
+      <Slider
+        value={value}
+        onChange={handleChange}
+        min={-100}
+        max={0}
+        valueLabelDisplay="auto"
+        aria-labelledby="continuous-slider"
+      />
+    </>
+  )
+}
+
+const SpringConstantSlider = (props: sliderProps) => {
+  const opt = defaultOpt(props.getOpt())
+  let atlas = opt.physics.forceAtlas2Based
+  const [value, setValue] = useState(Math.log10(atlas.springConstant))
+
+  const handleChange = (event: any, newValue: number | number[]) => {
+    const newVal = 10**(newValue as number)
+    atlas.springConstant = newVal
+    setValue(newValue as number)
+    props.setOpt(opt)
+  }
+
+  const labelFormat = (value: number) => {
+    return "1e^" + value
+  }
+
+  return (
+    <>
+      <Typography gutterBottom>
+        弹簧常数
+      </Typography>
+      <Slider
+        value={value}
+        onChange={handleChange}
+        step={0.5}
+        min={-5}
+        max={0}
+        valueLabelDisplay="auto"
+        valueLabelFormat={labelFormat}
+        aria-labelledby="non-linear-slider"
+      />
+    </>
+  )
+}
+
+const CustomSwitch = withStyles({
+  switchBase: {
+    color: "#3f51b5",
+    '&$checked': {
+      color: "#3f51b5",
+    },
+    '&$checked + $track': {
+      backgroundColor: "#3f51b5",
+    },
+  },
+  checked: {},
+  track: {},
+})(Switch);
+
+
+const PhysicsSwitch = (props: sliderProps) => {
+  const opt = defaultOpt(props.getOpt())
+  const [value, setValue] = useState(opt.physics.enabled)
+
+  const handleChange = (event: any) => {
+    const checked = event.target.checked
+    opt.physics.enabled = checked
+    setValue(checked)
+    props.setOpt(opt)
+  }
+
+  return (
+    <>
+      <Typography gutterBottom>
+        物理效果
+      </Typography>
+      <CustomSwitch checked={value} onChange={handleChange} name="physicsCheck" />
+    </>
+  )
+
+}
+
+
+type TuneDialogProps = {
+  setOpt: (opt: any) => void,
+  getOpt: () => any,
+}
+type TuneDialogState = {
+  open: boolean
+}
+
+class TuneDialog extends React.Component<TuneDialogProps, TuneDialogState> {
+  constructor(props: TuneDialogProps) {
+    super(props)
+    this.state = {
+      open: false,
+    }
+  }
+
+  handleClickOpen() {
+    this.setState({open: true})
+  };
+
+  handleClose() {
+    this.setState({open: false})
+  };
+
+  render() {
+    return (
+      <>
+        <Tooltip title="视图调整" placement="top">
+          <TuneIcon onClick={() => this.handleClickOpen()}/>
+        </Tooltip>
+        <Dialog open={this.state.open} onClose={() => {this.handleClose()}} aria-labelledby="form-dialog-title">
+          <DialogTitle id="form-dialog-title">网络视图调整</DialogTitle>
+          <DialogContent id="tuneDialog">
+            <PhysicsSwitch
+              setOpt={this.props.setOpt}
+              getOpt={this.props.getOpt}/>
+            <GravitationalConstantSlider
+              setOpt={this.props.setOpt}
+              getOpt={this.props.getOpt}/>
+            <SpringConstantSlider
+              setOpt={this.props.setOpt}
+              getOpt={this.props.getOpt}/>
+          </DialogContent>
+        </Dialog>
+      </>
+    )
+  }
+}
+
+
+
+export { EditOptionsDialog, SearchDialog, FilterDialog, TuneDialog }

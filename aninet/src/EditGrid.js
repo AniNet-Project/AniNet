@@ -3,7 +3,7 @@
 // This file is copy then modified from devexetreme-reactive demo:
 //   https://devexpress.github.io/devextreme-reactive/react/grid/demos/featured/data-editing/
 
-import React, { useState } from 'react';
+import React from 'react';
 import {
   SortingState, EditingState, PagingState, SummaryState,
   IntegratedPaging, IntegratedSorting,
@@ -160,7 +160,7 @@ const createGrid = (colDef, getParentState, widthDef, colOrder, defaultDef, setP
       super(props)
       this.state = {
         columns: colDef,
-        rows: getParentState(props),
+        rows: (typeof getParentState === "function") ? getParentState(props) : props[getParentState],
         tableColumnExtensions: widthDef,
         sorting: [],
         editingRowIds: [],
@@ -296,7 +296,7 @@ const NodeGrid = createGrid(
     { name: 'image', title: '图片' },
     { name: 'link', title: '链接' },
   ],
-  (props) => props.nodes,
+  "nodes",
   [
     { columnName: 'id', width: 80 },
     { columnName: 'label', width: 100 },

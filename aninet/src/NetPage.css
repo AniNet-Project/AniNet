@@ -168,3 +168,7 @@ img {
 #filterDialog > div > input {
   width: 25em;
 }
+
+#tuneDialog {
+  width: 20em;
+}

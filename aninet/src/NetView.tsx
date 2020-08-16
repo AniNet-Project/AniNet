@@ -6,7 +6,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 import CloseIcon from '@material-ui/icons/Close';
 
-import { EditOptionsDialog, SearchDialog, FilterDialog } from './Dialogs'
+import { EditOptionsDialog, SearchDialog, FilterDialog, TuneDialog } from './Dialogs'
 import { shorterString } from './utils'
 import { Network, Node, Edge } from 'react-vis-network'
 import { ItemInfo, NodeType, EdgeType, CatType } from './datatypes'
@@ -143,6 +143,7 @@ const ViewControl = (props: ViewControlProps) => {
       <SearchDialog queryAndFocus={props.queryAndFocus}/>
       <FilterDialog queryAndFilter={props.queryAndFilter} reset={props.reset}/>
       <Tooltip title="截图" placement="top"><PhotoCameraIcon onClick={() => props.captureImg()}/></Tooltip>
+      <TuneDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
       <EditOptionsDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
       {fullScreenMode
       ? <Tooltip title="退出全屏" placement="top"><FullscreenExitIcon onClick={exitFullScreen}/></Tooltip>
