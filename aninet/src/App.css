@@ -55,6 +55,8 @@ h1 {
   float: left;
   margin: 1em;
   border: 1px solid #BFBFBF;
+  width: 220px;
+  height: 300px;
 }
 
 .cards .card .name {
@@ -71,4 +73,22 @@ h1 {
   background-color: #aaaaaa;
   width: 220px;
   height: 250px;
+}
+
+#newPageIcon {
+  font-size: 50px;
+}
+
+#newPageButton {
+  position: absolute;
+  margin-left: 70px;
+  margin-top: 110px;
+}
+
+#newCard:hover {
+  box-shadow: none;
+}
+
+#newCard {
+  border: none;
 }

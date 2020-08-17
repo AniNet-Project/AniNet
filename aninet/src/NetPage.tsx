@@ -66,7 +66,7 @@ class ToolBar extends React.Component<ToolBarProps, object> {
       <div className="toolbar">
         <div className="rightside">
           <UploadBtn parent={parent}/>
-          <button onClick={() => {exportToJson(parent.state.info, "export.json")}}>下载数据 (JSON)</button>
+          <button onClick={() => {exportToJson(parent.state.info, "export.json")}}>保存数据 (JSON)</button>
         </div>
       </div>
     )

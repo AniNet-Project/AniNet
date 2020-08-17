@@ -347,7 +347,7 @@ const EdgeGrid = createGrid(
   ['id', 'from', 'to', 'label', 'direction'],
   {
     label: "",
-    categorie: availableValues.direction[0],
+    direction: availableValues.direction[0],
     info: "",
     image: "",
     link: ""

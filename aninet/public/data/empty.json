@@ -1,0 +1,12 @@
+{
+  "categories": {
+    "person": {
+      "label": "人物",
+      "color": "#66bbff"
+    }
+  },
+  "data": {
+    "nodes": [],
+    "edges": []
+  }
+}
