@@ -218,68 +218,77 @@ const createGrid = (colDef, getParentState, widthDef, colOrder, defaultDef, setP
       setParentState(this.props, changedRows)
     };
 
-    render() {
-      return (
-        <Paper>
-          <Grid
-            rows={this.state.rows}
-            columns={this.state.columns}
-            getRowId={getRowId}
-          >
-            <SortingState
-              sorting={this.state.sorting}
-              onSortingChange={(s) => {this.setState({sorting: s})}}
-            />
-            <PagingState
-              currentPage={this.state.currentPage}
-              onCurrentPageChange={(c) => this.setState({currentPage: c})}
-              pageSize={this.state.pageSize}
-              onPageSizeChange={(s) => this.setState({pageSize: s})}
-            />
-            <EditingState
-              editingRowIds={this.state.editingRowIds}
-              onEditingRowIdsChange={(ids) => {this.setState({editingRowIds: ids})}}
-              rowChanges={this.state.rowChanges}
-              onRowChangesChange={(c) => {this.setState({rowChanges: c})}}
-              addedRows={this.state.addedRows}
-              onAddedRowsChange={this.changeAddedRows.bind(this)}
-              onCommitChanges={this.commitChanges.bind(this)}
-            />
-            <SummaryState
-              totalItems={this.state.totalSummaryItems}
-            />
+  /**
+   * re-render rows when receive new props, see:
+   *   https://stackoverflow.com/questions/41233458/react-child-component-not-updating-after-parent-state-change
+   */
+  componentWillReceiveProps(nextProps) {
+    const newRows = (typeof getParentState === "function") ? getParentState(nextProps) : nextProps[getParentState]
+    this.setState({ rows: newRows });  
+  }
 
-            <IntegratedSorting />
-            <IntegratedPaging />
+  render() {
+    return (
+      <Paper>
+        <Grid
+          rows={this.state.rows}
+          columns={this.state.columns}
+          getRowId={getRowId}
+        >
+          <SortingState
+            sorting={this.state.sorting}
+            onSortingChange={(s) => {this.setState({sorting: s})}}
+          />
+          <PagingState
+            currentPage={this.state.currentPage}
+            onCurrentPageChange={(c) => this.setState({currentPage: c})}
+            pageSize={this.state.pageSize}
+            onPageSizeChange={(s) => this.setState({pageSize: s})}
+          />
+          <EditingState
+            editingRowIds={this.state.editingRowIds}
+            onEditingRowIdsChange={(ids) => {this.setState({editingRowIds: ids})}}
+            rowChanges={this.state.rowChanges}
+            onRowChangesChange={(c) => {this.setState({rowChanges: c})}}
+            addedRows={this.state.addedRows}
+            onAddedRowsChange={this.changeAddedRows.bind(this)}
+            onCommitChanges={this.commitChanges.bind(this)}
+          />
+          <SummaryState
+            totalItems={this.state.totalSummaryItems}
+          />
 
-            <Table
-              columnExtensions={this.state.tableColumnExtensions}
-            />
-            <TableColumnReordering
-              order={this.state.columnOrder}
-              onOrderChange={(c) => this.setState({columnOrder: c})}
-            />
-            <TableHeaderRow showSortingControls />
-            <TableEditRow
-              cellComponent={EditCell}
-            />
-            <TableEditColumn
-              width={150}
-              showAddCommand={!this.state.addedRows.length}
-              showEditCommand
-              showDeleteCommand
-              commandComponent={Command}
-            />
-            <TableFixedColumns
-              leftColumns={this.state.leftFixedColumns}
-            />
-            <PagingPanel
-              pageSizes={this.state.pageSizes}
-            />
-          </Grid>
-        </Paper>
-      );
-    }
+          <IntegratedSorting />
+          <IntegratedPaging />
+
+          <Table
+            columnExtensions={this.state.tableColumnExtensions}
+          />
+          <TableColumnReordering
+            order={this.state.columnOrder}
+            onOrderChange={(c) => this.setState({columnOrder: c})}
+          />
+          <TableHeaderRow showSortingControls />
+          <TableEditRow
+            cellComponent={EditCell}
+          />
+          <TableEditColumn
+            width={150}
+            showAddCommand={!this.state.addedRows.length}
+            showEditCommand
+            showDeleteCommand
+            commandComponent={Command}
+          />
+          <TableFixedColumns
+            leftColumns={this.state.leftFixedColumns}
+          />
+          <PagingPanel
+            pageSizes={this.state.pageSizes}
+          />
+        </Grid>
+      </Paper>
+    );
+  }
 
   }
 

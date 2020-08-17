@@ -76,13 +76,13 @@ h1 {
 }
 
 #newPageIcon {
-  font-size: 50px;
+  font-size: 80px;
 }
 
 #newPageButton {
   position: absolute;
-  margin-left: 70px;
-  margin-top: 110px;
+  margin-left: 60px;
+  margin-top: 100px;
 }
 
 #newCard:hover {

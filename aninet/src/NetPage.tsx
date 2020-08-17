@@ -10,7 +10,7 @@ import {NetItem, ItemInfo, NodeType, EdgeType, CatType} from './datatypes'
 import { NodeGrid, EdgeGrid, CatGrid } from './EditGrid'
 
 
-function buildFileSelector(parent: React.Component) {
+const buildFileSelector = (parent: React.Component) => {
   const fileSelector = document.createElement('input');
   fileSelector.setAttribute('type', 'file');
   fileSelector.setAttribute('multiple', 'multiple');
@@ -20,7 +20,7 @@ function buildFileSelector(parent: React.Component) {
     let file: File = (target.files as FileList)[0]
     let reader = new FileReader()
     reader.onload = () => {
-      parent.setState({'data': JSON.parse(reader.result as string)})
+      parent.setState({'info': JSON.parse(reader.result as string)})
     }
     if (file !== undefined) {
       reader.readAsText(file)
