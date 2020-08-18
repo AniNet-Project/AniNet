@@ -55,7 +55,7 @@ h1 {
   float: left;
   margin: 1em;
   border: 1px solid #BFBFBF;
-  width: 220px;
+  width: 200px;
   height: 300px;
 }
 
@@ -71,8 +71,8 @@ h1 {
 
 .cards .titleImg {
   background-color: #aaaaaa;
-  width: 220px;
-  height: 250px;
+  width: 200px;
+  max-height: 250px;
 }
 
 #newPageIcon {

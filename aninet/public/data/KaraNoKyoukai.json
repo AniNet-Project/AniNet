@@ -1,0 +1,177 @@
+{
+  "categories": {
+    "person": {
+      "label": "人物",
+      "color": "#66bbff"
+    },
+    "organization": {
+      "label": "组织",
+      "color": "#ffbb7c"
+    }
+  },
+  "data": {
+    "nodes": [
+      {
+        "id": "214",
+        "label": "两仪式",
+        "categorie": "person",
+        "info": "拥有直死之魔眼的少女，起源是　（カラ）（空）。这给予她能够看到并捕获死之线的能力，若是将其斩断，便能够将任何具备“活”的概念的事物所破坏。",
+        "image": "imgs/KaraNoKyoukai/liangyishi.png",
+        "link": "https://zh.moegirl.org.cn/zh-hans/%E4%B8%A4%E4%BB%AA%E5%BC%8F"
+      },
+      {
+        "id": "101",
+        "label": "黑桐干也",
+        "categorie": "person",
+        "info": "小说《空之境界》及其衍生作品中的男主角，是一个普通人。",
+        "image": "imgs/KaraNoKyoukai/heitong.png",
+        "link": "https://zh.moegirl.org.cn/%E9%BB%91%E6%A1%90%E5%B9%B2%E4%B9%9F"
+      },
+      {
+        "id": "102",
+        "label": "苍崎橙子",
+        "categorie": "person",
+        "info": "最高位的人形（人偶）师，虽然身份是魔术师却有接近魔法使的实力。个性相当奇怪，以眼镜做为人格转换的开关，戴着眼镜时语气婉柔，放下眼镜时会变成冷冷的语调。",
+        "image": "imgs/KaraNoKyoukai/chengzi.png",
+        "link": "https://zh.moegirl.org.cn/%E8%8B%8D%E5%B4%8E%E6%A9%99%E5%AD%90"
+      },
+      {
+        "id": "103",
+        "label": "黑桐鲜花",
+        "categorie": "person",
+        "info": "见习魔术师，橙子的徒弟，有着和魔术血统无关的点燃和发火的才能，目前就读于日本少有的正统天主教贵族女校礼园。仰慕著自小有不一样的坚强的哥哥。",
+        "image": "imgs/KaraNoKyoukai/xianhua.png",
+        "link": "https://zh.moegirl.org.cn/%E9%BB%91%E6%A1%90%E9%B2%9C%E8%8A%B1"
+      },
+      {
+        "id": "104",
+        "label": "两仪未那",
+        "categorie": "person",
+        "info": "两仪式和黑桐干也的独生女。好奇心旺盛，知道关于织的事情。称呼式为母亲（お母様），干也为爸爸（パパ），织为父亲（お父様）。",
+        "image": "imgs/KaraNoKyoukai/weina.png",
+        "link": "https://zh.moegirl.org.cn/%E4%B8%A4%E4%BB%AA%E6%9C%AA%E9%82%A3"
+      },
+      {
+        "id": "105",
+        "label": "巫条雾绘",
+        "categorie": "person",
+        "info": "“依存着死亡而漂浮的双重身体者”。被宣告剩余的人生都将在医院内度过的女性。",
+        "image": "imgs/KaraNoKyoukai/wutiao.png",
+        "link": "https://zh.moegirl.org.cn/%E5%B7%AB%E6%9D%A1%E9%9B%BE%E7%BB%98"
+      },
+      {
+        "id": "106",
+        "label": "浅上藤乃",
+        "categorie": "person",
+        "info": "名为“接触死亡，为之欢愉的不适应存在者。”",
+        "image": "imgs/KaraNoKyoukai/tengnai.png",
+        "link": "https://zh.moegirl.org.cn/zh-hans/%E6%B5%85%E4%B8%8A%E8%97%A4%E4%B9%83"
+      },
+      {
+        "id": "107",
+        "label": "白纯里绪",
+        "categorie": "person",
+        "info": "《空之境界》伊始篇章中便曾经登场的角色，此时的身份是比黑桐干也与两仪式大一届的同校学长，后来则是贯穿故事始终的杀人鬼真身。",
+        "image": "imgs/KaraNoKyoukai/baichun.png",
+        "link": "https://zh.moegirl.org.cn/%E7%99%BD%E7%BA%AF%E9%87%8C%E7%BB%AA"
+      },
+      {
+        "id": "108",
+        "label": "臙条巴",
+        "categorie": "person",
+        "info": "在《螺旋矛盾》中出场。  在自以为杀死了父母后出走，被两仪式救下。",
+        "image": "imgs/KaraNoKyoukai/yantiaoba.png",
+        "link": "https://zh.moegirl.org.cn/%E8%87%99%E6%9D%A1%E5%B7%B4"
+      },
+      {
+        "id": "109",
+        "label": "黄路美沙夜",
+        "categorie": "person",
+        "info": "黑桐鲜花的学姐。",
+        "image": "imgs/KaraNoKyoukai/meishaye.png",
+        "link": "https://zh.moegirl.org.cn/%E9%BB%84%E8%B7%AF%E7%BE%8E%E6%B2%99%E5%A4%9C"
+      },
+      {
+        "id": "110",
+        "label": "玄雾皋月",
+        "categorie": "person",
+        "info": "礼园女子学院的教师，给人的印象是脸上一直挂着微笑。",
+        "image": "imgs/KaraNoKyoukai/xuanwu.jpg",
+        "link": "https://typemoon.wiki.cre.jp/wiki/%E7%8E%84%E9%9C%A7%E7%9A%90%E6%9C%88"
+      },
+      {
+        "id": "111",
+        "label": "荒耶宗莲",
+        "categorie": "person",
+        "info": "外表45岁左右，但实际上活了超过200年的前台密僧侣，“地狱的具象化”，已经变成单纯现象的理论体现。",
+        "image": "imgs/KaraNoKyoukai/huangye.png",
+        "link": "https://zh.moegirl.org.cn/%E8%8D%92%E8%80%B6%E5%AE%97%E8%8E%B2"
+      },
+      {
+        "id": "112",
+        "label": "科尼利厄斯·阿鲁巴",
+        "categorie": "person",
+        "info": "时钟塔出身的魔术师，和苍崎橙子、荒耶宗莲是同学。是时计塔的中部组织——施蓬海姆修道院下一任院长。",
+        "image": "https://img.moegirl.org.cn/common/thumb/4/40/Cornelius_Alba_1.png/280px-Cornelius_Alba_1.png",
+        "link": "https://zh.moegirl.org.cn/%E7%A7%91%E5%B0%BC%E5%88%A9%E5%8E%84%E6%96%AF%C2%B7%E9%98%BF%E9%B2%81%E5%B7%B4"
+      },
+      {
+        "id": "113",
+        "label": "秋巳大辅",
+        "categorie": "person",
+        "info": "黑桐干也的叔叔，在干也父亲的弟弟中年纪排行最小，与干也年龄接近。",
+        "image": "https://img.moegirl.org.cn/common/thumb/7/7d/Wozenmejiuzhaobudaorenshetu.jpg/280px-Wozenmejiuzhaobudaorenshetu.jpg",
+        "link": "https://zh.moegirl.org.cn/%E7%A7%8B%E5%B7%B3%E5%A4%A7%E8%BE%85"
+      },
+      {
+        "id": "114",
+        "label": "濑尾静音",
+        "categorie": "person",
+        "info": "《空之境界》第八章《未来福音》的一号女主角，是黑桐鲜花就读于礼园女子学院的室友，个性开朗，与黑桐鲜花关系很好。",
+        "image": "https://img.moegirl.org.cn/common/thumb/f/f3/%E5%A4%8F%E4%B9%8B%E6%9C%AA%E6%9D%A5%E8%A7%86.png/280px-%E5%A4%8F%E4%B9%8B%E6%9C%AA%E6%9D%A5%E8%A7%86.png",
+        "link": "https://zh.moegirl.org.cn/%E6%BF%91%E5%B0%BE%E9%9D%99%E9%9F%B3"
+      },
+      {
+        "id": "115",
+        "label": "瓶仓光溜",
+        "categorie": "person",
+        "info": "拥有未来视能力的少年，利用自己的超能力接受委托进行精确爆破。未来对于他来说只不过是数分钟后的结果，直到遇到了两仪式这个人。",
+        "image": "https://img.moegirl.org.cn/common/thumb/c/ce/Refrain.png/280px-Refrain.png",
+        "link": "https://zh.moegirl.org.cn/%E7%93%B6%E4%BB%93%E5%85%89%E6%BA%9C"
+      },
+      {
+        "id": "116",
+        "label": "两仪要",
+        "categorie": "person",
+        "info": "两仪式的哥哥，因无法生出双重人格而没有继承人的资格。",
+        "image": "",
+        "link": ""
+      },
+      {
+        "id": "117",
+        "label": "砚木秋隆",
+        "categorie": "person",
+        "info": "两仪家的用人。",
+        "image": "https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=3432509076,3471305598&fm=74&app=80&f=JPEG&size=f121,90?sec=1880279984&t=5f1e53909d5909a35ffc8b671e2957b8",
+        "link": "https://typemoon.wiki.cre.jp/wiki/%E7%A1%AF%E6%9C%A8%E7%A7%8B%E9%9A%86"
+      },
+      {
+        "id": "118",
+        "label": "宫月理理栖",
+        "categorie": "person",
+        "info": "礼园女子学院的学生。",
+        "image": "https://lain.bgm.tv/pic/crt/m/d5/cc/23626_crt_46ZWS.jpg?r=1394339574",
+        "link": "https://bgm.tv/character/23626"
+      },
+      {
+        "id": "119",
+        "label": "观布子之母",
+        "categorie": "person",
+        "info": "观布子之母是空之境界第八章《未来福音》中的角色。占卜师，拥有被称为神之眼的“未来视”，将自己的能力用于帮别人消灾并不求回报。",
+        "image": "https://bkimg.cdn.bcebos.com/pic/9922720e0cf3d7caea69aca3f81fbe096a63a94c?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+        "link": "https://baike.baidu.com/item/%E8%A7%82%E5%B8%83%E5%AD%90%E4%B9%8B%E6%AF%8D"
+      }
+    ],
+    "edges": []
+  }
+}

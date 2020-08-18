@@ -3,5 +3,10 @@
         "name": "魔法使之夜",
         "title_img": "imgs/MahouTsukaiNoYoru/title.webp",
         "url": "data/MahouTsukaiNoYoru.json"
+    },
+    {
+        "name": "空之境界",
+        "title_img": "imgs/KaraNoKyoukai/title.jpg",
+        "url": "data/KaraNoKyoukai.json"
     }
 ]
