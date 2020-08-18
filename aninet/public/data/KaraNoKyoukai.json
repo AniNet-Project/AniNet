@@ -112,7 +112,7 @@
         "label": "科尼利厄斯·阿鲁巴",
         "categorie": "person",
         "info": "时钟塔出身的魔术师，和苍崎橙子、荒耶宗莲是同学。是时计塔的中部组织——施蓬海姆修道院下一任院长。",
-        "image": "https://img.moegirl.org.cn/common/thumb/4/40/Cornelius_Alba_1.png/280px-Cornelius_Alba_1.png",
+        "image": "imgs/KaraNoKyoukai/aluba.png",
         "link": "https://zh.moegirl.org.cn/%E7%A7%91%E5%B0%BC%E5%88%A9%E5%8E%84%E6%96%AF%C2%B7%E9%98%BF%E9%B2%81%E5%B7%B4"
       },
       {
@@ -120,7 +120,7 @@
         "label": "秋巳大辅",
         "categorie": "person",
         "info": "黑桐干也的叔叔，在干也父亲的弟弟中年纪排行最小，与干也年龄接近。",
-        "image": "https://img.moegirl.org.cn/common/thumb/7/7d/Wozenmejiuzhaobudaorenshetu.jpg/280px-Wozenmejiuzhaobudaorenshetu.jpg",
+        "image": "imgs/KaraNoKyoukai/dafu.png",
         "link": "https://zh.moegirl.org.cn/%E7%A7%8B%E5%B7%B3%E5%A4%A7%E8%BE%85"
       },
       {
@@ -128,7 +128,7 @@
         "label": "濑尾静音",
         "categorie": "person",
         "info": "《空之境界》第八章《未来福音》的一号女主角，是黑桐鲜花就读于礼园女子学院的室友，个性开朗，与黑桐鲜花关系很好。",
-        "image": "https://img.moegirl.org.cn/common/thumb/f/f3/%E5%A4%8F%E4%B9%8B%E6%9C%AA%E6%9D%A5%E8%A7%86.png/280px-%E5%A4%8F%E4%B9%8B%E6%9C%AA%E6%9D%A5%E8%A7%86.png",
+        "image": "imgs/KaraNoKyoukai/jingyin.png",
         "link": "https://zh.moegirl.org.cn/%E6%BF%91%E5%B0%BE%E9%9D%99%E9%9F%B3"
       },
       {
@@ -136,7 +136,7 @@
         "label": "瓶仓光溜",
         "categorie": "person",
         "info": "拥有未来视能力的少年，利用自己的超能力接受委托进行精确爆破。未来对于他来说只不过是数分钟后的结果，直到遇到了两仪式这个人。",
-        "image": "https://img.moegirl.org.cn/common/thumb/c/ce/Refrain.png/280px-Refrain.png",
+        "image": "imgs/KaraNoKyoukai/guangliu.png",
         "link": "https://zh.moegirl.org.cn/%E7%93%B6%E4%BB%93%E5%85%89%E6%BA%9C"
       },
       {
@@ -151,8 +151,8 @@
         "id": "117",
         "label": "砚木秋隆",
         "categorie": "person",
-        "info": "两仪家的用人。",
-        "image": "https://dss0.bdstatic.com/6Ox1bjeh1BF3odCf/it/u=3432509076,3471305598&fm=74&app=80&f=JPEG&size=f121,90?sec=1880279984&t=5f1e53909d5909a35ffc8b671e2957b8",
+        "info": "两仪家的佣人。",
+        "image": "imgs/KaraNoKyoukai/qiulong.png",
         "link": "https://typemoon.wiki.cre.jp/wiki/%E7%A1%AF%E6%9C%A8%E7%A7%8B%E9%9A%86"
       },
       {
@@ -160,7 +160,7 @@
         "label": "宫月理理栖",
         "categorie": "person",
         "info": "礼园女子学院的学生。",
-        "image": "https://lain.bgm.tv/pic/crt/m/d5/cc/23626_crt_46ZWS.jpg?r=1394339574",
+        "image": "imgs/KaraNoKyoukai/lilixi.jpg",
         "link": "https://bgm.tv/character/23626"
       },
       {
@@ -168,10 +168,343 @@
         "label": "观布子之母",
         "categorie": "person",
         "info": "观布子之母是空之境界第八章《未来福音》中的角色。占卜师，拥有被称为神之眼的“未来视”，将自己的能力用于帮别人消灾并不求回报。",
-        "image": "https://bkimg.cdn.bcebos.com/pic/9922720e0cf3d7caea69aca3f81fbe096a63a94c?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg",
+        "image": "imgs/KaraNoKyoukai/guanbuzizhimu.jpg",
         "link": "https://baike.baidu.com/item/%E8%A7%82%E5%B8%83%E5%AD%90%E4%B9%8B%E6%AF%8D"
+      },
+      {
+        "id": "120",
+        "label": "伽蓝之堂",
+        "categorie": "organization",
+        "info": "苍崎橙子经营的各种承包制作公司。虽然大致上主业是制作人偶，但对橙子来说只要有趣，无论什么样的制作委托都会欣然接受。",
+        "image": "imgs/KaraNoKyoukai/qielanzhitang.png",
+        "link": "https://www.tmdict.com/zh/ka.garan-no-dou"
+      },
+      {
+        "id": "121",
+        "label": "两仪家",
+        "categorie": "organization",
+        "info": "两仪和巫净，因为有即便退魔之外也“有用处”的技艺，以那边为主业得以残存下来。  家主均为双重人格者。拥有制造连接根源者的技术，即使家族本身不知道这种事。",
+        "image": "imgs/KaraNoKyoukai/liangyijia.png",
+        "link": "https://zh.moegirl.org.cn/zh-hans/%E9%80%80%E9%AD%94%E7%BB%84%E7%BB%87#%E4%B8%A4%E4%BB%AA"
+      },
+      {
+        "id": "122",
+        "label": "礼园女子学院",
+        "categorie": "organization",
+        "info": "礼园学院拥有小学、高中部、大部分学生都是直升的，也有少数像黑桐鲜花这样高中才转进入的学生。",
+        "image": "imgs/KaraNoKyoukai/liyuan.png",
+        "link": "https://baike.baidu.com/item/%E7%A4%BC%E5%9B%AD%E5%A5%B3%E5%AD%A6%E9%99%A2"
+      },
+      {
+        "id": "16",
+        "label": "魔术协会",
+        "categorie": "organization",
+        "info": "魔术师所组成的自卫管理团体，负责魔术的管理、隐蔽与发展（当然只是名义如此）。以「隐藏神秘」为第一宗旨。于公元元年成立。",
+        "image": "imgs/MahouTsukaiNoYoru/moshuxiehui.png",
+        "link": "https://zh.moegirl.org.cn/%E9%AD%94%E6%9C%AF%E5%8D%8F%E4%BC%9A"
       }
     ],
-    "edges": []
+    "edges": [
+      {
+        "id": "1100",
+        "label": "夫妻",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "214",
+        "to": "101"
+      },
+      {
+        "id": "1101",
+        "label": "工作",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "101",
+        "to": "120"
+      },
+      {
+        "id": "1102",
+        "label": "工作",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "214",
+        "to": "120"
+      },
+      {
+        "id": "1103",
+        "label": "老板",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "102",
+        "to": "120"
+      },
+      {
+        "id": "1104",
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "214",
+        "to": "121"
+      },
+      {
+        "id": "1105",
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "116",
+        "to": "121"
+      },
+      {
+        "id": "1106",
+        "label": "佣人",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "117",
+        "to": "121"
+      },
+      {
+        "id": "1107",
+        "label": "兴信所所长",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "115",
+        "to": "121"
+      },
+      {
+        "id": "1108",
+        "label": "女儿",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "104",
+        "to": "214"
+      },
+      {
+        "id": "1109",
+        "label": "女儿",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "104",
+        "to": "101"
+      },
+      {
+        "id": "1110",
+        "label": "照顾",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "115",
+        "to": "104"
+      },
+      {
+        "id": "1111",
+        "label": "妹妹",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "103",
+        "to": "101"
+      },
+      {
+        "id": "1112",
+        "label": "叔叔",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "113",
+        "to": "101"
+      },
+      {
+        "id": "1113",
+        "label": "学生",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "103",
+        "to": "122"
+      },
+      {
+        "id": "1114",
+        "label": "学生",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "106",
+        "to": "122"
+      },
+      {
+        "id": "1115",
+        "label": "学生",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "109",
+        "to": "122"
+      },
+      {
+        "id": "1116",
+        "label": "教师",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "110",
+        "to": "122"
+      },
+      {
+        "id": "1117",
+        "label": "学生",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "114",
+        "to": "122"
+      },
+      {
+        "id": "1118",
+        "label": "学生",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "118",
+        "to": "122"
+      },
+      {
+        "id": "1119",
+        "label": "同学",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "102",
+        "to": "111"
+      },
+      {
+        "id": "1120",
+        "label": "同学",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "112",
+        "to": "102"
+      },
+      {
+        "id": "1121",
+        "label": "封印指定",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "16",
+        "to": "102"
+      },
+      {
+        "id": "1122",
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "112",
+        "to": "16"
+      },
+      {
+        "id": "1123",
+        "label": "同学",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "112",
+        "to": "111"
+      },
+      {
+        "id": "1124",
+        "label": "迫害",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "111",
+        "to": "105"
+      },
+      {
+        "id": "1125",
+        "label": "迫害",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "111",
+        "to": "106"
+      },
+      {
+        "id": "1126",
+        "label": "迫害",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "111",
+        "to": "108"
+      },
+      {
+        "id": "1127",
+        "label": "迫害",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "111",
+        "to": "107"
+      },
+      {
+        "id": "1128",
+        "label": "学长",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "107",
+        "to": "214"
+      },
+      {
+        "id": "1129",
+        "label": "学长",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "107",
+        "to": "101"
+      }
+    ]
   }
 }
