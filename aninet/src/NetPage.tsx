@@ -50,7 +50,7 @@ class UploadBtn extends React.Component<UploadBtnProps, UploadBtnState> {
   }
   
   render(){
-    return <button onClick={this.handleFileSelect}>上传数据 (JSON)</button>
+    return <button onClick={this.handleFileSelect}>打开文件 (JSON)</button>
   }
 }
 
@@ -66,7 +66,7 @@ class ToolBar extends React.Component<ToolBarProps, object> {
       <div className="toolbar">
         <div className="rightside">
           <UploadBtn parent={parent}/>
-          <button onClick={() => {exportToJson(parent.state.info, "export.json")}}>保存数据 (JSON)</button>
+          <button onClick={() => {exportToJson(parent.state.info, "export.json")}}>保存文件 (JSON)</button>
         </div>
       </div>
     )

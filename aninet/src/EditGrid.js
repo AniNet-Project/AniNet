@@ -27,6 +27,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import SaveIcon from '@material-ui/icons/Save';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { withStyles } from '@material-ui/core/styles';
+import { maxHeaderSize } from 'http';
 
 
 const styles = theme => ({
@@ -176,8 +177,17 @@ const createGrid = (colDef, getParentState, widthDef, colOrder, defaultDef, setP
     }
 
     changeAddedRows(value) {
+      let defaultRow = {}
+      for (const [k, v] of Object.entries(defaultDef)) {
+        if (typeof v === "function") {
+          defaultRow[k] = v(this.state.rows)
+        } else {
+          defaultRow[k] = v
+        }
+      }
+      console.log(defaultRow)
       this.setState({
-        addedRows: value.map(row => (Object.keys(row).length ? row : defaultDef))
+        addedRows: value.map(row => (Object.keys(row).length ? row : defaultRow))
       })
     }
 
@@ -316,6 +326,7 @@ const NodeGrid = createGrid(
   ],
   ['id', 'label', 'categorie', 'info', 'image', 'link'],
   {
+    id: (rows) => Math.max(...rows.map((r) => r.id)) + 1,
     label: "",
     categorie: availableValues.categorie[0],
     info: "",
@@ -355,6 +366,7 @@ const EdgeGrid = createGrid(
   ],
   ['id', 'from', 'to', 'label', 'direction'],
   {
+    id: (rows) => Math.max(...rows.map((r) => r.id)) + 1,
     label: "",
     direction: availableValues.direction[0],
     info: "",
@@ -389,7 +401,11 @@ const CatGrid = createGrid(
     { name: 'label', title: '标签' },
     { name: 'color', title: '颜色' }
   ],
-  (props) => reprCats(props.cats),
+  (props) => {
+    const cats = props.cats
+    availableValues.categorie = Object.keys(cats)
+    return reprCats(cats)
+  },
   [
     { columnName: 'id', width: 200 },
     { columnName: 'label', width: 200 },
@@ -397,7 +413,7 @@ const CatGrid = createGrid(
   ],
   ['id', 'label', 'color'],
   {
-    id: 0,
+    id: "",
     label: "",
     color: "#aaaaaa"
   },
