@@ -6,7 +6,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 import CloseIcon from '@material-ui/icons/Close';
 
-import { EditOptionsDialog, SearchDialog, FilterDialog, TuneDialog } from './Dialogs'
+import { EditOptionsDialog, SearchDialog, FilterDialog, TuneDialog, SettingDialog } from './Dialogs'
 import { shorterString } from './utils'
 import { Network, Node, Edge } from 'react-vis-network'
 import { ItemInfo, NodeType, EdgeType, CatType } from './datatypes'
@@ -106,6 +106,8 @@ type ViewControlProps = {
   queryAndFocus: (q: string) => void,
   queryAndFilter: (q: string, reverse: boolean) => void,
   reset: () => void,
+  inforBoardSwitch: boolean,
+  setInforBoardSwitch: (on: boolean) => void,
 }
 
 const ViewControl = (props: ViewControlProps) => {
@@ -145,6 +147,7 @@ const ViewControl = (props: ViewControlProps) => {
       <Tooltip title="截图" placement="top"><PhotoCameraIcon onClick={() => props.captureImg()}/></Tooltip>
       <TuneDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
       <EditOptionsDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
+      <SettingDialog inforBoardSwitch={props.inforBoardSwitch} setInforBoardSwitch={props.setInforBoardSwitch}/>
       {fullScreenMode
       ? <Tooltip title="退出全屏" placement="top"><FullscreenExitIcon onClick={exitFullScreen}/></Tooltip>
       : <Tooltip title="全屏" placement="top"><FullscreenIcon onClick={enterFullScreen}/></Tooltip>
@@ -185,6 +188,7 @@ type NetViewProps = {
 
 type NetViewState = {
   infoBoard: JSX.Element | null,
+  inforBoardSwitch: boolean,
   netRef: any,
   netOptions: any,
   oldNodes: Array<NodeType>,
@@ -195,6 +199,7 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     super(props)
     this.state = {
       infoBoard: null,
+      inforBoardSwitch: true,
       netRef: React.createRef(),
       netOptions: null,
       oldNodes: props.info.data.nodes,
@@ -216,13 +221,19 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     }
 
     let board = this.state.infoBoard
-    if (select_node && (board === null)) {
+    if (select_node && (board === null) && this.state.inforBoardSwitch) {
       this.setState({infoBoard: create_board()})
-    } else if (select_node && (board !== null)) {
+    } else if (select_node && (board !== null) && this.state.inforBoardSwitch) {
       this.setState({infoBoard: create_board()})
     } else if (board !== null ) {
       this.setState({infoBoard: null})
     }
+  }
+
+  setInforBoardSwitch(on: boolean) {
+    this.setState({
+      inforBoardSwitch: on
+    })
   }
 
   setNetOptions(options: any) {
@@ -346,6 +357,8 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
             queryAndFocus={this.queryNodesAndFocus.bind(this)}
             queryAndFilter={this.queryNodesAndFilter.bind(this)}
             reset={this.resetNodes.bind(this)}
+            inforBoardSwitch={this.state.inforBoardSwitch}
+            setInforBoardSwitch={this.setInforBoardSwitch.bind(this)}
           />
         </div>
       </div>

@@ -18,6 +18,8 @@ import Slider from '@material-ui/core/Slider';
 import Typography from '@material-ui/core/Typography';
 import Switch from '@material-ui/core/Switch';
 import { withStyles } from '@material-ui/core/styles';
+import SettingsIcon from '@material-ui/icons/Settings';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 
 type EditOptionsDialogProps = {
@@ -458,5 +460,66 @@ class TuneDialog extends React.Component<TuneDialogProps, TuneDialogState> {
 }
 
 
+const InforBoardSwitch = (props: {switchState: boolean, setSwitch: (on: boolean) => void}) => {
+  const handleChange = (event: any) => {
+    const checked = event.target.checked
+    props.setSwitch(checked)
+  }
 
-export { EditOptionsDialog, SearchDialog, FilterDialog, TuneDialog }
+  return (
+    <FormControlLabel
+      control={<CustomSwitch checked={props.switchState} onChange={handleChange} name="inforBoardCheck" />}
+      label="弹出信息"
+      labelPlacement="start"
+    />
+    
+  )
+}
+
+
+type SettingDialogProps = {
+  inforBoardSwitch: boolean,
+  setInforBoardSwitch: (on: boolean) => void
+}
+type SettingDialogState = {
+  open: boolean
+}
+
+class SettingDialog extends React.Component<SettingDialogProps, SettingDialogState> {
+  constructor(props: SettingDialogProps) {
+    super(props)
+    this.state = {
+      open: false
+    }
+  }
+
+  handleClickOpen() {
+    this.setState({open: true})
+  };
+
+  handleClose() {
+    this.setState({open: false})
+  };
+
+  render() {
+    return (
+      <>
+        <Tooltip title="设置" placement="top">
+          <SettingsIcon onClick={() => this.handleClickOpen()}/>
+        </Tooltip>
+        <Dialog open={this.state.open} onClose={() => {this.handleClose()}} aria-labelledby="form-dialog-title">
+          <DialogTitle id="form-dialog-title">设置</DialogTitle>
+          <DialogContent id="tuneDialog">
+            <InforBoardSwitch
+              switchState={this.props.inforBoardSwitch}
+              setSwitch={this.props.setInforBoardSwitch}
+            />
+          </DialogContent>
+        </Dialog>
+      </>
+    )
+  }
+}
+
+
+export { EditOptionsDialog, SearchDialog, FilterDialog, TuneDialog, SettingDialog }
