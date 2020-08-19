@@ -7,6 +7,10 @@
     "organization": {
       "label": "组织",
       "color": "#ffbb7c"
+    },
+    "chapter": {
+      "label": "章节",
+      "color": "#cc66ff"
     }
   },
   "data": {
@@ -202,6 +206,86 @@
         "info": "魔术师所组成的自卫管理团体，负责魔术的管理、隐蔽与发展（当然只是名义如此）。以「隐藏神秘」为第一宗旨。于公元元年成立。",
         "image": "imgs/MahouTsukaiNoYoru/moshuxiehui.png",
         "link": "https://zh.moegirl.org.cn/%E9%AD%94%E6%9C%AF%E5%8D%8F%E4%BC%9A"
+      },
+      {
+        "id": "150",
+        "label": "俯瞰风景",
+        "categorie": "chapter",
+        "info": "1998年9月，围绕巫条大厦发生了连续少女坠楼事件。媒体将其报道为无法解释的自杀事件，而有一个人，看出了事件背后的某种关联。 　　她是魔术师苍崎橙子，伽蓝堂事务所的所长。解决都市不可思议事件的伽蓝堂只有三位成员：苍崎橙子、黑桐干也、两仪式。拥有“直死之眼”的两仪式受橙子所托，前往巫条大厦调查。等待她的是意想不到的敌人，而对抗敌人的武器，只有那把一直在式手中的匕首。而远在伽蓝堂，黑桐似乎被巫条大厦的魔力控制，失去了知觉。 　　日本同人小说最高境界《空之境界》全七章动画化，本作为第一章电影版。",
+        "image": "imgs/KaraNoKyoukai/fukanfengjing.webp",
+        "link": "https://movie.douban.com/subject/2354897/"
+      },
+      {
+        "id": "151",
+        "label": "杀人考察（前）",
+        "categorie": "chapter",
+        "info": "1995年9月，16岁的两仪式与黑桐干也相遇了。 　　男孩子气的两仪式穿着和服来到学校，特殊的她与任何人都没有交集，除了黑桐干也。二人产生了某种关联，并开始了安稳的校园生活。 　　同时，街上出现了连续猎奇杀人事件。由于警察朋友的关系，黑桐了解了一些内幕，他感到这个事件与式的双重人格有某种关系。 　　两仪式与两仪织，猎奇杀人事件的真相到底是什么？两仪家的秘密在黑桐眼前逐渐展开。 　　日本同人小说最高境界《空之境界》全七章动画化，本作为第二章电影版。",
+        "image": "imgs/KaraNoKyoukai/sharenkaochaqian.webp",
+        "link": "https://movie.douban.com/subject/2354900/"
+      },
+      {
+        "id": "153",
+        "label": "痛觉残留",
+        "categorie": "chapter",
+        "info": "1998年7月，饮酒会归来的下雨之夜，黑桐干也收留了一位无家可归的少女。但不久，少女不辞而别，去向不明。 　　与此同时，发生了连续杀人事件。死者无一例外，都是由于身体被强大的力量过渡扭曲而死。伽蓝堂开始为此展开调查。 　　一步步深入的调查，犯罪者居然是当时不辞而别的少女浅上藤乃，而她的能力更是惊人的强大。两仪式，拥有“直死之眼”的少女，再次提起匕首迎战。 　　日本同人小说最高境界《空之境界》全七章动画化，本作为第三章电影版。",
+        "image": "imgs/KaraNoKyoukai/tongjuecanliu.webp",
+        "link": "https://movie.douban.com/subject/2354908/"
+      },
+      {
+        "id": "154",
+        "label": "伽蓝之洞",
+        "categorie": "chapter",
+        "info": "1998年06月，意外事故后昏睡两年的两仪式苏醒了。 　　18年的记忆没有了，两仪织的人格也代替两仪式死去了。只有名为“黑桐干也”的男子守护在自己的身边。还有眼前奇怪的现象。两仪式获得了直视万物死之线的异形之力“直死之眼”。 　　黑桐干也的上司，苍崎橙子，来到医院接触两仪式，教导她“直死之眼”的使用方法。医院突然遭到袭击，式手握匕首，跨出了2年来，最坚毅的一步。 　　日本同人小说最高境界《空之境界》全七章动画化，本作为第四章电影版。",
+        "image": "imgs/KaraNoKyoukai/qielanzhidong.webp",
+        "link": "https://movie.douban.com/subject/3077701/"
+      },
+      {
+        "id": "155",
+        "label": "矛盾螺旋",
+        "categorie": "chapter",
+        "info": "“荒耶，你在追求什么？”“真正的睿智。”“在哪里追求？”“只在自己的心里。” 　　1998年11月，胭条巴遇到了两仪式并被她吸引。胭条巴每晚都做噩梦，自己犯下的罪行不断重现。两仪式为了调查事件的真相，前往胭条巴的寓所，却不知道，他们不知不觉已经进了敌人的圈套——复杂的“矛盾螺旋”。 　　而在这一切的背后，是名为荒耶宗莲的男子。他宿命的劲敌是魔术师苍崎橙子，最强的人偶师。伽藍堂全体出动，赌上性命的战斗即将开始。 　　日本同人小说最高境界《空之境界》全七章动画化，本作为第五章电影版。",
+        "image": "imgs/KaraNoKyoukai/maodunluoxuan.webp",
+        "link": "https://movie.douban.com/subject/3187790/"
+      },
+      {
+        "id": "156",
+        "label": "忘却录音",
+        "categorie": "chapter",
+        "info": "1999年1月，黑桐鲜花所就读的高级女子中学——礼园出现了神秘的事件。一年四班的学生橘佳织在宿舍起火事件中身亡，随后，一年四班全体同学的生活改变了。每天活在痛苦与烦恼中的她们，收到了不明来源的信件。不安的情绪在礼园全体学生间蔓延。为了解决事件，两仪式假扮学生潜入礼园，与黑桐鲜花一同调查事件的原委。另一方面，黑桐干也在使用自己的方法追踪事件的真相。而事件的背后，似乎还有那个男人，魔术师荒耶宗莲的安排。 　　苍崎橙子之徒黑桐鲜花，拥有“直死之魔眼”的两仪式，魔术与战斗的交叉，礼园的秘密在她们面前展开。 　　日本同人小说最高境界《空之境界》全七章动画化，本作为第六章电影版。",
+        "image": "imgs/KaraNoKyoukai/wangqueluyin.webp",
+        "link": "https://movie.douban.com/subject/3369765/"
+      },
+      {
+        "id": "157",
+        "label": "杀人考察（后）",
+        "categorie": "chapter",
+        "info": "1999年2月，杀人鬼回来了！ 　　1995年在日本发生的连续猎奇杀人事件，因嫌疑人遇到车祸住院而草草结案。如今疯狂的犯罪再次出现，恐怖的气氛来袭，原嫌疑人的嫌疑被洗清，到底谁才是这一系列事件的凶手？ 　　解决都市不可思议事件的伽蓝堂的成员开始展开调查，两仪式准备以自己的匕首结束这一切。但决战之前，黑桐干也发现犯人居然是自己旧日所识！ 　　在友情与正义相混淆的世界中，干也到底要如何抉择？ 　　日本同人小说最高境界《空之境界》全七章动画化，本作为第七章电影版。",
+        "image": "imgs/KaraNoKyoukai/sharenkaochahou.webp",
+        "link": "https://movie.douban.com/subject/3399553/"
+      },
+      {
+        "id": "158",
+        "label": "终章",
+        "categorie": "chapter",
+        "info": "“黑桐，你知道吗，杀人和杀戮是不一样的。据说，人一生只能杀一个人？”从心底里渴望成为“特别”的存在。这种愿望作出了错误的选择。不，应该说是被错误引导出了这种愿望。那时候，深信这是唯一的也是最好的方法。",
+        "image": "imgs/KaraNoKyoukai/zhongzhang.webp",
+        "link": "https://movie.douban.com/subject/5296286/"
+      },
+      {
+        "id": "159",
+        "label": "未来福音",
+        "categorie": "chapter",
+        "info": "1998年夏季，拥有预测型未来视的女孩濑尾静音（井口裕香 配音）邂逅伽蓝之堂的黑桐干也（铃村健一 配音）。从对方口中，她了解到未来视的真相，心中的疑惑和焦虑也烟消云散，但同时也看到了干也悲剧性的未来。另一方面，拥有测定型未来视的职业炸弹狂魔仓密目琉夏，利用自己构建的未来制造一系列恐怖袭击事件，直到他遭遇冷静干练的两仪式（坂本真绫 配音），命运的齿轮开始转动。转眼来到2010年，失去了未来视能力的瓶仓光瑠（石田彰 配音）转行做了绘本画家，命运安排他和两仪式及其女儿未那（金元寿子 配音）相逢，此后他和崇拜自己的未那拜访了传奇占卜师观布子之母……",
+        "image": "imgs/KaraNoKyoukai/weilaifuyin.webp",
+        "link": "https://movie.douban.com/subject/11499092/?from=subject-page"
+      },
+      {
+        "id": "160",
+        "label": "未来福音 extra chorus",
+        "categorie": "chapter",
+        "info": "痛觉残留：经历了和职业炸弹狂魔仓密目琉夏的惨烈对决后，伤痕累累的两仪式（坂本真绫 配音）待在家中静养。适逢黑桐干也（铃村健一 配音）需外出公干，他自顾自将一只黑猫托付给两仪照看。两仪与黑猫的关系巧巧起了变化；俯瞰风景：礼园女子学院八名女孩自杀，宫月理理栖（种田梨沙 配音）凭吊自杀的好友安藤由子，后悔自己没有和她一同赴死。就在此时，业已失明的浅上藤乃（能登麻美子 配音）出现在宫月面前；新年参拜：1998年即将过去，干也和两仪并肩走在去神社参拜的路上。寒冷的冬夜，两颗孤独之心不知不觉越来越近。",
+        "image": "imgs/KaraNoKyoukai/weilaifuyin_extra.webp",
+        "link": "https://movie.douban.com/subject/24861238/"
       }
     ],
     "edges": [
@@ -504,6 +588,506 @@
         "link": "",
         "from": "107",
         "to": "101"
+      },
+      {
+        "id": "1130",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "150",
+        "to": "214"
+      },
+      {
+        "id": "1131",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "150",
+        "to": "101"
+      },
+      {
+        "id": "1132",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "150",
+        "to": "102"
+      },
+      {
+        "id": "1133",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "150",
+        "to": "105"
+      },
+      {
+        "id": "1134",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "151",
+        "to": "214"
+      },
+      {
+        "id": "1135",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "151",
+        "to": "101"
+      },
+      {
+        "id": "1136",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "151",
+        "to": "107"
+      },
+      {
+        "id": "1137",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "151",
+        "to": "113"
+      },
+      {
+        "id": "1138",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "151",
+        "to": "117"
+      },
+      {
+        "id": "1139",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "153",
+        "to": "214"
+      },
+      {
+        "id": "1140",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "153",
+        "to": "101"
+      },
+      {
+        "id": "1141",
+        "label": "出场\t",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "153",
+        "to": "106"
+      },
+      {
+        "id": "1143",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "153",
+        "to": "102"
+      },
+      {
+        "id": "1144",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "153",
+        "to": "103"
+      },
+      {
+        "id": "1145",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "154",
+        "to": "214"
+      },
+      {
+        "id": "1146",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "154",
+        "to": "101"
+      },
+      {
+        "id": "1147",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "154",
+        "to": "102"
+      },
+      {
+        "id": "1148",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "155",
+        "to": "214"
+      },
+      {
+        "id": "1149",
+        "label": "出场\t",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "155",
+        "to": "101"
+      },
+      {
+        "id": "1150",
+        "label": "出场\t",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "155",
+        "to": "102"
+      },
+      {
+        "id": "1151",
+        "label": "出场\t",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "155",
+        "to": "108"
+      },
+      {
+        "id": "1152",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "155",
+        "to": "111"
+      },
+      {
+        "id": "1153",
+        "label": "出场\t",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "155",
+        "to": "112"
+      },
+      {
+        "id": "1154",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "155",
+        "to": "113"
+      },
+      {
+        "id": "1155",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "156",
+        "to": "214"
+      },
+      {
+        "id": "1156",
+        "label": "出场\t",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "156",
+        "to": "101"
+      },
+      {
+        "id": "1157",
+        "label": "出场\t",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "156",
+        "to": "103"
+      },
+      {
+        "id": "1158",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "156",
+        "to": "102"
+      },
+      {
+        "id": "1159",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "156",
+        "to": "109"
+      },
+      {
+        "id": "1160",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "156",
+        "to": "110"
+      },
+      {
+        "id": "1161",
+        "label": "出场\t",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "157",
+        "to": "214"
+      },
+      {
+        "id": "1162",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "157",
+        "to": "101"
+      },
+      {
+        "id": "1163",
+        "label": "出场\t",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "157",
+        "to": "107"
+      },
+      {
+        "id": "1164",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "157",
+        "to": "102"
+      },
+      {
+        "id": "1165",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "157",
+        "to": "113"
+      },
+      {
+        "id": "1166",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "158",
+        "to": "214"
+      },
+      {
+        "id": "1167",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "158",
+        "to": "101"
+      },
+      {
+        "id": "1169",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "159",
+        "to": "214"
+      },
+      {
+        "id": "1170",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "159",
+        "to": "101"
+      },
+      {
+        "id": "1171",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "159",
+        "to": "114"
+      },
+      {
+        "id": "1172",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "115",
+        "from": "159"
+      },
+      {
+        "id": "1173",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "159",
+        "to": "104"
+      },
+      {
+        "id": "1174",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "119",
+        "from": "159"
+      },
+      {
+        "id": "1175",
+        "label": "出场\t",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "160",
+        "to": "214"
+      },
+      {
+        "id": "1176",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "160",
+        "to": "101"
+      },
+      {
+        "id": "1177",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "160",
+        "to": "102"
+      },
+      {
+        "id": "1178",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "160",
+        "to": "103"
+      },
+      {
+        "id": "1179",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "160",
+        "to": "106"
+      },
+      {
+        "id": "1180",
+        "label": "出场",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "160",
+        "to": "118"
+      },
+      {
+        "id": "1181",
+        "label": "出场\t",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "159",
+        "to": "102"
       }
     ]
   }
