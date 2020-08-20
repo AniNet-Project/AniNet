@@ -27,7 +27,6 @@ import EditIcon from '@material-ui/icons/Edit';
 import SaveIcon from '@material-ui/icons/Save';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { withStyles } from '@material-ui/core/styles';
-import { maxHeaderSize } from 'http';
 
 
 const styles = theme => ({
@@ -326,14 +325,14 @@ const NodeGrid = createGrid(
   ],
   ['id', 'label', 'categorie', 'info', 'image', 'link'],
   {
-    id: (rows) => Math.max(...rows.map((r) => r.id)) + 1,
+    id: (rows) => (rows.length > 0) ? Math.max(...rows.map((r) => r.id)) + 1 : 0,
     label: "",
     categorie: availableValues.categorie[0],
     info: "",
     image: "",
     link: ""
   },
-  (props, changedRows) => {props.setNodes(changedRows)}
+  (props, changedRows) => {props.setNodes(changedRows.map((r) => {return {...r, id: parseInt(String(r.id))}}))}
 )
 
 const reprEdges = (edges) => edges.map((e_) => {
@@ -344,6 +343,7 @@ const reprEdges = (edges) => edges.map((e_) => {
 
 const recoverEdges = (rows) => rows.map((e_) => {
   let e = Object.assign({}, e_)
+  e.id = parseInt(String(e.id))
   e.direction = (e.direction === "false") ? false : true
   return e
 })
@@ -366,7 +366,7 @@ const EdgeGrid = createGrid(
   ],
   ['id', 'from', 'to', 'label', 'direction'],
   {
-    id: (rows) => Math.max(...rows.map((r) => r.id)) + 1,
+    id: (rows) => (rows.length > 0) ? Math.max(...rows.map((r) => r.id)) + 1 : 0,
     label: "",
     direction: availableValues.direction[0],
     info: "",

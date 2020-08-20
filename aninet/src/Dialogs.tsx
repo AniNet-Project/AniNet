@@ -477,9 +477,28 @@ const InforBoardSwitch = (props: {switchState: boolean, setSwitch: (on: boolean)
 }
 
 
+const HiddenUnselectedSwitch = (props: {switchState: boolean, setSwitch: (on: boolean) => void}) => {
+  const handleChange = (event: any) => {
+    const checked = event.target.checked
+    props.setSwitch(checked)
+  }
+
+  return (
+    <FormControlLabel
+      control={<CustomSwitch checked={props.switchState} onChange={handleChange} name="hiddenUnselectedCheck" />}
+      label="隐藏未选中节点"
+      labelPlacement="start"
+    />
+    
+  )
+}
+
+
 type SettingDialogProps = {
   inforBoardSwitch: boolean,
-  setInforBoardSwitch: (on: boolean) => void
+  setInforBoardSwitch: (on: boolean) => void,
+  hiddenUnselectedSwitch: boolean,
+  setHiddenUnselectedSwitch: (on: boolean) => void,
 }
 type SettingDialogState = {
   open: boolean
@@ -513,6 +532,10 @@ class SettingDialog extends React.Component<SettingDialogProps, SettingDialogSta
             <InforBoardSwitch
               switchState={this.props.inforBoardSwitch}
               setSwitch={this.props.setInforBoardSwitch}
+            />
+            <HiddenUnselectedSwitch
+              switchState={this.props.hiddenUnselectedSwitch}
+              setSwitch={this.props.setHiddenUnselectedSwitch}
             />
           </DialogContent>
         </Dialog>

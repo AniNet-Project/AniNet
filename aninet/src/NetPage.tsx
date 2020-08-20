@@ -75,6 +75,12 @@ class ToolBar extends React.Component<ToolBarProps, object> {
 
 
 const preProcessInfo = (info: ItemInfo) => {
+  let new_nodes: Array<NodeType> = []
+  for (let n of info.data.nodes) {
+    n.id = parseInt(String(n.id))
+    new_nodes.push(n)
+  }
+  info.data.nodes = new_nodes
   let new_edges: Array<EdgeType> = []
   for (let e of info.data.edges) {
     if (!('direction' in e)) {

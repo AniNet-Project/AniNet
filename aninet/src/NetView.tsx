@@ -10,6 +10,7 @@ import { EditOptionsDialog, SearchDialog, FilterDialog, TuneDialog, SettingDialo
 import { shorterString } from './utils'
 import { Network, Node, Edge } from 'react-vis-network'
 import { ItemInfo, NodeType, EdgeType, CatType } from './datatypes'
+import { Network as NetworkType, IdType } from 'vis/index'
 
 
 const getCanvas = () => document.getElementsByTagName("canvas")[0]
@@ -108,6 +109,8 @@ type ViewControlProps = {
   reset: () => void,
   inforBoardSwitch: boolean,
   setInforBoardSwitch: (on: boolean) => void,
+  hiddenUnselectedSwitch: boolean,
+  setHiddenUnselectedSwitch: (on: boolean) => void,
 }
 
 const ViewControl = (props: ViewControlProps) => {
@@ -147,7 +150,12 @@ const ViewControl = (props: ViewControlProps) => {
       <Tooltip title="截图" placement="top"><PhotoCameraIcon onClick={() => props.captureImg()}/></Tooltip>
       <TuneDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
       <EditOptionsDialog setOpt={props.setOpt} getOpt={props.getOpt}/>
-      <SettingDialog inforBoardSwitch={props.inforBoardSwitch} setInforBoardSwitch={props.setInforBoardSwitch}/>
+      <SettingDialog
+        inforBoardSwitch={props.inforBoardSwitch}
+        setInforBoardSwitch={props.setInforBoardSwitch}
+        hiddenUnselectedSwitch={props.hiddenUnselectedSwitch}
+        setHiddenUnselectedSwitch={props.setHiddenUnselectedSwitch}
+      />
       {fullScreenMode
       ? <Tooltip title="退出全屏" placement="top"><FullscreenExitIcon onClick={exitFullScreen}/></Tooltip>
       : <Tooltip title="全屏" placement="top"><FullscreenIcon onClick={enterFullScreen}/></Tooltip>
@@ -178,6 +186,7 @@ const DEFAULT_NETWORK_OPTIONS = {
   interaction: {
     hideEdgesOnDrag: false,
     hover: true,
+    multiselect: true,
   }
 }
 
@@ -186,12 +195,17 @@ type NetViewProps = {
   setNodes: (nodes: Array<NodeType>) => void,
 }
 
+type NetworkRef = {
+  network: NetworkType
+}
+
 type NetViewState = {
   infoBoard: JSX.Element | null,
   inforBoardSwitch: boolean,
-  netRef: any,
+  netRef: React.RefObject<NetworkRef>,
   netOptions: any,
   oldNodes: Array<NodeType>,
+  hiddenUnselectedSwitch: boolean,
 }
 
 export default class NetView extends React.Component<NetViewProps, NetViewState> {
@@ -203,17 +217,32 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
       netRef: React.createRef(),
       netOptions: null,
       oldNodes: props.info.data.nodes,
+      hiddenUnselectedSwitch: false
     }
   }
 
+  setHiddenUnselectedSwitch(on: boolean) {
+    const oldState = this.state.hiddenUnselectedSwitch
+    if ((oldState == true) && (on == false)) {
+      this.resetNodes()
+    } else if((oldState == false) && (on == true)) {
+      this.hiddenNonSelected()
+    }
+    this.setState({
+      hiddenUnselectedSwitch: on
+    })
+  }
+
   handlePopup (params: any) {
-    const select_node = (params.nodes.length > 0)
+    const network = (this.state.netRef.current as NetworkRef).network
+    const node_id = network.getNodeAt(params.pointer.DOM)
+    const select_node = (typeof node_id !== "undefined")
+    console.log(node_id)
     let pos: Pos2d = params.pointer.DOM
     const _pading: Pos2d = {x: 30, y: -30}
     pos = {x: pos.x+_pading.x, y: pos.y+_pading.y}
 
     const create_board = () => {
-      let node_id = params.nodes[0]
       let node = this.props.info.data.nodes.find((n) => (n.id === node_id))
       return <InfoBoard pos={pos} node={node as NodeType}
                         cats={this.props.info.categories}
@@ -230,6 +259,21 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     }
   }
 
+  handleHidden(params: any) {
+    if (!(this.state.hiddenUnselectedSwitch)) {return}
+    const select_node = (params.nodes.length > 0)
+    if (select_node) {
+      this.hiddenNonSelected()
+    } else {
+      this.resetNodes()
+    }
+  }
+
+  handleClick(params: any) {
+    this.handlePopup(params)
+    this.handleHidden(params)
+  }
+
   setInforBoardSwitch(on: boolean) {
     this.setState({
       inforBoardSwitch: on
@@ -237,7 +281,7 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
   }
 
   setNetOptions(options: any) {
-    let network = this.state.netRef.current.network
+    let network = (this.state.netRef.current as NetworkRef).network
     network.setOptions(options)
     this.setState({netOptions: options})
   }
@@ -253,7 +297,7 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
   createNetwork() {
     let info = this.props.info
     return (
-      <Network ref={this.state.netRef} onClick={(params: any) => {this.handlePopup(params)}} >
+      <Network ref={this.state.netRef} onClick={(params: any) => {this.handleClick(params)}} >
         {info.data.nodes.map(n => createNode(n, info.categories))}
         {info.data.edges.map((e) => createEdge(e))}
       </Network>
@@ -324,9 +368,9 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
   queryNodesAndFocus(q:string) {
     const nodes = this.queryNodes(q)
     if (nodes.length <= 0) {return}
-    const network = this.state.netRef.current.network
+    const network = (this.state.netRef.current as NetworkRef).network
     network.selectNodes([])
-    const nodes_id = nodes.map(n => n.id)
+    const nodes_id = nodes.map(n => String(n.id))
     if (nodes.length > 1) {
       network.fit({nodes: nodes_id, animation: true})
     } else {
@@ -344,6 +388,32 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     this.props.setNodes(this.state.oldNodes)
   }
 
+  getSelectedClosure() {
+    const network = (this.state.netRef.current as NetworkRef).network
+    const selected = network.getSelectedNodes()
+    let closure: Set<IdType> = new Set();
+    for (const nid of selected) {
+      closure.add( parseInt(String(nid)) )
+      const connected = network.getConnectedNodes(nid)
+      for (const nid2 of (connected as IdType[])) {
+        closure.add( parseInt(String(nid2)) )
+      }
+    }
+    return closure
+  }
+
+  hiddenNonSelected() {
+    this.resetNodes()
+    const closure = this.getSelectedClosure()
+    let nodes = []
+    for (const n of this.state.oldNodes) {
+      if (closure.has(n.id)) {
+        nodes.push(n)
+      }
+    }
+    this.props.setNodes(nodes)
+  }
+
   render() {
     return (
       <div className="netView">
@@ -359,6 +429,8 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
             reset={this.resetNodes.bind(this)}
             inforBoardSwitch={this.state.inforBoardSwitch}
             setInforBoardSwitch={this.setInforBoardSwitch.bind(this)}
+            hiddenUnselectedSwitch={this.state.hiddenUnselectedSwitch}
+            setHiddenUnselectedSwitch={this.setHiddenUnselectedSwitch.bind(this)}
           />
         </div>
       </div>
