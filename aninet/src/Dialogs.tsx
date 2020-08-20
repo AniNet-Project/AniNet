@@ -300,6 +300,9 @@ const defaultOpt = (oldOpt: any) => {
       atlas[k] = v
     }
   }
+  if (!("edges" in opt)) { opt.edges = {} }
+  if (!("font" in opt.edges)) { opt.edges.font = {} }
+  if (!("size" in opt.edges.font)) { opt.edges.font.size = 14 }
   return opt
 }
 
@@ -410,6 +413,34 @@ const PhysicsSwitch = (props: sliderProps) => {
 }
 
 
+const HiddenEdgeLabelSwitch = (props: sliderProps) => {
+  const opt = defaultOpt(props.getOpt())
+  const [value, setValue] = useState(opt.edges.font.size === 0)
+
+  const handleChange = (event: any) => {
+    const checked = event.target.checked
+    if (checked) {
+      opt.edges.font.size = 0
+    } else {
+      opt.edges.font.size = 14
+    }
+    setValue(checked)
+    props.setOpt(opt)
+    console.log(opt)
+  }
+
+  return (
+    <>
+      <Typography gutterBottom>
+        隐藏边标签
+      </Typography>
+      <CustomSwitch checked={value} onChange={handleChange} name="hiddenEdgeLabelCheck" />
+    </>
+  )
+
+}
+
+
 type TuneDialogProps = {
   setOpt: (opt: any) => void,
   getOpt: () => any,
@@ -450,6 +481,9 @@ class TuneDialog extends React.Component<TuneDialogProps, TuneDialogState> {
               setOpt={this.props.setOpt}
               getOpt={this.props.getOpt}/>
             <SpringConstantSlider
+              setOpt={this.props.setOpt}
+              getOpt={this.props.getOpt}/>
+            <HiddenEdgeLabelSwitch
               setOpt={this.props.setOpt}
               getOpt={this.props.getOpt}/>
           </DialogContent>

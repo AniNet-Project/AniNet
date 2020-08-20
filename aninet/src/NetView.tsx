@@ -182,6 +182,9 @@ const DEFAULT_NETWORK_OPTIONS = {
   },
   edges: {
     width: 0.3,
+    color: {
+      inherit: "to"
+    }
   },
   interaction: {
     hideEdgesOnDrag: false,
@@ -223,9 +226,9 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
 
   setHiddenUnselectedSwitch(on: boolean) {
     const oldState = this.state.hiddenUnselectedSwitch
-    if ((oldState == true) && (on == false)) {
+    if ((oldState === true) && (on === false)) {
       this.resetNodes()
-    } else if((oldState == false) && (on == true)) {
+    } else if((oldState === false) && (on === true)) {
       this.hiddenNonSelected()
     }
     this.setState({
