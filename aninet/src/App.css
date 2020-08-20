@@ -22,9 +22,13 @@ body {
 }
 
 .page-title {
-  padding: 40px 0 20px 0;
+  padding: 1px 0 20px 0;
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+}
+
+.page-title .title {
+  padding-top: 25px;
 }
 
 .page-title p h1 {
@@ -40,6 +44,16 @@ body {
   margin-block-start: 0.2em;
 }
 
+.page-title .topbar {
+  margin-top: 0.2em;
+}
+
+.page-title .topbar a {
+  float: right;
+  margin-right: 0.7em;
+  font-size: 1em;
+  font-weight: 300;
+}
 
 h1 {
     font-size: 2em;
@@ -48,7 +62,7 @@ h1 {
 
 .cards {
   display: table;
-  margin-top: 2em;
+  margin-top: 2.01em;
 }
 
 .cards .card {
@@ -72,7 +86,7 @@ h1 {
 .cards .titleImg {
   background-color: #aaaaaa;
   width: 200px;
-  max-height: 250px;
+  height: 250px;
 }
 
 #newPageIcon {
@@ -91,4 +105,25 @@ h1 {
 
 #newCard {
   border: none;
+}
+
+.App .contents {
+  min-height: 32em;
+}
+
+.footer {
+  margin-top: 2.5em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.footer .MuiSvgIcon-root {
+  color: #666;
+  font-size: 1.3em;
+  margin-right: 0.25em;
+  margin-left: 0.25em;
+}
+
+.footer .MuiSvgIcon-root:hover {
+  color: #67bce7;
 }

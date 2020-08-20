@@ -6,6 +6,7 @@ import {
 import './App.css';
 import NetPage from './NetPage'
 import Header from './Header'
+import Footer from './Footer'
 import { NetItem } from './datatypes';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import IconButton from '@material-ui/core/IconButton';
@@ -35,7 +36,7 @@ class NewCard extends React.Component<CardProps, object> {
     return (
         <div className="card" id="newCard">
           <a href={"#/network/"+item.name}>
-            <Tooltip title="新建" placement="top">
+            <Tooltip title="新建空白页" placement="top">
               <IconButton type="submit" id="newPageButton" >
                 <AddCircleOutlineIcon id="newPageIcon"/>
               </IconButton>
@@ -80,6 +81,7 @@ class Home extends React.Component<HomeProps, object> {
             <Cards items={items}/>
           </div>
         </div>
+        <Footer/>
       </div>
     )
   }

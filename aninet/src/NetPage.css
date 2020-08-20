@@ -11,8 +11,8 @@ canvas {
 
 .toolbar {
   height: 1em;
-  margin-top: 1.5em;
-  margin-bottom: 0;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
 }
 
 button:focus {outline:0;}

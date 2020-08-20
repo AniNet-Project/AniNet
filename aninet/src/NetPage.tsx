@@ -4,6 +4,7 @@ import 'react-tabs/style/react-tabs.css'
 
 import './NetPage.css'
 import Header from './Header'
+import Footer from './Footer'
 import { exportToJson } from './utils'
 import NetView from './NetView'
 import {NetItem, ItemInfo, NodeType, EdgeType, CatType} from './datatypes'
@@ -171,27 +172,30 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
           <Header title={item.name}/>
           <div className="container">
           <ToolBar parent={this}/>
-          <Tabs>
-            <TabList>
-              <Tab>网络视图</Tab>
-              <Tab>节点(Nodes)</Tab>
-              <Tab>边(Edges)</Tab>
-              <Tab>节点类别</Tab>
-            </TabList>
-            <TabPanel forceRender={true}>
-              <NetView info={info as ItemInfo} setNodes={this.setNodes.bind(this)} />
-            </TabPanel>
-            <TabPanel forceRender={true}>
-              <NodeGrid nodes={(info as ItemInfo).data.nodes} setNodes={this.setNodes.bind(this)}/>
-            </TabPanel>
-            <TabPanel forceRender={true}>
-              <EdgeGrid edges={(info as ItemInfo).data.edges} setEdges={this.setEdges.bind(this)}/>
-            </TabPanel>
-            <TabPanel forceRender={true}>
-              <CatGrid cats={(info as ItemInfo).categories} setCats={this.setCategories.bind(this)}/>
-            </TabPanel>
-          </Tabs>
+          <div className="tabs">
+            <Tabs>
+              <TabList>
+                <Tab>网络视图</Tab>
+                <Tab>节点(Nodes)</Tab>
+                <Tab>边(Edges)</Tab>
+                <Tab>节点类别</Tab>
+              </TabList>
+              <TabPanel forceRender={true}>
+                <NetView info={info as ItemInfo} setNodes={this.setNodes.bind(this)} />
+              </TabPanel>
+              <TabPanel forceRender={true}>
+                <NodeGrid nodes={(info as ItemInfo).data.nodes} setNodes={this.setNodes.bind(this)}/>
+              </TabPanel>
+              <TabPanel forceRender={true}>
+                <EdgeGrid edges={(info as ItemInfo).data.edges} setEdges={this.setEdges.bind(this)}/>
+              </TabPanel>
+              <TabPanel forceRender={true}>
+                <CatGrid cats={(info as ItemInfo).categories} setCats={this.setCategories.bind(this)}/>
+              </TabPanel>
+            </Tabs>
           </div>
+          </div>
+          <Footer/>
         </div>
       )
     }

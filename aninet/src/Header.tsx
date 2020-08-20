@@ -10,9 +10,24 @@ export default class Header extends React.Component<HeaderProps, object> {
       <header>
         <div className="page-title">
           <div className="container">
-            <a href="/">
-              <p className="sub">AniNet</p>
-            </a>
+            <div className="topbar">
+              <a href="https://github.com/Nanguage/AniNet">
+                GitHub
+              </a>
+              <a href="/">
+                关于
+              </a>
+              <a href="/">
+                帮助
+              </a>
+            </div>
+          </div>
+          <div className="container title">
+            <p className="sub">
+              <a href="/">
+                AniNet
+              </a>
+            </p>
             <h1>{this.props.title}</h1>
           </div>
         </div>
