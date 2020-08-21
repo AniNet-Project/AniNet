@@ -7,8 +7,14 @@ export default class Footer extends React.Component<object, object> {
   render() {
     return (
       <div className="footer">
-        <GitHubIcon/>
-        <EmailIcon id="email-icon"/>
+        <div className="container">
+          <a href="https://github.com/Nanguage/AniNet">
+            <GitHubIcon/>
+          </a>
+          <a href="mailto:nanguage@yahoo.com">
+            <EmailIcon id="email-icon"/>
+          </a>
+        </div>
       </div>
     )
   }
