@@ -17,7 +17,7 @@ export default class Header extends React.Component<HeaderProps, object> {
               <a href="/">
                 关于
               </a>
-              <a href="/">
+              <a href="#/help">
                 帮助
               </a>
             </div>

@@ -11,6 +11,7 @@ import { NetItem } from './datatypes';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
+import DocPage from './DocPage';
 
 type CardProps = {
   item: NetItem
@@ -137,6 +138,8 @@ class App extends React.Component<AppProps, AppState> {
             <Route key={item.name} path={"/network/"+item.name}
                    component={() => <NetPage item={item}/>} />
           ))}
+          <Route key="help" path={"/help"}
+                 component={() => <DocPage title="帮助" sourceUrl={"docs/help.md"}/>} />
         </Router>
       );
     }

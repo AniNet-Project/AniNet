@@ -1,0 +1,24 @@
+.doc {
+    padding: 2em;
+    min-height: 500px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.doc p {
+    font-weight: 300;
+}
+
+.doc h2,h3,h4,h5 {
+    font-weight: 500;
+}
+
+.doc a {
+  text-decoration: none;
+  color: #339aee;
+}
+
+.doc a:hover {
+  text-decoration: underline;
+}
+
