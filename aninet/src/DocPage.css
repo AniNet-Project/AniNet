@@ -22,3 +22,13 @@
   text-decoration: underline;
 }
 
+#for-you {
+  text-align: center;
+  font-size: 50px;
+}
+
+#logo {
+  display: block;
+  width: 400px;
+  margin: auto;
+}

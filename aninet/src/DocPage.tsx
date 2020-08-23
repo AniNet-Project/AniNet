@@ -61,6 +61,7 @@ export default class DocPage extends React.Component<DocPageProps, DocPageState>
               <ReactMarkdown
                 source={content as string}
                 renderers={{ code: CodeBlock }}
+                escapeHtml={false}
               />
             </div>
           </div>

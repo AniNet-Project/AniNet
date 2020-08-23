@@ -1,5 +1,5 @@
 
-## 网络的创建与修改
+## 1. 网络的创建与修改
 网络的创建可以通过两种方式：
 
 ### a. 通过页面内编辑器创建与修改
@@ -16,7 +16,7 @@
 你也可以通过直接编辑或通过程序生成这个 JSON 文件来实现
 对于网络的创建与更改。JSON 的具体格式标准参考下文的数据格式一节。
 
-## 发布到 AniNet
+## 2. 发布到 AniNet
 
 AniNet 目前是一个 Host 在 GitHub Pages 上的静态网站，
 对网站内容本身的修改只能通过 [GitHub 工作流](https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md)
@@ -27,7 +27,7 @@ AniNet 目前是一个 Host 在 GitHub Pages 上的静态网站，
 
 在完成修改后，请通过 PR 方式进行提交，通过后内容会更新到 AniNet。
 
-## 数据格式
+## 3. 数据格式
 AniNet 目前使用 [JSON](https://www.json.org/json-en.html) 作为数据的存储格式，每个作品对应于一个 JSON 文件，
 其中存储了网络中的边、节点、节点的类别等信息。 JSON 的 TypeScript 类型定义如下：
 

@@ -14,7 +14,7 @@ export default class Header extends React.Component<HeaderProps, object> {
               <a href="https://github.com/Nanguage/AniNet">
                 GitHub
               </a>
-              <a href="/">
+              <a href="#/about">
                 关于
               </a>
               <a href="#/help">

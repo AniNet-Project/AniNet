@@ -140,6 +140,9 @@ class App extends React.Component<AppProps, AppState> {
           ))}
           <Route key="help" path={"/help"}
                  component={() => <DocPage title="帮助" sourceUrl={"docs/help.md"}/>} />
+          <Route key="about" path={"/about"}
+                 component={() => <DocPage title="关于" sourceUrl={"docs/about.md"}/>}
+                 />
         </Router>
       );
     }
