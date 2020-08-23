@@ -1,0 +1,407 @@
+{
+  "categories": {
+    "person": {
+      "label": "人物",
+      "color": "#66bbff"
+    },
+    "part": {
+      "label": "部",
+      "color": "#ffbb66"
+    },
+    "stand": {
+      "label": "替身",
+      "color": "#ff66bb"
+    }
+  },
+  "data": {
+    "nodes": [
+            {
+                "id": 1,
+                "label": "幻影之血",
+                "categorie": "part",
+                "info": "JOJO的奇妙冒险的第一部，该部的背景在19世纪后叶的英国，围绕着两名青年的奇妙的青春，以及石鬼面的吸血鬼与波纹战士的战斗展开。该部的核心主题为人类赞歌，这点在后续的部中升华为黄金精神。",
+                "image": "imgs/JoJo/01.jpg",
+                "link": "https://zh.moegirl.org.cn/%E5%B9%BB%E5%BD%B1%E4%B9%8B%E8%A1%80"
+            },
+            {
+                "id": 2,
+                "label": "战斗潮流",
+                "categorie": "part",
+                "info": "JOJO的奇妙冒险的第二部，继承了上一部的“波纹”设定。该部的背景在20世纪初，讲述了乔纳森·乔斯达的孙子乔瑟夫·乔斯达与波纹战士的西撒·A·齐贝林、莉莎莉莎和比石鬼面的吸血鬼更加强大的古代智慧生物柱之男为了抢夺完美的艾哲红石——超级艾哲而决一死战的故事。",
+                "image": "imgs/JoJo/02.jpg",
+                "link": "https://zh.moegirl.org.cn/%E6%88%98%E6%96%97%E6%BD%AE%E6%B5%81"
+            },
+            {
+                "id": 3,
+                "label": "星尘斗士",
+                "categorie": "part",
+                "info": "JOJO的奇妙冒险的第三部，本作出现了名为替身的超能力，这个设定也成为之后JoJo系列的核心。 故事揭幕于1987年的日本，乔纳森·乔斯达与宿敌DIO决战的一百年后，DIO于大西洋下意外被打捞上岸而重生。同时，乔瑟夫的孙子，空条承太郎突然发现自己有一种名替身的能力，起因于DIO的替身能力的觉醒，而同时影响了对替身没有抵抗能力的空条荷莉，令她陷入病危；为了拯救命在旦夕的母亲，承太郎、乔瑟夫、花京院典明与阿布德尔一行出发前往DIO的藏匿地：埃及。",
+                "image": "imgs/JoJo/03.jpg",
+                "link": "https://zh.moegirl.org.cn/%E6%98%9F%E5%B0%98%E6%96%97%E5%A3%AB"
+            },
+            {
+                "id": 4,
+                "label": "不灭钻石",
+                "categorie": "part",
+                "info": "JOJO的奇妙冒险的第四部，首次引入了替身之箭这一概念。 舞台是1999年日本M县S市杜王町。由于自身年事已高，而开始筹画分配财产的乔瑟夫·乔斯达向家族透露自己有一个私生子，而为了处理财产分配的事宜，乔瑟夫的孙子空条承太郎造访杜王町，和他的舅舅——也就是其祖父的私生子东方仗助相遇。",
+                "image": "imgs/JoJo/04.jpg",
+                "link": "https://zh.moegirl.org.cn/%E4%B8%8D%E7%81%AD%E9%92%BB%E7%9F%B3"
+            },
+            {
+                "id": 5,
+                "label": "黄金之风",
+                "categorie": "part",
+                "info": "JOJO的奇妙冒险的第五部2001年，意大利。收到空条承太郎的请求的广濑康一，为了调查少年汐华初流乃而来到了意大利——却发现这位少年改名为乔鲁诺·乔巴拿，并骗取了他的行李。在追踪中他发现这位少年居然是DIO的儿子并且也觉醒了替身能力。",
+                "image": "imgs/JoJo/05.jpg",
+                "link": "https://zh.moegirl.org.cn/%E9%BB%84%E9%87%91%E4%B9%8B%E9%A3%8E"
+            },
+            {
+                "id": 6,
+                "label": "石之海",
+                "categorie": "part",
+                "info": "JOJO的奇妙冒险的第六部，该作为系列中首次、也是目前唯一以女性做为主角的作品。 舞台是2011年的美国佛罗里达州，空条承太郎的女儿空条徐伦因为谋杀罪而被囚入州立监狱“Green Dophin”，她得到从父亲那里取来的护身符、并获得了替身能力。她在监狱里结交了伙伴艾梅斯。徐伦的父亲承太郎前来探监，告知徐伦她的入狱是DIO的部下约翰格里·A所陷害，但他们并不知道这事实上这是监狱内的神父──普奇神父的阴谋，普奇神父用他的替身白蛇偷袭徐伦，承太郎为了救女儿而失去替身和记忆、陷入假死。 ",
+                "image": "imgs/JoJo/06.jpg",
+                "link": "https://zh.moegirl.org.cn/%E7%9F%B3%E4%B9%8B%E6%B5%B7"
+            },
+            {
+                "id": 100,
+                "label": "乔纳森·乔斯达",
+                "categorie": "person",
+                "info": "漫画《JOJO的奇妙冒险》第一部《幻影之血》的主角，JOJO初代主角，百年物语的开端，一切传说的开始。 被认为是历代主角中唯一的绅士。",
+                "image": "imgs/JoJo/dajo.png",
+                "link": "https://zh.moegirl.org.cn/%E4%B9%94%E7%BA%B3%E6%A3%AE%C2%B7%E4%B9%94%E6%96%AF%E8%BE%BE"
+            },
+            {
+               "id": 101,
+                "label": "罗伯特·E·O·史比特瓦根",
+                "categorie": "person",
+                "info": "史比特瓦根在《JOJO的奇妙冒险》第一部出场，影响贯穿前两部，而他创建的史比特瓦根基金会（SPW基金会）更是影响了整个旧世界专业给乔斯达家擦屁股。名字来自于1967年成立的美国摇滚乐团REO Speedwagon。",
+                "image": "imgs/JoJo/spw.png",
+                "link": "https://zh.moegirl.org.cn/%E7%BD%97%E4%BC%AF%E7%89%B9%C2%B7E%C2%B7O%C2%B7%E5%8F%B2%E6%AF%94%E7%89%B9%E7%93%A6%E6%A0%B9"
+            },
+            {
+               "id": 102,
+                "label": "威廉·A·齐贝林",
+                "categorie": "person",
+                "info": "齐贝林是一位功力深厚的波纹斗士，毕生致力于寻找并消灭石鬼面。作为JOJO系列最初的“JOJO的亲密同伴”系角色之一，齐贝林大叔以其搞怪中带严肃的风格在JOJO粉心中留下了深刻的印象。姓氏出自著名乐队齐柏林飞船。",
+                "image": "imgs/JoJo/qibeilin.png",
+                "link": "https://zh.moegirl.org.cn/%E5%A8%81%E5%BB%89%C2%B7A%C2%B7%E9%BD%90%E8%B4%9D%E6%9E%97"
+            },
+            {
+               "id": 103,
+                "label": "艾莉娜·班德鲁顿",
+                "categorie": "person",
+                "info": "第一部幻影之血的女主角，乔纳森·乔斯达的妻子，乔瑟夫·乔斯达的祖母。1880年登场时为一名漂亮的英国乡下女孩，1887年登场时已是一名美丽的护士。1889年和乔纳森·乔斯达结婚，但在蜜月时丧夫。1938年和孙子乔瑟夫·乔斯达移民到美国。",
+                "image": "imgs/JoJo/ailinna.png",
+                "link": "https://zh.moegirl.org.cn/%E8%89%BE%E8%8E%89%E5%A8%9C%C2%B7%E7%8F%AD%E5%BE%B7%E9%B2%81%E9%A1%BF"
+            },
+            {
+               "id": 104,
+                "label": "迪奥·布兰度",
+                "categorie": "person",
+                "info": "荒木飞吕彦所绘漫画《JoJo的奇妙冒险》中最大反派之一，贯穿第一部至第六部。 名字DIO来自于重金属乐队Dio[17]，同时这个名字也是意大利语中“神”的意思",
+                "image": "imgs/JoJo/dio.png",
+                "link": "https://zh.moegirl.org.cn/%E8%BF%AA%E5%A5%A5%C2%B7%E5%B8%83%E5%85%B0%E5%BA%A6"
+            },
+            {
+               "id": 105,
+                "label": "乔治·乔斯达一世",
+                "categorie": "person",
+                "info": "英国贵族，乔纳森的父亲。平常不时会外出去进行贸易。初登场时是黑发，七年后便成了白发。性格善良，不会怀疑人，不过在教导乔纳森时，也会表现出十分严厉的一面。老乔为大乔挡刀的牺牲被公认为【黄金精神】的开始！",
+                "image": "imgs/JoJo/0jo.png",
+                "link": "https://zh.moegirl.org.cn/%E4%B9%94%E6%B2%BB%C2%B7%E4%B9%94%E6%96%AF%E8%BE%BE%E4%B8%80%E4%B8%96"
+            },
+            {
+               "id": 106,
+                "label": "达利欧·布兰度",
+                "categorie": "person",
+                "info": "迪奥·布兰度的生父，但却是个不折不扣的混混，也就是因为他，迪奥·布兰度也变得越来越邪恶。",
+                "image": "imgs/JoJo/dioba.png",
+                "link": "https://zh.moegirl.org.cn/%E8%BE%BE%E5%88%A9%E6%AC%A7%C2%B7%E5%B8%83%E5%85%B0%E5%BA%A6"
+            },
+            {
+               "id": 107,
+                "label": "波克",
+                "categorie": "person",
+                "info": "名字出自1968年成立于加州洛杉矶的乡村摇滚乐团Poco。十分喜爱姐姐，也十分注重家人。",
+                "image": "imgs/JoJo/boke.png",
+                "link": "https://zh.moegirl.org.cn/%E6%B3%A2%E5%85%8B"
+            },
+            {
+               "id": 108,
+                "label": "多配地",
+                "categorie": "person",
+                "info": "多配地是一位高僧，也是威廉等人的师傅。姓名出自音乐人Tom Petty。",
+                "image": "imgs/JoJo/duopeidi.png",
+                "link": "https://zh.moegirl.org.cn/%E5%A4%9A%E9%85%8D%E5%9C%B0"
+            },
+            {
+               "id": 109,
+                "label": "旦亚",
+                "categorie": "person",
+                "info": "跟随多佩地前来协助乔纳森的波纹战士之一。是和齐贝林一同修练波纹的师兄弟，两人交情似互相当深厚。",
+                "image": "imgs/JoJo/danya.png",
+                "link": "https://zh.moegirl.org.cn/%E6%97%A6%E4%BA%9A"
+            },
+            {
+               "id": 110,
+                "label": "史特雷",
+                "categorie": "person",
+                "info": "第一部中是年轻、英俊而强大的波纹战士，足以一人对战大群尸生人。第二部登场时继承多配地成为波纹使者领袖，年事已高，但看上去仍比同年出生的史比特瓦根年轻不少。",
+                "image": "imgs/JoJo/shitelei.png",
+                "link": "https://zh.moegirl.org.cn/%E5%8F%B2%E7%89%B9%E9%9B%B7"
+            },
+            {
+               "id": 111,
+                "label": "温青",
+                "categorie": "person",
+                "info": "第一部幻影之血的小角色，大乔的对手，dio的部下，在大乔结婚度蜜月的时候和迪奥偷袭大乔。",
+                "image": "imgs/JoJo/wenqing.png",
+                "link": "https://zh.moegirl.org.cn/%E6%B8%A9%E9%9D%92"
+            },
+            {
+               "id": 112,
+                "label": "开膛手杰克",
+                "categorie": "person",
+                "info": "著名的杀人犯，是历史资料里存在的人物，其身份与下落都无人知晓。 被迪奥变成尸生人（Zombie）来为他做事。",
+                "image": "imgs/JoJo/kaitangshou.png",
+                "link": "https://zh.moegirl.org.cn/%E5%BC%80%E8%86%9B%E6%89%8B%E6%9D%B0%E5%85%8B(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)"
+            },
+            {
+               "id": 113,
+                "label": "塔卡斯",
+                "categorie": "person",
+                "info": "十六世纪的骑士，是玛丽·斯图亚特的手下，对玛丽忠心耿耿。当时玛丽与伊丽莎白一世争夺王位，后来伊丽莎白趁乱夺得王位并陷害玛丽。玛丽死后，伊丽莎白欺骗了双骑士并将他们杀死。三百年后迪奥在风之骑士镇将两人变成尸生人而复活。",
+                "image": "imgs/JoJo/takasi.png",
+                "link": "https://zh.moegirl.org.cn/%E5%A1%94%E5%8D%A1%E6%96%AF"
+            },
+            {
+               "id": 114,
+                "label": "布拉霍",
+                "categorie": "person",
+                "info": "第一部幻影之血的小角色，大乔的对手，Dio的部下，是玛丽·斯图亚特的手下，对玛丽忠心耿耿。当时玛丽与伊丽莎白一世争夺王位，后来伊丽莎白趁乱夺得王位并陷害玛丽。玛丽死后，伊丽莎白欺骗了双骑士并将他们杀死。三百年后迪奥在风之骑士镇将两人变成尸生人而复活。",
+                "image": "imgs/JoJo/bulahuo.png",
+                "link": "https://zh.moegirl.org.cn/%E5%B8%83%E6%8B%89%E9%9C%8D"
+            }
+    ],
+    "edges": [
+        {
+            "id": 1000,
+            "label": "出场",
+            "direction": true,
+            "from": 100,
+            "to": 1
+        },
+        {
+            "id": 1001,
+            "label": "出场",
+            "direction": true,
+            "from": 101,
+            "to": 1
+        },
+        {
+            "id": 1002,
+            "label": "出场",
+            "direction": true,
+            "from": 102,
+            "to": 1
+        },
+        {
+            "id": 1003,
+            "label": "出场",
+            "direction": true,
+            "from": 103,
+            "to": 1
+        },
+        {
+            "id": 1004,
+            "label": "出场",
+            "direction": true,
+            "from": 104,
+            "to": 1
+        },
+        {
+            "id": 1005,
+            "label": "出场",
+            "direction": true,
+            "from": 105,
+            "to": 1
+        },
+        {
+            "id": 1006,
+            "label": "出场",
+            "direction": true,
+            "from": 106,
+            "to": 1
+        },
+        {
+            "id": 1007,
+            "label": "出场",
+            "direction": true,
+            "from": 107,
+            "to": 1
+        },
+        {
+            "id": 1008,
+            "label": "出场",
+            "direction": true,
+            "from": 108,
+            "to": 1
+        },
+        {
+            "id": 1009,
+            "label": "出场",
+            "direction": true,
+            "from": 109,
+            "to": 1
+        },
+        {
+            "id": 1010,
+            "label": "出场",
+            "direction": true,
+            "from": 110,
+            "to": 1
+        },
+        {
+            "id": 1011,
+            "label": "出场",
+            "direction": true,
+            "from": 111,
+            "to": 1
+        },
+        {
+            "id": 1012,
+            "label": "出场",
+            "direction": true,
+            "from": 112,
+            "to": 1
+        },
+        {
+            "id": 1013,
+            "label": "出场",
+            "direction": true,
+            "from": 113,
+            "to": 1
+        },
+        {
+            "id": 1014,
+            "label": "出场",
+            "direction": true,
+            "from": 114,
+            "to": 1
+        },
+        {
+            "id": 1015,
+            "label": "父亲",
+            "direction": true,
+            "from": 105,
+            "to": 100
+        },
+        {
+            "id": 1016,
+            "label": "挚友",
+            "direction": false,
+            "from": 101,
+            "to": 100
+        },
+        {
+            "id": 1017,
+            "label": "师傅",
+            "direction": true,
+            "from": 102,
+            "to": 100
+        },
+        {
+            "id": 1018,
+            "label": "朋友",
+            "direction": false,
+            "from": 102,
+            "to": 101
+        },
+        {
+            "id": 1019,
+            "label": "夫妇",
+            "direction": false,
+            "from": 100,
+            "to": 103
+        },
+        {
+            "id": 1020,
+            "label": "养父",
+            "direction": true,
+            "from": 105,
+            "to": 104
+        },
+        {
+            "id": 1021,
+            "label": "宿敌",
+            "direction": false,
+            "from": 100,
+            "to": 104
+        },
+        {
+            "id": 1022,
+            "label": "师傅",
+            "direction": true,
+            "from": 108,
+            "to": 102
+        },
+        {
+            "id": 1023,
+            "label": "师傅",
+            "direction": true,
+            "from": 108,
+            "to": 110
+        },
+        {
+            "id": 1024,
+            "label": "师傅",
+            "direction": true,
+            "from": 108,
+            "to": 109
+        },
+        {
+            "id": 1025,
+            "label": "父亲",
+            "direction": true,
+            "from": 106,
+            "to": 104
+        },
+        {
+            "id": 1026,
+            "label": "救命恩人",
+            "direction": true,
+            "from": 106,
+            "to": 105
+        },
+        {
+            "id": 1027,
+            "label": "部下",
+            "direction": true,
+            "from": 111,
+            "to": 104
+        },
+        {
+            "id": 1028,
+            "label": "部下",
+            "direction": true,
+            "from": 112,
+            "to": 104
+        },
+        {
+            "id": 1029,
+            "label": "部下",
+            "direction": true,
+            "from": 113,
+            "to": 104
+        },
+        {
+            "id": 1030,
+            "label": "部下",
+            "direction": true,
+            "from": 114,
+            "to": 104
+        }
+    ]
+  }
+}

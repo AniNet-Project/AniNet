@@ -8,5 +8,10 @@
         "name": "空之境界",
         "title_img": "imgs/KaraNoKyoukai/title.jpg",
         "url": "data/KaraNoKyoukai.json"
+    },
+    {
+        "name": "JoJo的奇妙冒险",
+        "title_img": "imgs/JoJo/title.svg",
+        "url": "data/JoJo.json"
     }
 ]
