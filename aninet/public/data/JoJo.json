@@ -19,6 +19,10 @@
     "item": {
       "label": "道具",
       "color": "#333333"
+    },
+    "organization": {
+      "label": "组织",
+      "color": "#66ffbb"
     }
   },
   "data": {
@@ -350,6 +354,590 @@
         "info": "艾哲红石是自然界里难得罕见的美石，它的结晶体内能够反射数亿次的光线，只要增幅就能从一点放射出来，是自然界的奇异力量。  既然没了这块石头卡兹他们就无法进化，二乔曾向他老妈提议干脆毁掉被丽莎丽莎拒绝，理由是传闻只有靠这块石头能打败柱男。",
         "image": "imgs/JoJo/aizhe.png",
         "link": "https://zh.moegirl.org.cn/%E8%89%BE%E5%93%B2%E7%BA%A2%E7%9F%B3"
+      },
+      {
+        "id": 13,
+        "label": "SPW财团",
+        "categorie": "organization",
+        "info": "第一部结束的数十年后、SPW意外的在美洲大陆发现了大片的油田，使其成为了美国乃至世界级的石油王。靠石油致富的SPW建立了一个巨大的财团，即现在的SPW财团。",
+        "image": "imgs/JoJo/SPW-caituan.png",
+        "link": "https://zh.moegirl.org.cn/%E5%8F%B2%E6%AF%94%E7%89%B9%E7%93%A6%E6%A0%B9%E8%B4%A2%E5%9B%A2"
+      },
+      {
+        "id": 300,
+        "label": "空条承太郎",
+        "categorie": "person",
+        "info": "空条承太郎（Kujo Jotaro），是日本漫画《JOJO的奇妙冒险》及其衍生作品中的角色，也是贯穿系列三、四、六部的重要人物。其替身为“白金之星”。",
+        "image": "imgs/JoJo/jotairo.png",
+        "link": "https://zh.moegirl.org.cn/%E7%A9%BA%E6%9D%A1%E6%89%BF%E5%A4%AA%E9%83%8E"
+      },
+      {
+        "id": 301,
+        "label": "花京院典明",
+        "categorie": "person",
+        "info": "花京院典明，是日本漫画《JOJO的奇妙冒险》第三部《星尘斗士》中的主要角色之一。曾被迫成为DIO的手下，因操控他的肉芽被承太郎清除而恢复自我，为报答承太郎与克服对邪恶的恐惧而参与前往埃及的旅程。",
+        "image": "imgs/JoJo/huajingyuan.png",
+        "link": "https://zh.moegirl.org.cn/%E8%8A%B1%E4%BA%AC%E9%99%A2%E5%85%B8%E6%98%8E"
+      },
+      {
+        "id": 302,
+        "label": "穆罕默德·阿布德尔",
+        "categorie": "person",
+        "info": "穆罕默德·阿布德尔，漫画《JoJo奇妙冒险》第三部主要人物，在第三部中主要提供替身的资料情报和给替身取名以及算命。",
+        "image": "imgs/JoJo/abudeer.png",
+        "link": "https://zh.moegirl.org.cn/%E7%A9%86%E7%BD%95%E9%BB%98%E5%BE%B7%C2%B7%E9%98%BF%E5%B8%83%E5%BE%B7%E5%B0%94"
+      },
+      {
+        "id": 303,
+        "label": "简·皮耶尔·波鲁纳雷夫",
+        "categorie": "person",
+        "info": "简·皮耶尔·波尔纳雷夫，是漫画《JOJO奇妙冒险》系列中的人物，出现在第三部、第五部。 为寻找杀死妹妹的凶手（倒吊男，J·凯尔）而四处旅行，被迪奥·布兰度用肉芽控制后去香港刺杀承太郎一行。后在与阿布德尔的替身对决落败被承太郎解除肉芽，遂加入乔瑟夫·乔斯达、空条承太郎、穆罕默德·阿布德尔、花京院典明一行。",
+        "image": "imgs/JoJo/bolunaleifu.png",
+        "link": "https://zh.moegirl.org.cn/%E7%AE%80%C2%B7%E7%9A%AE%E8%80%B6%E5%B0%94%C2%B7%E6%B3%A2%E9%B2%81%E7%BA%B3%E9%9B%B7%E5%A4%AB"
+      },
+      {
+        "id": 304,
+        "label": "伊奇",
+        "categorie": "person",
+        "info": "伊奇是一只流浪狗，起初完全无意与乔斯达一行合作，但后期为击败DIO作出了重大而惨烈的贡献。",
+        "image": "imgs/JoJo/yiqi.png",
+        "link": "https://zh.moegirl.org.cn/%E4%BC%8A%E5%A5%87"
+      },
+      {
+        "id": 305,
+        "label": "荷莉·乔斯达",
+        "categorie": "person",
+        "info": "空条承太郎的母亲，是乔瑟夫·乔斯达(英国人)和丝吉Q(意大利人)的女儿，由于乔瑟夫夫妇婚后居住在美国，因此荷莉是美籍英意混血儿。",
+        "image": "imgs/JoJo/heli.png",
+        "link": "https://zh.moegirl.org.cn/%E8%8D%B7%E8%8E%89%C2%B7%E4%B9%94%E6%96%AF%E8%BE%BE"
+      },
+      {
+        "id": 306,
+        "label": "空条贞夫",
+        "categorie": "person",
+        "info": "爵士乐演奏家，空条承太郎的父亲，从未露过面的只在漫画开头简介中提及的超级神秘乔家人。",
+        "image": "",
+        "link": "https://zh.moegirl.org.cn/%E7%A9%BA%E6%9D%A1%E8%B4%9E%E5%A4%AB"
+      },
+      {
+        "id": 307,
+        "label": "白金之星",
+        "categorie": "stand",
+        "info": "白金之星是JOJO的奇妙冒险第三部主角空条承太郎的替身。其为典型的近距离力量型替身，而且比起其他近距离力量型攻击更加精准有力。",
+        "image": "imgs/JoJo/baijinzhixing.png",
+        "link": "https://zh.moegirl.org.cn/%E7%99%BD%E9%87%91%E4%B9%8B%E6%98%9F"
+      },
+      {
+        "id": 308,
+        "label": "隐者之紫",
+        "categorie": "stand",
+        "info": "外观类似荆棘，透过相机、电视等物品进行“念照”拍摄（偷拍过DIO），有透视远方的能力，可用于沙子上将其变成地图，能用来操控电器。",
+        "image": "imgs/JoJo/yinzhezhizi.png",
+        "link": "https://zh.moegirl.org.cn/%E4%B9%94%E7%91%9F%E5%A4%AB%C2%B7%E4%B9%94%E6%96%AF%E8%BE%BE#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 309,
+        "label": "绿色法皇",
+        "categorie": "stand",
+        "info": "绿色法皇具有人形，但是自身可以延展成细条状，还可伸出触手。其破坏力不强，主要的攻击方式为绿宝石水花。但是替身其射程极大，可以覆盖很远的距离，进行探测等一些作用。",
+        "image": "imgs/JoJo/fahuangzhilv.png",
+        "link": "https://zh.moegirl.org.cn/%E8%8A%B1%E4%BA%AC%E9%99%A2%E5%85%B8%E6%98%8E#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 310,
+        "label": "魔术师之红",
+        "categorie": "stand",
+        "info": "魔术师之红是能操控火焰的替身，其本身的破坏力和精密行动的能力较为一般，但是能力的攻击范围很广。操控火焰看上去是很强大的，就连荷尔·荷斯也认为，阿布德尔的替身无论是他自己还是倒吊男都难以对付。但是由于种种原因，阿布德尔的替身没有发挥出太多的实力。",
+        "image": "imgs/JoJo/moshushizhihong.png",
+        "link": "https://zh.moegirl.org.cn/%E7%A9%86%E7%BD%95%E9%BB%98%E5%BE%B7%C2%B7%E9%98%BF%E5%B8%83%E5%BE%B7%E5%B0%94#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 311,
+        "label": "银色战车",
+        "categorie": "stand",
+        "info": "替身能力：具有优异的速度和精确度，着甲状态下甚至具备了超越同为A级速度的白金之星的速度。",
+        "image": "imgs/JoJo/yinsezhanche.png",
+        "link": "https://zh.moegirl.org.cn/%E7%AE%80%C2%B7%E7%9A%AE%E8%80%B6%E5%B0%94%C2%B7%E6%B3%A2%E9%B2%81%E7%BA%B3%E9%9B%B7%E5%A4%AB#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 312,
+        "label": "愚者",
+        "categorie": "stand",
+        "info": "愚者是JOJO的奇妙冒险中的主要角色伊奇的替身。可自由控制沙子变形与攻击，属于很强的替身。",
+        "image": "imgs/JoJo/yuzhe.png",
+        "link": "https://zh.moegirl.org.cn/%E6%84%9A%E8%80%85(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)"
+      },
+      {
+        "id": 313,
+        "label": "世界",
+        "categorie": "stand",
+        "info": "世界是DIO的替身，为近距离力量型替身，凭借着高强度的力量速度和时间停止在对战上有很大的优势。",
+        "image": "imgs/JoJo/shijie.png",
+        "link": "https://zh.moegirl.org.cn/%E4%B8%96%E7%95%8C(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)"
+      },
+      {
+        "id": 314,
+        "label": "格雷·弗莱",
+        "categorie": "person",
+        "info": "迪奥的手下，在航班上伪装成乘客袭击主角团。曾用替身制造过多起意外事故来夺取旅行者们的财物。",
+        "image": "imgs/JoJo/geleifulai.png",
+        "link": "https://zh.moegirl.org.cn/%E6%A0%BC%E9%9B%B7%C2%B7%E5%BC%97%E8%8E%B1"
+      },
+      {
+        "id": 315,
+        "label": "灰塔",
+        "categorie": "stand",
+        "info": "代表第16张塔罗牌“塔”。甲虫状替身，移动速度很快，擅长割取敌人的舌头。",
+        "image": "imgs/JoJo/huita.png",
+        "link": "https://zh.moegirl.org.cn/%E6%A0%BC%E9%9B%B7%C2%B7%E5%BC%97%E8%8E%B1#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 316,
+        "label": "假提尼尔船长",
+        "categorie": "person",
+        "info": "在主角团乘坐的轮船上以船长身份出现，实际上是迪奥的手下，杀死了真正的船长并假冒成船长，本名不详。",
+        "image": "imgs/JoJo/jiatinier.png",
+        "link": "https://zh.moegirl.org.cn/%E5%81%87%E6%8F%90%E5%B0%BC%E5%B0%94%E8%88%B9%E9%95%BF"
+      },
+      {
+        "id": 317,
+        "label": "暗蓝之月",
+        "categorie": "stand",
+        "info": "替身能力 代表第18张塔罗牌“月亮”。鱼人外型，擅长水下作战，背鳍和鳞片非常锋利，能控制藤壶吸收敌人能量。",
+        "image": "imgs/JoJo/anlanzhiyue.png",
+        "link": "https://zh.moegirl.org.cn/%E5%81%87%E6%8F%90%E5%B0%BC%E5%B0%94%E8%88%B9%E9%95%BF#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 318,
+        "label": "FOREVER",
+        "categorie": "person",
+        "info": "主角团登上第二艘船上后发现的猩猩，拥有很高的智商而且非常好色。  JOJO的第一个拥有替身的动物。",
+        "image": "imgs/JoJo/forever.png",
+        "link": "https://zh.moegirl.org.cn/FOREVER"
+      },
+      {
+        "id": 319,
+        "label": "力",
+        "categorie": "stand",
+        "info": "是附在轮船上的替身，所以普通人也能看见。本体可以随意控制轮船上的任何部位。",
+        "image": "imgs/JoJo/li.png",
+        "link": "https://zh.moegirl.org.cn/FOREVER#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 320,
+        "label": "诅咒的迪波",
+        "categorie": "person",
+        "info": "印第安的巫师，自称杀死过各国的政要。  自称见到过他的人都被他杀死了。",
+        "image": "imgs/JoJo/zuzhoudedibo.png",
+        "link": "https://zh.moegirl.org.cn/%E8%AF%85%E5%92%92%E7%9A%84%E8%BF%AA%E6%B3%A2"
+      },
+      {
+        "id": 321,
+        "label": "黑檀木恶魔",
+        "categorie": "stand",
+        "info": "代表第15张塔罗牌“恶魔”。替身能附身在傀儡身上，借由本体的恨意控制傀儡行动。",
+        "image": "imgs/JoJo/heitanmuemo.png",
+        "link": "https://zh.moegirl.org.cn/%E8%AF%85%E5%92%92%E7%9A%84%E8%BF%AA%E6%B3%A2#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 322,
+        "label": "拉巴索",
+        "categorie": "person",
+        "info": "在新加坡伪装成花京院袭击承太郎。",
+        "image": "imgs/JoJo/labasuo.png",
+        "link": "https://zh.moegirl.org.cn/%E6%8B%89%E5%B7%B4%E7%B4%A2"
+      },
+      {
+        "id": 323,
+        "label": "黄色节制",
+        "categorie": "stand",
+        "info": "代表第14张塔罗牌“节制”。软泥状，能分散能量保护本体。本体可用来改变容貌，还可以溶解有机质。由于是依存现有生物的血肉，所以一般人也能看的到。",
+        "image": "imgs/JoJo/huangsejiezhi.png",
+        "link": "https://zh.moegirl.org.cn/%E6%8B%89%E5%B7%B4%E7%B4%A2#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 324,
+        "label": "J·盖尔",
+        "categorie": "person",
+        "info": "数年前性侵并杀害了许多女性，其中就包括波鲁纳雷夫的妹妹，是导致波鲁纳雷夫以复仇为由加入主角团，并参与对抗迪奥的主要原因。",
+        "image": "imgs/JoJo/jkaier.png",
+        "link": "https://zh.moegirl.org.cn/J%C2%B7%E7%9B%96%E5%B0%94"
+      },
+      {
+        "id": 325,
+        "label": "倒吊男",
+        "categorie": "stand",
+        "info": "代表塔罗牌大阿卡纳的12号牌“倒吊男”。人形，实体存在于镜子中，可以在不同的反射面之间高速转移，替身能在镜中对敌人进行攻击，镜中造成的伤害会反馈到受害者的实体身上。",
+        "image": "imgs/JoJo/daodiaonan.png",
+        "link": "https://zh.moegirl.org.cn/J%C2%B7%E7%9B%96%E5%B0%94#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 326,
+        "label": "荷尔·荷斯",
+        "categorie": "person",
+        "info": "荷尔·荷斯是《JOJO的奇妙冒险》第三部出场的重要反派角色，也是第三部除DIO之外出场次数最多的反派角色。",
+        "image": "imgs/JoJo/heerhesi.png",
+        "link": "https://zh.moegirl.org.cn/%E8%8D%B7%E5%B0%94%C2%B7%E8%8D%B7%E6%96%AF"
+      },
+      {
+        "id": 327,
+        "label": "皇帝",
+        "categorie": "stand",
+        "info": "手枪形状的替身，可以随时凭空从手中出现。射出的子弹也是替身的一部分，因此荷尔·荷斯可以随意控制弹道，也不需要手动重新装弹；但是从荷尔·荷斯和波因哥篇托托神预言中提到的“荷尔·荷斯把所有的子弹射进了管子里”看，同时射出的子弹数还是有限制的。",
+        "image": "imgs/JoJo/huangdi.png",
+        "link": "https://zh.moegirl.org.cn/%E8%8D%B7%E5%B0%94%C2%B7%E8%8D%B7%E6%96%AF#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 328,
+        "label": "妮娜",
+        "categorie": "person",
+        "info": "荷尔·荷斯在印度的情人，通过假装保护被主角团追逐的荷尔·荷斯而接近主角团。",
+        "image": "imgs/JoJo/nina.png",
+        "link": "https://zh.moegirl.org.cn/%E5%A6%AE%E5%A8%9C(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)"
+      },
+      {
+        "id": 329,
+        "label": "女帝",
+        "categorie": "stand",
+        "info": "代表第3张塔罗牌“女帝”。通过本体血液寄生在别人身上，会逐渐成长并获得力量与意识。  并且可以从一张脸开始渐渐地成长为一个人体。",
+        "image": "imgs/JoJo/nvdi.png",
+        "link": "https://zh.moegirl.org.cn/%E5%A6%AE%E5%A8%9C(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 330,
+        "label": "ZZ",
+        "categorie": "person",
+        "info": "迪奥的部下，按照迪奥的指示，去刺杀空条承太郎等人。",
+        "image": "imgs/JoJo/ZZ.png",
+        "link": "https://zh.moegirl.org.cn/ZZ"
+      },
+      {
+        "id": 331,
+        "label": "命运车轮",
+        "categorie": "stand",
+        "info": "代表第10张塔罗牌“命运之轮”。附在汽车上的替身，因此普通人也能看见。能使车体变形以适应不同地貌，以汽油弹和电力系统攻击敌人。",
+        "image": "imgs/JoJo/mingyunchelun.png",
+        "link": "https://zh.moegirl.org.cn/ZZ#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 332,
+        "label": "恩雅婆婆",
+        "categorie": "person",
+        "info": "发现DIO的替身能力并教导其使用方法的人。崇拜着DIO，曾发誓绝对效忠对方。",
+        "image": "imgs/JoJo/enyapopo.png",
+        "link": "https://zh.moegirl.org.cn/%E6%81%A9%E9%9B%85%E5%A9%86%E5%A9%86"
+      },
+      {
+        "id": 333,
+        "label": "正义",
+        "categorie": "stand",
+        "info": "头戴王冠的骷髅容貌的雾状替身。在原作与OVA中是普通的双手，但是在TV中却变更为与本体一样的两只右手。让敌人产生幻觉，身上若有伤口直接碰触会造成严重的洞状伤口，并控制尸体。",
+        "image": "imgs/JoJo/zhengyi.png",
+        "link": "https://zh.moegirl.org.cn/%E6%81%A9%E9%9B%85%E5%A9%86%E5%A9%86#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 334,
+        "label": "钢铁阿丹",
+        "categorie": "person",
+        "info": "伪装成土耳其烤肉(Kebab)店老板的刺客。名字的由来是美国爵士摇滚乐团Steely Dan.",
+        "image": "imgs/JoJo/gangtieadan.png",
+        "link": "https://zh.moegirl.org.cn/%E9%92%A2%E9%93%81%E9%98%BF%E4%B8%B9"
+      },
+      {
+        "id": 335,
+        "label": "恋人",
+        "categorie": "stand",
+        "info": "体型极小，能轻易潜入人体内，会在人的脑部控制人体神经，如果本体受到伤害，被寄生者也会感受到加倍的疼痛。恋人还会用人体细胞制作假替身来迷惑敌人。",
+        "image": "imgs/JoJo/lianren.png",
+        "link": "https://zh.moegirl.org.cn/%E9%92%A2%E9%93%81%E9%98%BF%E4%B8%B9#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 336,
+        "label": "阿拉伯胖子",
+        "categorie": "person",
+        "info": "在沙特阿拉伯地区的沙漠袭击主角团，但是出场很短，所以只有一部分人记住了他的替身，而忘记了这个人。",
+        "image": "imgs/JoJo/alabopangzi.png",
+        "link": "https://zh.moegirl.org.cn/%E9%98%BF%E6%8B%89%E4%BC%AF%E8%83%96%E5%AD%90"
+      },
+      {
+        "id": 337,
+        "label": "太阳",
+        "categorie": "stand",
+        "info": "代表第19张塔罗牌“太阳”。能像真的太阳一样放出大量光和热，发射镭射光线攻击敌人。",
+        "image": "imgs/JoJo/taiyang.png",
+        "link": "https://zh.moegirl.org.cn/%E9%98%BF%E6%8B%89%E4%BC%AF%E8%83%96%E5%AD%90#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 338,
+        "label": "Mannish Boy",
+        "categorie": "person",
+        "info": "搭乘主角团飞机的婴儿，长着吸血鬼一样的獠牙，能用哭声操控他人，虽然只有11个月大但是却有成年人一般的智商。",
+        "image": "imgs/JoJo/mannishboy.png",
+        "link": "https://zh.moegirl.org.cn/Mannish_Boy"
+      },
+      {
+        "id": 339,
+        "label": "死神13",
+        "categorie": "stand",
+        "info": "代表第13张塔罗牌“死神”。只能出现在敌人的梦中，能控制敌人的梦境，在梦境中可以做任何事情，在梦里敌人无法使用替身。如果在梦中攻击敌人，敌人受到的伤害会反馈到实体上，敌人醒来后会忘记梦里发生的事。",
+        "image": "imgs/JoJo/sishen13.png",
+        "link": "https://zh.moegirl.org.cn/Mannish_Boy#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 340,
+        "label": "卡梅欧",
+        "categorie": "person",
+        "info": "在岛上的地底埋伏、利用波鲁纳雷夫内心的弱点来袭击他的男子。",
+        "image": "imgs/JoJo/kameiou.png",
+        "link": "https://zh.moegirl.org.cn/%E5%8D%A1%E6%A2%85%E6%AC%A7"
+      },
+      {
+        "id": 341,
+        "label": "审判",
+        "categorie": "stand",
+        "info": "代表第20张塔罗牌“审判”。能将人的愿望投射到泥土上，将泥土变成人想要的东西。",
+        "image": "imgs/JoJo/shenpan.png",
+        "link": "https://zh.moegirl.org.cn/%E5%8D%A1%E6%A2%85%E6%AC%A7#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 342,
+        "label": "蜜朵拉",
+        "categorie": "person",
+        "info": "dio的部下，对dio极其忠诚，甚至不惜放弃生命。",
+        "image": "imgs/JoJo/miduola.png",
+        "link": "https://zh.moegirl.org.cn/%E8%9C%9C%E6%9C%B5%E6%8B%89"
+      },
+      {
+        "id": 343,
+        "label": "女教皇",
+        "categorie": "stand",
+        "info": "代表第2张塔罗牌“女教皇”。能变成或同化金属、矿物、玻璃、塑胶、树脂制品。",
+        "image": "imgs/JoJo/nvjiaohuang.png",
+        "link": "https://zh.moegirl.org.cn/%E8%9C%9C%E6%9C%B5%E6%8B%89#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 344,
+        "label": "埃及九荣神",
+        "categorie": "organization",
+        "info": "星尘斗士中DIO麾下的精英小队，用于阻挡星尘斗士一行前往埃及开罗。如同组织名称一样，成员共有9名，每个成员都是替身使者，并拥有一个埃及神名作为替身名。",
+        "image": "imgs/JoJo/jiurongshen.png",
+        "link": "https://zh.moegirl.org.cn/%E5%9F%83%E5%8F%8A%E4%B9%9D%E8%8D%A3%E7%A5%9E"
+      },
+      {
+        "id": 345,
+        "label": "恩多尔",
+        "categorie": "person",
+        "info": "之前虽然是个盲人但是听觉非常敏锐，能通过地面传来的声音判断敌人位置。非常崇敬DIO，后来被伊奇发现了位置并被承太郎击败，为了不泄露DIO的秘密而自尽。",
+        "image": "imgs/JoJo/enduoer.png",
+        "link": "https://zh.moegirl.org.cn/%E6%81%A9%E5%A4%9A%E5%B0%94"
+      },
+      {
+        "id": 346,
+        "label": "盖布神",
+        "categorie": "stand",
+        "info": "代表“埃及九荣神”中的大地之神。液体状，能变成各种形态攻击敌人。",
+        "image": "imgs/JoJo/gaibushen.png",
+        "link": "http://zh.moegirl.org.cn/%E6%81%A9%E5%A4%9A%E5%B0%94#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 347,
+        "label": "星尘十字军",
+        "categorie": "organization",
+        "info": "也指第三部的主角团乔斯达一行。一共6人5人1犬，全员是替身使者。同时在历代主角团中，星尘十字军的替身也是唯一没有靠外来因素获得的。",
+        "image": "imgs/JoJo/dadiaotuan.png",
+        "link": "https://zh.moegirl.org.cn/%E6%98%9F%E5%B0%98%E5%8D%81%E5%AD%97%E5%86%9B"
+      },
+      {
+        "id": 348,
+        "label": "欧因哥",
+        "categorie": "person",
+        "info": "和弟弟波因哥一起行动，在亚斯文袭击主角团。  沉不住气，但是很为弟弟着想。",
+        "image": "imgs/JoJo/ouyinge.png",
+        "link": "https://zh.moegirl.org.cn/%E6%AC%A7%E5%9B%A0%E5%93%A5"
+      },
+      {
+        "id": 349,
+        "label": "克努姆神",
+        "categorie": "stand",
+        "info": "代表“埃及九荣神”中的“创造之神”。本体能变换容貌，无替身像。",
+        "image": "imgs/JoJo/kenumushen.png",
+        "link": "https://zh.moegirl.org.cn/%E6%AC%A7%E5%9B%A0%E5%93%A5#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 350,
+        "label": "波因哥",
+        "categorie": "person",
+        "info": "在亚斯文袭击主角团。  内向怕生，不善于和哥哥以外的人打交道。屡次暗杀主角团失败，后来和欧因哥一起被人报复而揍到住院。",
+        "image": "imgs/JoJo/boyinge.png",
+        "link": "https://zh.moegirl.org.cn/%E6%B3%A2%E5%9B%A0%E5%93%A5"
+      },
+      {
+        "id": 351,
+        "label": "托托神",
+        "categorie": "stand",
+        "info": "代表“埃及九荣神”中的“书本之神”。漫画书外形，里面的漫画能预知即将发生的命运，预言绝对会实现。",
+        "image": "imgs/JoJo/tuotuoshen.png",
+        "link": "https://zh.moegirl.org.cn/%E6%B3%A2%E5%9B%A0%E5%93%A5#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 352,
+        "label": "阿努比斯",
+        "categorie": "person",
+        "info": "一位刀匠死了，但是他的灵魂残存在了一把刀上。  随后当这把刀被迪奥布兰度发现，并释放它后，这把拥有灵魂的刀于是臣服了迪奥布兰度。",
+        "image": "imgs/JoJo/anubisi.png",
+        "link": "https://zh.moegirl.org.cn/%E9%98%BF%E5%8A%AA%E6%AF%94%E6%96%AF(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)"
+      },
+      {
+        "id": 353,
+        "label": "阿努比斯神",
+        "categorie": "stand",
+        "info": "五百年前的刀匠恰拉邦·萨拉伊，本体死后替身附在了刀上。  随后一直陈列在在博物馆的仓库里，直到被迪奥解放。",
+        "image": "imgs/JoJo/anubisishen.png",
+        "link": "https://zh.moegirl.org.cn/%E9%98%BF%E5%8A%AA%E6%AF%94%E6%96%AF(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 354,
+        "label": "玛莱雅",
+        "categorie": "person",
+        "info": "DIO派去阻止埃及打屌团的替身使者之一，能力是使人吸引金属类物品。",
+        "image": "imgs/JoJo/malaiya.png",
+        "link": "https://zh.moegirl.org.cn/%E7%8E%9B%E8%8E%B1%E9%9B%85"
+      },
+      {
+        "id": 355,
+        "label": "巴斯提女神",
+        "categorie": "stand",
+        "info": "操纵磁力的替身，将磁力灌在目标身上，使目标逐渐吸引金属类物品。",
+        "image": "imgs/JoJo/batisinvshen.png",
+        "link": "https://zh.moegirl.org.cn/%E7%8E%9B%E8%8E%B1%E9%9B%85#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 356,
+        "label": "阿雷西",
+        "categorie": "person",
+        "info": "个性欺软怕硬，口头禅是“真了不起啊”。",
+        "image": "imgs/JoJo/aleixi.png",
+        "link": "https://zh.moegirl.org.cn/%E9%98%BF%E9%9B%B7%E8%A5%BF"
+      },
+      {
+        "id": 357,
+        "label": "赛特神",
+        "categorie": "stand",
+        "info": "无实体类型的替身，与本体的影子同化并能够在一定程度上曲折延伸，通过接触他人的影子发动能力 —— 使生物的生理年龄暂时倒退。",
+        "image": "imgs/JoJo/saiteshen.png",
+        "link": "https://zh.moegirl.org.cn/%E9%98%BF%E9%9B%B7%E8%A5%BF#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 358,
+        "label": "丹尼尔·J·达比",
+        "categorie": "person",
+        "info": "达比是一名狂热的赌徒，他曾经依靠赌博和替身能力赢得了很多人的财产和灵魂，并把这些灵魂做成筹码收集起来。",
+        "image": "imgs/JoJo/dabi.png",
+        "link": "https://zh.moegirl.org.cn/%E4%B8%B9%E5%B0%BC%E5%B0%94%C2%B7J%C2%B7%E8%BE%BE%E6%AF%94"
+      },
+      {
+        "id": 359,
+        "label": "奥西里斯神",
+        "categorie": "stand",
+        "info": "赌徒达比会与对手进行赌博，对方需要说出“我拿我的灵魂来赌”或者立下字据等凭据，之后如果对方输了，达比的奥西里斯神就会直接抽出他的灵魂，做成筹码。即使是不说出来，在心中认输也是一样。奥西里斯神还能将灵魂筹码分成数份进行赌博。",
+        "image": "imgs/JoJo/aoxilisishen.png",
+        "link": "https://zh.moegirl.org.cn/%E4%B8%B9%E5%B0%BC%E5%B0%94%C2%B7J%C2%B7%E8%BE%BE%E6%AF%94#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 360,
+        "label": "佩特夏",
+        "categorie": "person",
+        "info": "迪奥饲养的一只隼，看守着迪奥的城堡，会杀死任何接近城堡的生物。",
+        "image": "imgs/JoJo/peitexia.png",
+        "link": "https://zh.moegirl.org.cn/%E4%BD%A9%E7%89%B9%E5%A4%8F"
+      },
+      {
+        "id": 361,
+        "label": "霍尔斯神",
+        "categorie": "stand",
+        "info": "代表“埃及九荣神”中的“天空之神”。能随意制造并控制冰。",
+        "image": "imgs/JoJo/huoersishen.png",
+        "link": "https://zh.moegirl.org.cn/%E4%BD%A9%E7%89%B9%E5%A4%8F#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 362,
+        "label": "泰伦斯·T·达比",
+        "categorie": "person",
+        "info": "玩家达比与作为兄长的赌徒达比有着相似的语癖以及同样强烈的胜负欲，在自我介绍时也总是不断地提起哥哥并与其作比较以突显自己的能力比哥哥更强。",
+        "image": "imgs/JoJo/xiaodabi.png",
+        "link": "https://zh.moegirl.org.cn/%E6%B3%B0%E4%BC%A6%E6%96%AF%C2%B7T%C2%B7%E8%BE%BE%E6%AF%94"
+      },
+      {
+        "id": 363,
+        "label": "阿图姆神",
+        "categorie": "stand",
+        "info": "玩家达比会与对手进行游戏比赛，如果对方被击败或者在心中认输，阿图姆神就会抽走对方的灵魂做成人偶。",
+        "image": "imgs/JoJo/atumushen.png",
+        "link": "https://zh.moegirl.org.cn/%E6%B3%B0%E4%BC%A6%E6%96%AF%C2%B7T%C2%B7%E8%BE%BE%E6%AF%94#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 364,
+        "label": "瓦尼拉·艾斯",
+        "categorie": "person",
+        "info": "DIO的忠实手下，曾杀死穆罕默德·阿布德尔、伊奇。 因为忠于迪奥把自己的头砍下来，打算把血捐给他。",
+        "image": "imgs/JoJo/vice.png",
+        "link": "https://zh.moegirl.org.cn/%E7%93%A6%E5%B0%BC%E6%8B%89%C2%B7%E8%89%BE%E6%96%AF"
+      },
+      {
+        "id": 365,
+        "label": "亚空瘴气",
+        "categorie": "stand",
+        "info": "人形替身，可以通过把身体吞进嘴里变成球形。吞噬周围的物体，将所有的一切都放入到一个不可知的地方去，并能利用这一特性来隐藏自己的身形，使自己完全藏入替身形成的虚空之中。",
+        "image": "imgs/JoJo/yakongchangqi.png",
+        "link": "https://zh.moegirl.org.cn/%E7%93%A6%E5%B0%BC%E6%8B%89%C2%B7%E8%89%BE%E6%96%AF#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 366,
+        "label": "肯尼·G",
+        "categorie": "person",
+        "info": "和小达比、瓦尼拉·艾斯一起作为Dio最后的防线出场，任务是阻止承太郎等人。躲藏在柱子里，利用替身在屌魔馆内制造幻觉，将整个屌魔馆变成了一座迷宫，小达比的游戏场地也是他制造的。最后本体被阿布德尔的替身能力探查到，被伊奇打倒。",
+        "image": "imgs/JoJo/kenniG.png",
+        "link": "https://zh.moegirl.org.cn/%E8%82%AF%E5%B0%BC%C2%B7G"
+      },
+      {
+        "id": 367,
+        "label": "高音萨克斯",
+        "categorie": "stand",
+        "info": "能制造幻觉的替身，无实体，迪奥藏身处的迷宫、小达比的游戏场地都是由此替身制造出来的。",
+        "image": "imgs/JoJo/gaoyinsakesi.png",
+        "link": "https://zh.moegirl.org.cn/%E8%82%AF%E5%B0%BC%C2%B7G#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 368,
+        "label": "大笨蛋",
+        "categorie": "person",
+        "info": "迪奥手下的一个普通吸血鬼，不是替身使者，由于实力太弱、智商太低而被其他迪奥的手下戏称为“大笨蛋”",
+        "image": "imgs/JoJo/dabendan.png",
+        "link": "https://zh.moegirl.org.cn/%E5%A4%A7%E7%AC%A8%E8%9B%8B"
+      },
+      {
+        "id": 369,
+        "label": "雪莉·波鲁纳雷夫",
+        "categorie": "person",
+        "info": "波鲁纳雷夫的妹妹。  剧情开始的三年前被J·盖尔杀害，促使波鲁纳雷夫为亲自向凶手复仇，以此为由参加了和空条承太郎等人的讨伐迪奥·布兰度的路程。",
+        "image": "imgs/JoJo/xueli.png",
+        "link": "https://zh.moegirl.org.cn/%E9%9B%AA%E8%8E%89%C2%B7%E6%B3%A2%E9%B2%81%E7%BA%B3%E9%9B%B7%E5%A4%AB"
+      },
+      {
+        "id": 370,
+        "label": "威尔森·菲利浦斯",
+        "categorie": "person",
+        "info": "开车在各个国家旅行的美国议员。  自称在学生时代是一名优秀出众的人。  纳税是别人的50倍。",
+        "image": "imgs/JoJo/weiersen.png",
+        "link": "https://zh.moegirl.org.cn/%E5%A8%81%E5%B0%94%E6%A3%AE%C2%B7%E8%8F%B2%E5%88%A9%E6%B5%A6%E6%96%AF"
+      },
+      {
+        "id": 371,
+        "label": "安",
+        "categorie": "person",
+        "info": "星尘十字军在通往新加坡的船上认识的路人少女。  后来，她跟随着空条承太郎等人经历了很多的战斗。",
+        "image": "imgs/JoJo/an.png",
+        "link": "https://zh.moegirl.org.cn/%E5%AE%89(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)"
       }
     ],
     "edges": [
@@ -1081,6 +1669,1148 @@
         "link": "",
         "from": "202",
         "to": "12"
+      },
+      {
+        "id": 2290,
+        "label": "创立",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "13",
+        "from": "101"
+      },
+      {
+        "id": 3000,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "307",
+        "to": "300"
+      },
+      {
+        "id": 3001,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "308",
+        "to": "200"
+      },
+      {
+        "id": 3002,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "309",
+        "to": "301"
+      },
+      {
+        "id": 3003,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "310",
+        "to": "302"
+      },
+      {
+        "id": 3004,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "311",
+        "to": "303"
+      },
+      {
+        "id": 3005,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "312",
+        "to": "304"
+      },
+      {
+        "id": 3006,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "313",
+        "to": "104"
+      },
+      {
+        "id": 3007,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "315",
+        "to": "314"
+      },
+      {
+        "id": 3008,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "317",
+        "to": "316"
+      },
+      {
+        "id": 3009,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "319",
+        "to": "318"
+      },
+      {
+        "id": 3010,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "321",
+        "to": "320"
+      },
+      {
+        "id": 3011,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "323",
+        "to": "322"
+      },
+      {
+        "id": 3012,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "325",
+        "to": "324"
+      },
+      {
+        "id": 3013,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "327",
+        "to": "326"
+      },
+      {
+        "id": 3014,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "329",
+        "to": "328"
+      },
+      {
+        "id": 3015,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "331",
+        "to": "330"
+      },
+      {
+        "id": 3016,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "333",
+        "to": "332"
+      },
+      {
+        "id": 3017,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "335",
+        "to": "334"
+      },
+      {
+        "id": 3018,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "337",
+        "to": "336"
+      },
+      {
+        "id": 3019,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "339",
+        "to": "338"
+      },
+      {
+        "id": 3020,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "341",
+        "to": "340"
+      },
+      {
+        "id": 3021,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "343",
+        "to": "342"
+      },
+      {
+        "id": 3022,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "346",
+        "to": "345"
+      },
+      {
+        "id": 3023,
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "345",
+        "to": "344"
+      },
+      {
+        "id": 3024,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "344",
+        "to": "104"
+      },
+      {
+        "id": 3025,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "314",
+        "to": "104"
+      },
+      {
+        "id": 3026,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "316",
+        "to": "104"
+      },
+      {
+        "id": 3027,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "318",
+        "to": "104"
+      },
+      {
+        "id": 3028,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "320",
+        "to": "104"
+      },
+      {
+        "id": 3029,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "322",
+        "to": "104"
+      },
+      {
+        "id": 3030,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "324",
+        "to": "104"
+      },
+      {
+        "id": 3031,
+        "label": "儿子",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "324",
+        "to": "332"
+      },
+      {
+        "id": 3032,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "326",
+        "to": "104"
+      },
+      {
+        "id": 3033,
+        "label": "搭档",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "324",
+        "to": "326"
+      },
+      {
+        "id": 3034,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "328",
+        "to": "104"
+      },
+      {
+        "id": 3035,
+        "label": "恋人（名义上）",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "328",
+        "to": "326"
+      },
+      {
+        "id": 3036,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "330",
+        "to": "104"
+      },
+      {
+        "id": 3037,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "332",
+        "to": "104"
+      },
+      {
+        "id": 3038,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "334",
+        "to": "104"
+      },
+      {
+        "id": 3039,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "336",
+        "to": "104"
+      },
+      {
+        "id": 3040,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "338",
+        "to": "104"
+      },
+      {
+        "id": 3041,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "340",
+        "to": "104"
+      },
+      {
+        "id": 3042,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "342",
+        "to": "104"
+      },
+      {
+        "id": 3043,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "300",
+        "to": "347"
+      },
+      {
+        "id": 3044,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "200",
+        "to": "347"
+      },
+      {
+        "id": 3045,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "301",
+        "to": "347"
+      },
+      {
+        "id": 3046,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "302",
+        "to": "347"
+      },
+      {
+        "id": 3047,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "303",
+        "to": "347"
+      },
+      {
+        "id": 3048,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "304",
+        "to": "347"
+      },
+      {
+        "id": 3049,
+        "label": "敌人",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "347",
+        "to": "104"
+      },
+      {
+        "id": 3050,
+        "label": "仇人",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "324",
+        "to": "303"
+      },
+      {
+        "id": 3051,
+        "label": "拯救",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "347",
+        "to": "305"
+      },
+      {
+        "id": 3052,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "349",
+        "to": "348"
+      },
+      {
+        "id": 3053,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "351",
+        "to": "350"
+      },
+      {
+        "id": 3054,
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "348",
+        "to": "344"
+      },
+      {
+        "id": 3055,
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "350",
+        "to": "344"
+      },
+      {
+        "id": 3056,
+        "label": "弟弟",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "350",
+        "to": "348"
+      },
+      {
+        "id": 3057,
+        "label": "搭档",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "350",
+        "to": "326"
+      },
+      {
+        "id": 3058,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "353",
+        "to": "352"
+      },
+      {
+        "id": 3059,
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "352",
+        "to": "344"
+      },
+      {
+        "id": 3060,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "355",
+        "to": "354"
+      },
+      {
+        "id": 3061,
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "354",
+        "to": "344"
+      },
+      {
+        "id": 3062,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "357",
+        "to": "356"
+      },
+      {
+        "id": 3063,
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "356",
+        "to": "344"
+      },
+      {
+        "id": 3064,
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "358",
+        "to": "344"
+      },
+      {
+        "id": 3065,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "359",
+        "to": "358"
+      },
+      {
+        "id": 3066,
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "360",
+        "to": "344"
+      },
+      {
+        "id": 3067,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "361",
+        "to": "360"
+      },
+      {
+        "id": 3068,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "365",
+        "to": "364"
+      },
+      {
+        "id": 3069,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "364",
+        "to": "104"
+      },
+      {
+        "id": 3070,
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "364",
+        "to": "10"
+      },
+      {
+        "id": 3071,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "367",
+        "to": "366"
+      },
+      {
+        "id": 3072,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "366",
+        "to": "104"
+      },
+      {
+        "id": 3073,
+        "label": "部下",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "368",
+        "to": "104"
+      },
+      {
+        "id": 3074,
+        "label": "属于",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "368",
+        "to": "10"
+      },
+      {
+        "id": 3075,
+        "label": "哥哥",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "358",
+        "to": "362"
+      },
+      {
+        "id": 3076,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "363",
+        "to": "362"
+      },
+      {
+        "id": 3077,
+        "label": "妹妹",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "369",
+        "to": "303"
+      },
+      {
+        "id": 3078,
+        "label": "杀害",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "369",
+        "from": "324"
+      },
+      {
+        "id": 3079,
+        "label": "司机",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "370",
+        "to": "104"
+      },
+      {
+        "id": 3080,
+        "label": "喜欢",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "371",
+        "to": "300"
+      },
+      {
+        "id": 3081,
+        "label": "出场",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "200",
+        "to": "3"
+      },
+      {
+        "id": 3082,
+        "label": "出场",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "203",
+        "to": "3"
+      },
+      {
+        "id": 3083,
+        "label": "出场",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "104",
+        "to": "3"
+      },
+      {
+        "id": 3084,
+        "label": "夫妇",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "306",
+        "to": "305"
+      },
+      {
+        "id": 3085,
+        "label": "儿子",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "300",
+        "to": "305"
+      },
+      {
+        "id": 3086,
+        "label": "儿子",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "300",
+        "to": "306"
+      },
+      {
+        "id": 3087,
+        "label": "女儿",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "305",
+        "to": "200"
+      },
+      {
+        "id": 3401,
+        "label": "出场",
+        "direction": true,
+        "from": 301,
+        "to": 3
+      },
+      {
+        "id": 3402,
+        "label": "出场",
+        "direction": true,
+        "from": 302,
+        "to": 3
+      },
+      {
+        "id": 3403,
+        "label": "出场",
+        "direction": true,
+        "from": 303,
+        "to": 3
+      },
+      {
+        "id": 3404,
+        "label": "出场",
+        "direction": true,
+        "from": 304,
+        "to": 3
+      },
+      {
+        "id": 3405,
+        "label": "出场",
+        "direction": true,
+        "from": 305,
+        "to": 3
+      },
+      {
+        "id": 3406,
+        "label": "出场",
+        "direction": true,
+        "from": 306,
+        "to": 3
+      },
+      {
+        "id": 3414,
+        "label": "出场",
+        "direction": true,
+        "from": 314,
+        "to": 3
+      },
+      {
+        "id": 3416,
+        "label": "出场",
+        "direction": true,
+        "from": 316,
+        "to": 3
+      },
+      {
+        "id": 3418,
+        "label": "出场",
+        "direction": true,
+        "from": 318,
+        "to": 3
+      },
+      {
+        "id": 3420,
+        "label": "出场",
+        "direction": true,
+        "from": 320,
+        "to": 3
+      },
+      {
+        "id": 3422,
+        "label": "出场",
+        "direction": true,
+        "from": 322,
+        "to": 3
+      },
+      {
+        "id": 3424,
+        "label": "出场",
+        "direction": true,
+        "from": 324,
+        "to": 3
+      },
+      {
+        "id": 3426,
+        "label": "出场",
+        "direction": true,
+        "from": 326,
+        "to": 3
+      },
+      {
+        "id": 3428,
+        "label": "出场",
+        "direction": true,
+        "from": 328,
+        "to": 3
+      },
+      {
+        "id": 3430,
+        "label": "出场",
+        "direction": true,
+        "from": 330,
+        "to": 3
+      },
+      {
+        "id": 3432,
+        "label": "出场",
+        "direction": true,
+        "from": 332,
+        "to": 3
+      },
+      {
+        "id": 3434,
+        "label": "出场",
+        "direction": true,
+        "from": 334,
+        "to": 3
+      },
+      {
+        "id": 3436,
+        "label": "出场",
+        "direction": true,
+        "from": 336,
+        "to": 3
+      },
+      {
+        "id": 3438,
+        "label": "出场",
+        "direction": true,
+        "from": 338,
+        "to": 3
+      },
+      {
+        "id": 3440,
+        "label": "出场",
+        "direction": true,
+        "from": 340,
+        "to": 3
+      },
+      {
+        "id": 3442,
+        "label": "出场",
+        "direction": true,
+        "from": 342,
+        "to": 3
+      },
+      {
+        "id": 3445,
+        "label": "出场",
+        "direction": true,
+        "from": 345,
+        "to": 3
+      },
+      {
+        "id": 3448,
+        "label": "出场",
+        "direction": true,
+        "from": 348,
+        "to": 3
+      },
+      {
+        "id": 3450,
+        "label": "出场",
+        "direction": true,
+        "from": 350,
+        "to": 3
+      },
+      {
+        "id": 3452,
+        "label": "出场",
+        "direction": true,
+        "from": 352,
+        "to": 3
+      },
+      {
+        "id": 3454,
+        "label": "出场",
+        "direction": true,
+        "from": 354,
+        "to": 3
+      },
+      {
+        "id": 3456,
+        "label": "出场",
+        "direction": true,
+        "from": 356,
+        "to": 3
+      },
+      {
+        "id": 3458,
+        "label": "出场",
+        "direction": true,
+        "from": 358,
+        "to": 3
+      },
+      {
+        "id": 3460,
+        "label": "出场",
+        "direction": true,
+        "from": 360,
+        "to": 3
+      },
+      {
+        "id": 3462,
+        "label": "出场",
+        "direction": true,
+        "from": 362,
+        "to": 3
+      },
+      {
+        "id": 3464,
+        "label": "出场",
+        "direction": true,
+        "from": 364,
+        "to": 3
+      },
+      {
+        "id": 3466,
+        "label": "出场",
+        "direction": true,
+        "from": 366,
+        "to": 3
+      },
+      {
+        "id": 3468,
+        "label": "出场",
+        "direction": true,
+        "from": 368,
+        "to": 3
+      },
+      {
+        "id": 3469,
+        "label": "出场",
+        "direction": true,
+        "from": 369,
+        "to": 3
+      },
+      {
+        "id": 3470,
+        "label": "出场",
+        "direction": true,
+        "from": 370,
+        "to": 3
+      },
+      {
+        "id": 3471,
+        "label": "出场",
+        "direction": true,
+        "from": 371,
+        "to": 3
       }
     ]
   }
