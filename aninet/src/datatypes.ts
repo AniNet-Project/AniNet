@@ -33,3 +33,8 @@ export type CatType = {
   label: string,
   color: string
 }
+
+export type Pos2d = {
+  x: number,
+  y: number
+}

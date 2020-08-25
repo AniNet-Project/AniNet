@@ -1,68 +1,20 @@
 import React, { useState } from 'react'
-import Draggable from 'react-draggable';
 import FullscreenIcon from '@material-ui/icons/Fullscreen'
 import FullscreenExitIcon from '@material-ui/icons/FullscreenExit';
 import Tooltip from '@material-ui/core/Tooltip';
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
-import CloseIcon from '@material-ui/icons/Close';
+import { Network as NetworkType, IdType } from 'vis/index'
+
 
 import { EditOptionsDialog, SearchDialog, FilterDialog, TuneDialog, SettingDialog } from './Dialogs'
-import { shorterString } from './utils'
 import { Network, Node, Edge } from 'react-vis-network'
-import { ItemInfo, NodeType, EdgeType, CatType } from './datatypes'
-import { Network as NetworkType, IdType } from 'vis/index'
+import { ItemInfo, NodeType, EdgeType, CatType, Pos2d } from './datatypes'
+import InfoBoard from './InfoBoard'
+import CircularProgress from './CircularProgressWithLabel'
 
 
 const getCanvas = () => document.getElementsByTagName("canvas")[0]
 
-type infoBoardProps = {
-  pos: Pos2d,
-  node: NodeType,
-  cats: Record<string, CatType>,
-  close: () => void,
-}
-
-const InfoBoard = (props: infoBoardProps) => {
-  const node = props.node
-  const pos = props.pos
-  let cat = props.cats[node.categorie]
-  const boardStyle = {
-    top: pos.y + "px",
-    left: pos.x + "px",
-  }
-  const catStyle = 'color' in cat ? {color: cat.color} : {}
-  return (
-    <Draggable>
-      <div className="infoBoard" style={boardStyle}>
-        <CloseIcon className="closeButton" onClick={() => props.close()} />
-        <div className="content">
-          <img src={('image' in node) ? node.image : ''} alt=""/>
-          <div className="title">
-            <div className="name">
-              {node.label}
-            </div>
-            <div className="categorie" style={catStyle}>
-              {(cat !== undefined) ? cat.label : ""}
-            </div>
-          </div>
-          <div className="describe">
-            { shorterString(node.info, 80) }
-          </div>
-          {
-            'link' in node ?
-            <a className="link" href={node.link}>链接</a> :
-            null
-          }
-        </div>
-      </div>
-    </Draggable>
-  )
-}
-
-type Pos2d = {
-  x: number,
-  y: number
-}
 
 const DefaultNetStyle = {
   NodeColor: "#66bbff",
@@ -204,6 +156,7 @@ type NetworkRef = {
 
 type NetViewState = {
   infoBoard: JSX.Element | null,
+  loadingRatio: number,
   inforBoardSwitch: boolean,
   netRef: React.RefObject<NetworkRef>,
   netOptions: any,
@@ -216,6 +169,7 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     super(props)
     this.state = {
       infoBoard: null,
+      loadingRatio: 0,
       inforBoardSwitch: true,
       netRef: React.createRef(),
       netOptions: null,
@@ -293,16 +247,42 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
 
   componentDidMount() {
     this.setNetOptions(DEFAULT_NETWORK_OPTIONS)
+    this.registerLoading()
   }
 
   createNetwork() {
     let info = this.props.info
-    return (
+    const network = (
+      <>
+      {this.createLoadindBar()}
       <Network ref={this.state.netRef} onClick={(params: any) => {this.handleClick(params)}} >
         {info.data.nodes.map(n => createNode(n, info.categories))}
         {info.data.edges.map((e) => createEdge(e))}
       </Network>
+      </>
     )
+    return network
+  }
+
+  createLoadindBar() {
+    return (
+      <div id="progressBar">
+        <CircularProgress variant="determinate" value={this.state.loadingRatio * 100}/>
+      </div>
+    )
+  }
+
+  registerLoading() {
+    // https://jsfiddle.net/api/post/library/pure/
+    const self = this
+    const ref = (this.state.netRef.current as NetworkRef).network
+    ref.on("stabilizationProgress", function (params: any) {
+      const ratio = params.iterations / params.total;
+      self.setState({loadingRatio: ratio})
+    })
+    ref.once("stabilizationIterationsDone", function () {
+      self.setState({loadingRatio: 1})
+    })
   }
 
   captureImg() {

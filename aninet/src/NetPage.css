@@ -172,3 +172,11 @@ img {
 #tuneDialog {
   width: 20em;
 }
+
+#progressBar {
+  position: absolute;
+  z-index: 10;
+  top: 46%;
+  left: 48%;
+
+}
