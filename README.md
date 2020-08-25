@@ -12,7 +12,7 @@ AniNet 是一个用来可视化展示各种AGC（动画、漫画、游戏）作�
 
 ### 截图
 
-<img src=./imgs/AniNetTitle0.png width=600 />
+<img src=./aninet/public/screenshots/aninet0.png width=600 />
 
 ### 相关项目
 
