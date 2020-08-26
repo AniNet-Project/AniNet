@@ -1418,6 +1418,510 @@
         "info": "本来是一只被「箭」射中的猫，后来在川尻家被忍扫倒的家俱压毙 ，吉良吉影将它的尸体葬在川尻家的花园，后来在尸体安葬的位置长出了一棵草，最后变成了既是猫又是植物还是本体和替身的奇特生物。",
         "image": "imgs/JoJo/maocao.png",
         "link": "https://zh.moegirl.org.cn/%E7%8C%AB%E8%8D%89"
+      },
+      {
+        "id": 500,
+        "label": "乔鲁诺·乔巴拿",
+        "categorie": "person",
+        "info": "漫画JOJO的奇妙冒险第五部黄金之风的主角。第一部和第三部的反派BOSS迪奥·布兰度的儿子。",
+        "image": "imgs/JoJo/giogio.png",
+        "link": "https://zh.moegirl.org.cn/%E4%B9%94%E9%B2%81%E8%AF%BA%C2%B7%E4%B9%94%E5%B7%B4%E6%8B%BF"
+      },
+      {
+        "id": 501,
+        "label": "布鲁诺·布加拉迪",
+        "categorie": "person",
+        "info": "20岁，「热情」的干部波尔波麾下小队的领导者，极其痛恨毒品。",
+        "image": "imgs/JoJo/buchalati.png",
+        "link": "https://zh.moegirl.org.cn/%E5%B8%83%E9%B2%81%E8%AF%BA%C2%B7%E5%B8%83%E5%8A%A0%E6%8B%89%E8%BF%AA"
+      },
+      {
+        "id": 502,
+        "label": "雷奥·阿帕基",
+        "categorie": "person",
+        "info": "21岁，布加拉提的部下。  以前是个正义感十足的警察，但是在现实的矛盾下感到失望，自己也开始收贿而堕落  直到某日因为自己的收贿渎职而导致同僚源桃的父亲殉职，良心受到苛责的他于是离开警界，转而成为黑帮份子。 因为过去的伤痛，他将「服从任务」摆在第一顺位，甚至可以为了任务舍弃自己或伙伴的性命。 ",
+        "image": "imgs/JoJo/apaji.png",
+        "link": "https://zh.moegirl.org.cn/%E9%9B%B7%E5%A5%A5%C2%B7%E9%98%BF%E5%B8%95%E5%9F%BA"
+      },
+      {
+        "id": 503,
+        "label": "盖多·米斯达",
+        "categorie": "person",
+        "info": "布加拉迪的手下，18岁。擅长使用手枪，替身为住在手枪内的6个子弹型替身。  在某天一位女性被不良份子骚扰时出面相救，游走在枪林弹雨中却毫发无伤的用四发子弹将三名不良份子全部射杀。",
+        "image": "imgs/JoJo/misida.png",
+        "link": "https://zh.moegirl.org.cn/%E7%9B%96%E5%A4%9A%C2%B7%E7%B1%B3%E6%96%AF%E8%BE%BE"
+      },
+      {
+        "id": 504,
+        "label": "纳兰迦·基尔伽",
+        "categorie": "person",
+        "info": "布加拉迪的部下之一，17岁。母亲很早就过世，因为不满父亲在母亲死后对自己的抚养不闻不问，便叛逆和朋友混迹街头甚至在各处偷窃，却因为朋友的出卖被关入少年感化院一年，出院后患了和母亲一样的眼疾被以前的朋友们疏远，对人生感到绝望而成为街童，之后被福葛捡到，并在布加拉迪的帮助下痊愈。",
+        "image": "imgs/JoJo/nalanjia.png",
+        "link": "https://zh.moegirl.org.cn/%E7%BA%B3%E5%85%B0%E8%BF%A6%C2%B7%E5%9F%BA%E5%B0%94%E4%BC%BD"
+      },
+      {
+        "id": 505,
+        "label": "潘纳科达·福葛",
+        "categorie": "person",
+        "info": "16岁，布加拉迪的部下。  1985年生于那不勒斯豪门。IQ高达152，13岁就取得大学入学资格。由于有与外表不相称的急躁性格，所以与老师的关系不太好，之后更因为揍了老师而遭到退学，还被父母逐出家门。不断的堕落最后加入黑帮成为布加拉迪的部下。",
+        "image": "imgs/JoJo/fuge.png",
+        "link": "https://zh.moegirl.org.cn/%E6%BD%98%E7%BA%B3%E7%A7%91%E8%BE%BE%C2%B7%E7%A6%8F%E8%91%9B"
+      },
+      {
+        "id": 506,
+        "label": "布加拉迪小队",
+        "categorie": "organization",
+        "info": "JOJO的奇妙冒险的第五部：黄金之风的主人公小队。",
+        "image": "imgs/JoJo/huweidui.png",
+        "link": "https://zh.moegirl.org.cn/%E7%83%AD%E6%83%85%E7%BB%84%E7%BB%87%E6%8A%A4%E5%8D%AB%E9%98%9F"
+      },
+      {
+        "id": 507,
+        "label": "黄金体验",
+        "categorie": "stand",
+        "info": "通过用拳头殴打或碰触任何没有生命的物体，赋予物体生命，被赋与生命的物件将会变成有机物体，物体种类能由乔鲁诺自行决定。物体崩坏则会变回原物体。",
+        "image": "imgs/JoJo/huangjintiyan.png",
+        "link": "https://zh.moegirl.org.cn/%E4%B9%94%E9%B2%81%E8%AF%BA%C2%B7%E4%B9%94%E5%B7%B4%E6%8B%BF#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 508,
+        "label": "黄金体验镇魂曲",
+        "categorie": "stand",
+        "info": "替身被「箭」刺穿而激发的替身能力。 能够将对手的行动，或是其他概念全数归零，因此对乔鲁诺发起的替身能力都会无效化。",
+        "image": "imgs/JoJo/huangzhen.png",
+        "link": "https://zh.moegirl.org.cn/%E4%B9%94%E9%B2%81%E8%AF%BA%C2%B7%E4%B9%94%E5%B7%B4%E6%8B%BF#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 509,
+        "label": "钢链手指",
+        "categorie": "stand",
+        "info": "替身殴打在东西上便会出现“拉链”，用拉链能够不损毁物件表面地去开闭的空间，可用于储藏、潜行，甚至接合物件、伤口，还能够利用拉链的摩擦力去减速、也能使开启的物体变为软布般做为防御，开启拉链在地上甚至可以加速滑走",
+        "image": "imgs/JoJo/ganglianshouzhi.png",
+        "link": "https://zh.moegirl.org.cn/%E5%B8%83%E9%B2%81%E8%AF%BA%C2%B7%E5%B8%83%E5%8A%A0%E6%8B%89%E8%BF%AA#%E6%9B%BF%E8%BA%AB%E8%83%BD%E5%8A%9B"
+      },
+      {
+        "id": 510,
+        "label": "忧郁蓝调",
+        "categorie": "stand",
+        "info": "根据所在地点的「记忆」，替身可以「倒带」到指定的时间点并『变身』成在该时该地出现的一个人物，回放他当时的行动。",
+        "image": "imgs/JoJo/youyulandiao.png",
+        "link": "https://zh.moegirl.org.cn/%E9%9B%B7%E5%A5%A5%C2%B7%E9%98%BF%E5%B8%95%E5%9F%BA#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 511,
+        "label": "性感手枪",
+        "categorie": "stand",
+        "info": "平时住在米斯达的左轮手枪里，可操纵射出子弹（小型飞行道具）的运动轨迹的远距离操纵型替身，一共6只。",
+        "image": "imgs/JoJo/xingganshouqiang.png",
+        "link": "https://zh.moegirl.org.cn/%E7%9B%96%E5%A4%9A%C2%B7%E7%B1%B3%E6%96%AF%E8%BE%BE#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 512,
+        "label": "航空史密斯",
+        "categorie": "stand",
+        "info": "螺旋桨飞机型态的替身，其外型可能是参考了二战美国战机与玩具飞机。",
+        "image": "imgs/JoJo/hangkongshimisi.png",
+        "link": "https://zh.moegirl.org.cn/%E7%BA%B3%E5%85%B0%E8%BF%A6%C2%B7%E5%9F%BA%E5%B0%94%E4%BC%BD#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 513,
+        "label": "紫烟",
+        "categorie": "stand",
+        "info": "利用双手六颗胶囊内的杀人病毒进行攻击，病毒散布在空气中，可经由呼吸吸入或是皮肤渗入体内，迅速在体内繁殖，肉体内的所有代谢功能都受到侵害，从体内开始腐烂，30秒之内，就可以让对手立刻发病死亡。",
+        "image": "imgs/JoJo/ziyan.png",
+        "link": "https://zh.moegirl.org.cn/%E6%BD%98%E7%BA%B3%E7%A7%91%E8%BE%BE%C2%B7%E7%A6%8F%E8%91%9B#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 514,
+        "label": "热情组织",
+        "categorie": "organization",
+        "info": "JOJO的奇妙冒险第五部“黄金之风”中登场的黑帮组织。",
+        "image": "imgs/JoJo/reqing.png",
+        "link": "https://zh.moegirl.org.cn/%E7%83%AD%E6%83%85%E7%BB%84%E7%BB%87"
+      },
+      {
+        "id": 515,
+        "label": "暗杀小队",
+        "categorie": "organization",
+        "info": "黑帮组织“热情”的暗杀部队，以里苏特·涅罗为首，总人数9名。因为工作的性质得不到老板的信任，而且报酬、地位与工作上的致命性、危险性不成正比。因此想要杀害老板，并趁机掌控组织毒品交易借此获得大笔金钱。为了追查老板的身份，他们试图绑架老板的女儿特莉休。",
+        "image": "",
+        "link": "https://zh.wikipedia.org/wiki/%E9%BB%83%E9%87%91%E4%B9%8B%E9%A2%A8#%E6%9A%97%E6%AE%BA%E5%B0%8F%E9%9A%8A"
+      },
+      {
+        "id": 516,
+        "label": "里苏特·涅罗",
+        "categorie": "person",
+        "info": "暗杀小队队长，个性沉着冷静，有着奇异的黑色巩膜和红色虹膜。",
+        "image": "imgs/JoJo/lisute.png",
+        "link": "https://zh.moegirl.org.cn/%E9%87%8C%E8%8B%8F%E7%89%B9%C2%B7%E6%B6%85%E7%BD%97"
+      },
+      {
+        "id": 517,
+        "label": "金属制品",
+        "categorie": "stand",
+        "info": "潜藏于本体体内的极小的替身，能力是用磁力控制附近的铁质。",
+        "image": "imgs/JoJo/jinshuzhipin.png",
+        "link": "https://zh.moegirl.org.cn/%E9%87%8C%E8%8B%8F%E7%89%B9%C2%B7%E6%B6%85%E7%BD%97#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 518,
+        "label": "霍尔马吉欧",
+        "categorie": "person",
+        "info": "暗杀小队队员。口头禅是「真没办法啊」(しょうがねえなあ)，是个性格冷静头脑灵活的谋略家，充分的运用了自己被认为没什么特色的替身，还能可以很快分析出对手替身的战斗原理。",
+        "image": "imgs/JoJo/majiou.png",
+        "link": "https://zh.moegirl.org.cn/%E9%9C%8D%E5%B0%94%E9%A9%AC%E5%90%89%E6%AC%A7"
+      },
+      {
+        "id": 519,
+        "label": "小脚",
+        "categorie": "stand",
+        "info": "被该替身食指刺到的目标会逐渐缩小，本体可以瞬间缩小，但对本体以外的东西必须花几分钟的时间才会显现出效果。",
+        "image": "imgs/JoJo/xiaojiao.png",
+        "link": "https://zh.moegirl.org.cn/%E9%9C%8D%E5%B0%94%E9%A9%AC%E5%90%89%E6%AC%A7#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 520,
+        "label": "伊鲁索",
+        "categorie": "person",
+        "info": "“热情”暗杀组成员之一，性格自大且有些孩子气，在镜中世界相当嚣张跋扈，但一碰到劣势就会显露出自己懦弱的一面，因为对自己的替身能力有着绝对的自信，他似乎也对一些能力普通的替身抱持鄙视的态度，例如在动画版中，他曾嘲讽霍尔马吉欧的缩小能力很无聊。",
+        "image": "imgs/JoJo/yilusuo.png",
+        "link": "https://zh.moegirl.org.cn/%E4%BC%8A%E9%B2%81%E7%B4%A2"
+      },
+      {
+        "id": 521,
+        "label": "镜中人",
+        "categorie": "stand",
+        "info": "能将敌人拉入镜子中，并在本体的允许下从而把敌人和替身份开，如果只拉入一半则可以使敌人无法动弹。因为镜中是属于一个「死之世界」，除本体与自己的替身外，被拉入镜子中的生物无法对镜中世界的事物做出影响。",
+        "image": "imgs/JoJo/jingzhongren.png",
+        "link": "https://zh.moegirl.org.cn/%E4%BC%8A%E9%B2%81%E7%B4%A2#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 522,
+        "label": "普罗修特",
+        "categorie": "person",
+        "info": "暗杀小队成员，贝西的大哥（兄贵）。",
+        "image": "imgs/JoJo/puluoxiute.png",
+        "link": "https://zh.moegirl.org.cn/%E6%99%AE%E7%BD%97%E4%BF%AE%E7%89%B9"
+      },
+      {
+        "id": 523,
+        "label": "壮烈成仁",
+        "categorie": "stand",
+        "info": "使人快速老化挺秃然的 ，根据体温分辨性别，对女性的老化较为缓慢，可以使用冰块降低体温缓解。距离替身越近，老化速度也会成倍增加",
+        "image": "imgs/JoJo/zhuangliechengren.png",
+        "link": "https://zh.moegirl.org.cn/%E6%99%AE%E7%BD%97%E4%BF%AE%E7%89%B9#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 524,
+        "label": "贝西",
+        "categorie": "person",
+        "info": "暗杀小队成员，普罗休特的小弟。",
+        "image": "imgs/JoJo/beixi.png",
+        "link": "https://zh.moegirl.org.cn/%E8%B4%9D%E8%A5%BF"
+      },
+      {
+        "id": 525,
+        "label": "海滩男孩",
+        "categorie": "stand",
+        "info": "外型为挂着骷髅卷轴钓竿形替身，能隔着物体攻击敌人，钓钩会钻进敌人身体并攻击要害，钓线被攻击则可以将受到的攻击从钓钩处散发出去，如果受到的攻击包含替身能力，则能力效果也会从钓钩处散发。还可以通过气息来感知敌人的数量。力量和精密度很大程度上取决于贝西自身的腕力和操作技术 。",
+        "image": "imgs/JoJo/shatannanhai.png",
+        "link": "https://zh.moegirl.org.cn/%E8%B4%9D%E8%A5%BF#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 526,
+        "label": "梅洛尼",
+        "categorie": "person",
+        "info": "暗杀小队成员，有询问女性性癖好的变态爱好的金发青年。",
+        "image": "imgs/JoJo/meiluoni.png",
+        "link": "https://zh.moegirl.org.cn/%E6%A2%85%E6%B4%9B%E5%B0%BC"
+      },
+      {
+        "id": 527,
+        "label": "娃娃脸",
+        "categorie": "stand",
+        "info": "（电脑）一个键盘式电脑，是娃娃脸的本体。可以利用男人的血液和女性的身体制造“孩子”（动画中称为Junior）怀孕时间3分钟，出产后孩子开始学习妈妈的行动和梅洛尼的指令，孩子是远程自动操纵型，并是实体化的替身。",
+        "image": "imgs/JoJo/wawalian.png",
+        "link": "https://zh.moegirl.org.cn/%E6%A2%85%E6%B4%9B%E5%B0%BC#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 528,
+        "label": "加丘",
+        "categorie": "person",
+        "info": "加丘是暗杀小队的一名成员，有名为“白色相簿”的替身。",
+        "image": "imgs/JoJo/jiaqiu.png",
+        "link": "https://zh.moegirl.org.cn/%E5%8A%A0%E4%B8%98"
+      },
+      {
+        "id": 529,
+        "label": "白色相簿",
+        "categorie": "stand",
+        "info": "替身显现为将空气凝结形成的外装甲，能够挡住子弹。脚下有能用于快速滑行用的冰刀。",
+        "image": "imgs/JoJo/baisexiangbu.png",
+        "link": "https://zh.moegirl.org.cn/%E5%8A%A0%E4%B8%98#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 530,
+        "label": "索尔贝",
+        "categorie": "person",
+        "info": "索尔贝是暗杀小队的一名成员。",
+        "image": "imgs/JoJo/suoerbei.png",
+        "link": "https://zh.moegirl.org.cn/%E7%B4%A2%E5%B0%94%E8%B4%9D"
+      },
+      {
+        "id": 531,
+        "label": "杰拉德",
+        "categorie": "person",
+        "info": "杰拉德是暗杀小队的一名成员。",
+        "image": "imgs/JoJo/jielade.png",
+        "link": "https://zh.moegirl.org.cn/%E6%9D%B0%E6%8B%89%E5%BE%B7"
+      },
+      {
+        "id": 532,
+        "label": "泪眼鲁卡",
+        "categorie": "person",
+        "info": "“热情”组织的成员，分管机场处的地盘，喜欢欺负弱小，甚至卖毒品给小孩，在组织内的风评似乎很差",
+        "image": "imgs/JoJo/yanleiluka.png",
+        "link": "https://zh.moegirl.org.cn/%E6%B3%AA%E7%9C%BC%E9%B2%81%E5%8D%A1"
+      },
+      {
+        "id": 533,
+        "label": "波尔波",
+        "categorie": "person",
+        "info": "“热情”组织的面试官，管理着老板交付的箭，使用其考核想要加入组织的新人，并让自己的替身担任考官。",
+        "image": "imgs/JoJo/boerbo.png",
+        "link": "https://zh.moegirl.org.cn/zh-hans/%E6%B3%A2%E5%B0%94%E6%B3%A2"
+      },
+      {
+        "id": 534,
+        "label": "黑色安息日",
+        "categorie": "stand",
+        "info": "远距离自动操作型替身，只能在阴影中行动且不能进入特别小的影子，虽然破坏力只有E但身处阴影中时压制力能达到A，力量和速度都大幅增加。",
+        "image": "imgs/JoJo/heiseanxiri.png",
+        "link": "https://zh.moegirl.org.cn/zh-hans/%E6%B3%A2%E5%B0%94%E6%B3%A2#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 535,
+        "label": "马里奥·兹凯罗",
+        "categorie": "person",
+        "info": "“热情”组织的成员。得知波尔波的死讯后并听说其隐藏财产的传言后，前去寻找布加拉迪意图将隐藏财产据为己有反被对方击败。",
+        "image": "imgs/JoJo/zikailuo.png",
+        "link": "https://zh.moegirl.org.cn/%E9%A9%AC%E9%87%8C%E5%A5%A5%C2%B7%E5%85%B9%E5%87%AF%E7%BD%97"
+      },
+      {
+        "id": 536,
+        "label": "柔软机器",
+        "categorie": "stand",
+        "info": "被它手里的锥子刺中的物体会像泄气的气球被布姐比喻成安全套一样变薄，本体能在变薄的物体内和狭窄的空间中随意移动。",
+        "image": "imgs/JoJo/rouruanjiqi.png",
+        "link": "https://zh.moegirl.org.cn/%E9%A9%AC%E9%87%8C%E5%A5%A5%C2%B7%E5%85%B9%E5%87%AF%E7%BD%97#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 537,
+        "label": "沙雷",
+        "categorie": "person",
+        "info": "“热情”组织的成员。 波尔波死后，和马里奥·兹凯罗策划去夺走遗产。",
+        "image": "imgs/JoJo/shalei.png",
+        "link": "https://zh.moegirl.org.cn/%E6%B2%99%E9%9B%B7"
+      },
+      {
+        "id": 538,
+        "label": "手艺工作",
+        "categorie": "stand",
+        "info": "能将任何物体固定在任何位置或是物件范围外的空间，无数量上限。",
+        "image": "imgs/JoJo/shouyigongzuo.png",
+        "link": "https://zh.moegirl.org.cn/%E6%B2%99%E9%9B%B7#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 539,
+        "label": "史克亚罗",
+        "categorie": "person",
+        "info": "老板的亲卫队成员之一，性格自信而强硬，十分信任迪查诺。",
+        "image": "imgs/JoJo/shikeyaluo.png",
+        "link": "https://zh.moegirl.org.cn/%E5%8F%B2%E5%85%8B%E4%BA%9A%E7%BD%97"
+      },
+      {
+        "id": 540,
+        "label": "冲击",
+        "categorie": "stand",
+        "info": "远距离操纵型，样貌为一直披有铁甲的鲨鱼，其外型参考了甲胄鱼。",
+        "image": "imgs/JoJo/chongji.png",
+        "link": "https://zh.moegirl.org.cn/%E5%8F%B2%E5%85%8B%E4%BA%9A%E7%BD%97#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 541,
+        "label": "迪查诺",
+        "categorie": "person",
+        "info": "迪查诺是亲卫队的一名成员。性格沉着冷静。十分信任史克亚罗。",
+        "image": "imgs/JoJo/dichanuo.png",
+        "link": "https://zh.moegirl.org.cn/%E8%BF%AA%E6%9F%A5%E8%AF%BA"
+      },
+      {
+        "id": 542,
+        "label": "面部特写",
+        "categorie": "stand",
+        "info": "能黏着在敌人的舌头部位，被该替身附着后只能说违心话，必要时可以伸长舌头抓取东西。",
+        "image": "imgs/JoJo/mianbutexie.png",
+        "link": "https://zh.moegirl.org.cn/%E8%BF%AA%E6%9F%A5%E8%AF%BA#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 543,
+        "label": "卡尔涅",
+        "categorie": "person",
+        "info": "卡尔涅是老板的亲卫队成员之一，也是其中存在感最低的。刚出场就退场，以至于许多读者记不住他的名字。",
+        "image": "imgs/JoJo/kaernie.png",
+        "link": "https://zh.moegirl.org.cn/zh-hans/%E5%8D%A1%E5%B0%94%E6%B6%85(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)"
+      },
+      {
+        "id": 544,
+        "label": "臭名昭著的B·I·G",
+        "categorie": "stand",
+        "info": "本体死后借由怨恨能量放出的替身，会优先攻击自己的攻击范围内速度最快的目标。",
+        "image": "imgs/JoJo/big.png",
+        "link": "https://zh.moegirl.org.cn/zh-hans/%E5%8D%A1%E5%B0%94%E6%B6%85(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 545,
+        "label": "乔可拉特",
+        "categorie": "person",
+        "info": "乔可拉特是老板亲卫队的成员之一。  在变态杀人狂层出不穷的JOJO中，乔可拉特的变态程度也是全系列数一数二的。",
+        "image": "imgs/JoJo/qiaokelate.png",
+        "link": "https://zh.moegirl.org.cn/%E4%B9%94%E5%8F%AF%E6%8B%89%E7%89%B9"
+      },
+      {
+        "id": 546,
+        "label": "青春岁月",
+        "categorie": "stand",
+        "info": "广范围无差别攻击型替身。会散发出霉菌，霉菌借由尸体传播，射程可蔓延覆盖整座罗马城。因为会使向低处下降的人体腐烂，因此只有不断前往高处才能避免霉菌。",
+        "image": "imgs/JoJo/qingchunsuiyue.png",
+        "link": "https://zh.moegirl.org.cn/%E4%B9%94%E5%8F%AF%E6%8B%89%E7%89%B9#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 547,
+        "label": "赛可",
+        "categorie": "person",
+        "info": "赛可是亲卫队的一名成员。兴趣与队友乔可拉特一样扭曲，通常在乔可拉特行暴时为他摄像。",
+        "image": "imgs/JoJo/saike.png",
+        "link": "https://zh.moegirl.org.cn/%E8%B5%9B%E5%8F%AF"
+      },
+      {
+        "id": 548,
+        "label": "绿洲",
+        "categorie": "stand",
+        "info": "穿在身上的替身。赛可通常都将替身穿于身上，因此全篇中赛可除了脸部之外没有露出任何身体部位。  能将自身接触的物体变得像泥浆一样，配合其敏锐的听觉，赛可通常将这个能力用于地面，不过也可用于直接接触的其他物体乃至人体。",
+        "image": "imgs/JoJo/lvzhou.png",
+        "link": "https://zh.moegirl.org.cn/%E8%B5%9B%E5%8F%AF#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 549,
+        "label": "老板亲卫队",
+        "categorie": "organization",
+        "info": "JOJO的奇妙冒险的第五部：黄金之风后期的反派小队。  成员数量未知，作品中共登场5名。",
+        "image": "imgs/JoJo/qinweidui.png",
+        "link": "https://zh.moegirl.org.cn/zh-hans/%E8%80%81%E6%9D%BF%E4%BA%B2%E5%8D%AB%E9%98%9F"
+      },
+      {
+        "id": 550,
+        "label": "乔鲁诺的母亲",
+        "categorie": "person",
+        "info": "乔鲁诺·乔巴拿的母亲",
+        "image": "imgs/JoJo/gioma.png",
+        "link": "https://zh.moegirl.org.cn/%E4%B9%94%E9%B2%81%E8%AF%BA%E7%9A%84%E6%AF%8D%E4%BA%B2"
+      },
+      {
+        "id": 551,
+        "label": "Coco Jamboo",
+        "categorie": "person",
+        "info": "“热情”组织饲养的一只乌龟，当护卫队在庞贝遗迹找到使用替身关键的钥匙后被护卫队带走，其后它以替身【总统先生】制造的房间在壮志成仁战、娃娃脸战等事件中一直作为护卫队的藏身场所。",
+        "image": "imgs/JoJo/wugui.png",
+        "link": "https://zh.moegirl.org.cn/Coco_Jamboo"
+      },
+      {
+        "id": 552,
+        "label": "总统先生",
+        "categorie": "stand",
+        "info": "需要将钥匙放在乌龟龟壳的钥匙形凹槽里才能使用。可以在钥匙的红色宝石内制造一个房间，任何人都能以宝石为出入口进出这个房间。",
+        "image": "",
+        "link": "https://zh.moegirl.org.cn/Coco_Jamboo#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 553,
+        "label": "贝利可罗",
+        "categorie": "person",
+        "info": "“热情”组织的成员，但是没有替身，并对组织忠心耿耿。  照顾特里休的老人。",
+        "image": "imgs/JoJo/beilikeluo.png",
+        "link": "https://zh.moegirl.org.cn/%E8%B4%9D%E5%88%A9%E5%8F%AF%E7%BD%97"
+      },
+      {
+        "id": 554,
+        "label": "特里休·乌纳",
+        "categorie": "person",
+        "info": "第五部“黄金之风”的女主角，BOSS迪亚波罗的女儿。",
+        "image": "imgs/JoJo/telixiu.png",
+        "link": "https://zh.moegirl.org.cn/%E7%89%B9%E9%87%8C%E4%BC%91%C2%B7%E4%B9%8C%E7%BA%B3"
+      },
+      {
+        "id": 555,
+        "label": "辣妹",
+        "categorie": "stand",
+        "info": "人型替身，外貌与绯红之王相似。拥有自己的意识，能与特里休对话，关系更像是朋友。从小就在特里休身边，但在恶名昭彰的B·I·G篇才出场。",
+        "image": "imgs/JoJo/lamei.png",
+        "link": "https://zh.moegirl.org.cn/%E7%89%B9%E9%87%8C%E4%BC%91%C2%B7%E4%B9%8C%E7%BA%B3#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 556,
+        "label": "迪亚波罗",
+        "categorie": "person",
+        "info": "系列第五部《黄金之风》的最终BOSS，因为自己对“过去”的执著，一直隐匿身形的意大利黑帮组织「热情」的老板。",
+        "image": "imgs/JoJo/diyaboluo.png",
+        "link": "https://zh.moegirl.org.cn/%E8%BF%AA%E4%BA%9A%E6%B3%A2%E7%BD%97(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)"
+      },
+      {
+        "id": 557,
+        "label": "绯红之王",
+        "categorie": "stand",
+        "info": "简单地说，就是可以能够「飞跃」进而「删除」时间。（It Just Works）  准确地说是将这个世界的时间「消减」最长约十几秒。",
+        "image": "imgs/JoJo/feihongzhiwang.png",
+        "link": "https://zh.moegirl.org.cn/%E8%BF%AA%E4%BA%9A%E6%B3%A2%E7%BD%97(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)#%E6%9B%BF%E8%BA%AB"
+      },
+      {
+        "id": 558,
+        "label": "多娜提拉·乌纳",
+        "categorie": "person",
+        "info": "第五部“黄金之风”的女主角特里休·乌纳的母亲。剧情开始前已经病故。",
+        "image": "imgs/JoJo/wuna.png",
+        "link": "https://zh.moegirl.org.cn/%E5%A4%9A%E5%A8%9C%E6%8F%90%E6%8B%89%C2%B7%E4%B9%8C%E7%BA%B3"
+      },
+      {
+        "id": 559,
+        "label": "维内加·托比欧",
+        "categorie": "person",
+        "info": "虽然迪亚波罗和托比欧共用一个身体，但两者的样貌差别十分之大，可以说除了同样是粉红色的头发以外没有其他任何的端倪。",
+        "image": "imgs/JoJo/tuobiou.png",
+        "link": "https://zh.moegirl.org.cn/%E8%BF%AA%E4%BA%9A%E6%B3%A2%E7%BD%97(JOJO%E7%9A%84%E5%A5%87%E5%A6%99%E5%86%92%E9%99%A9)#%E5%85%B3%E4%BA%8E%E7%9B%B8%E8%B2%8C%E4%BB%A5%E5%8F%8A%E5%8F%A6%E4%B8%80%E4%B8%AA%E4%BA%BA%E6%A0%BC%E5%A4%9A%E6%AF%94%E6%AC%A7"
+      },
+      {
+        "id": 560,
+        "label": "银色战车镇魂曲",
+        "categorie": "stand",
+        "info": "波鲁那雷夫死前，用箭刺穿自己的银色战车，使其在自己死后进化为「银色战车镇魂曲」来保护箭",
+        "image": "imgs/JoJo/yinzhen.png",
+        "link": "https://zh.moegirl.org.cn/%E7%AE%80%C2%B7%E7%9A%AE%E8%80%B6%E5%B0%94%C2%B7%E6%B3%A2%E9%B2%81%E7%BA%B3%E9%9B%B7%E5%A4%AB#%E6%9B%BF%E8%BA%AB%E6%95%B0%E6%8D%AE"
+      },
+      {
+        "id": 561,
+        "label": "史可里皮",
+        "categorie": "person",
+        "info": "是个很普通的雕刻艺术家，认为所有人都是「命运的奴隶」。",
+        "image": "imgs/JoJo/shikelipi.png",
+        "link": "https://zh.moegirl.org.cn/%E5%8F%B2%E5%8F%AF%E9%87%8C%E7%9A%AE"
+      },
+      {
+        "id": 562,
+        "label": "滚石",
+        "categorie": "stand",
+        "info": "石头会自动变成将死之人的模样并不断追踪那人，当那人碰到替身时就会不受到任何痛苦地安乐死  若不是将死之人碰到，则不会发生任何事（但皮肤上会浮现一些文字 如请杀了我，但没有实际作用，不继续碰石头的话字就会消失）",
+        "image": "imgs/JoJo/gunshi.png",
+        "link": "https://zh.moegirl.org.cn/%E5%8F%B2%E5%8F%AF%E9%87%8C%E7%9A%AE#%E6%9B%BF%E8%BA%AB"
       }
     ],
     "edges": [
@@ -4404,6 +4908,1083 @@
         "direction": true,
         "from": 456,
         "to": 4
+      },
+      {
+        "id": 5000,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "500",
+        "to": "506"
+      },
+      {
+        "id": 5001,
+        "label": "领导",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "501",
+        "to": "506"
+      },
+      {
+        "id": 5002,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "502",
+        "to": "506"
+      },
+      {
+        "id": 5003,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "503",
+        "to": "506"
+      },
+      {
+        "id": 5004,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "504",
+        "to": "506"
+      },
+      {
+        "id": 5005,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "505",
+        "to": "506"
+      },
+      {
+        "id": 5006,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "507",
+        "to": "500"
+      },
+      {
+        "id": 5007,
+        "label": "进化体",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "507",
+        "from": "508"
+      },
+      {
+        "id": 5008,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "509",
+        "to": "501"
+      },
+      {
+        "id": 5009,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "510",
+        "to": "502"
+      },
+      {
+        "id": 5010,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "511",
+        "to": "503"
+      },
+      {
+        "id": 5011,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "512",
+        "to": "504"
+      },
+      {
+        "id": 5012,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "513",
+        "to": "505"
+      },
+      {
+        "id": 5013,
+        "label": "上级",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "514",
+        "to": "506"
+      },
+      {
+        "id": 5014,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "517",
+        "to": "516"
+      },
+      {
+        "id": 5015,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "518",
+        "from": "519"
+      },
+      {
+        "id": 5016,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "521",
+        "to": "520"
+      },
+      {
+        "id": 5017,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "523",
+        "to": "522"
+      },
+      {
+        "id": 5018,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "525",
+        "to": "524"
+      },
+      {
+        "id": 5019,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "527",
+        "to": "526"
+      },
+      {
+        "id": 5020,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "529",
+        "to": "528"
+      },
+      {
+        "id": 5021,
+        "label": "上级",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "515",
+        "from": "514"
+      },
+      {
+        "id": 5022,
+        "label": "队长",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "515",
+        "from": "516"
+      },
+      {
+        "id": 5023,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "518",
+        "to": "515"
+      },
+      {
+        "id": 5024,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "515",
+        "from": "520"
+      },
+      {
+        "id": 5025,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "515",
+        "from": "522"
+      },
+      {
+        "id": 5026,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "524",
+        "to": "515"
+      },
+      {
+        "id": 5027,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "515",
+        "from": "526"
+      },
+      {
+        "id": 5028,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "528",
+        "to": "515"
+      },
+      {
+        "id": 5029,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "531",
+        "to": "515"
+      },
+      {
+        "id": 5030,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "515",
+        "from": "530"
+      },
+      {
+        "id": 5031,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "532",
+        "to": "514"
+      },
+      {
+        "id": 5032,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "534",
+        "to": "533"
+      },
+      {
+        "id": 5033,
+        "label": "面试官",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "533",
+        "to": "514"
+      },
+      {
+        "id": 5034,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "536",
+        "to": "535"
+      },
+      {
+        "id": 5035,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "535",
+        "to": "514"
+      },
+      {
+        "id": 5036,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "538",
+        "to": "537"
+      },
+      {
+        "id": 5037,
+        "label": "好友",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "537",
+        "to": "535"
+      },
+      {
+        "id": 5038,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "537",
+        "to": "514"
+      },
+      {
+        "id": 5039,
+        "label": "替身\t",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "540",
+        "to": "539"
+      },
+      {
+        "id": 5040,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "542",
+        "to": "541"
+      },
+      {
+        "id": 5041,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "544",
+        "to": "543"
+      },
+      {
+        "id": 5042,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "546",
+        "to": "545"
+      },
+      {
+        "id": 5043,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "548",
+        "to": "547"
+      },
+      {
+        "id": 5044,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "539",
+        "to": "549"
+      },
+      {
+        "id": 5045,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "541",
+        "to": "549"
+      },
+      {
+        "id": 5046,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "543",
+        "to": "549"
+      },
+      {
+        "id": 5047,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "545",
+        "to": "549"
+      },
+      {
+        "id": 5048,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "549",
+        "from": "547"
+      },
+      {
+        "id": 5049,
+        "label": "上级",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "549",
+        "from": "514"
+      },
+      {
+        "id": 5050,
+        "label": "母亲",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "550",
+        "to": "500"
+      },
+      {
+        "id": 5051,
+        "label": "父亲",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "104",
+        "to": "500"
+      },
+      {
+        "id": 5052,
+        "label": "配偶",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "550",
+        "to": "104"
+      },
+      {
+        "id": 5053,
+        "label": "父亲（生理层面）",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "100",
+        "to": "500"
+      },
+      {
+        "id": 5054,
+        "label": "调查",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "401",
+        "to": "500"
+      },
+      {
+        "id": 5055,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "552",
+        "to": "551"
+      },
+      {
+        "id": 5056,
+        "label": "庇护所",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "552",
+        "to": "506"
+      },
+      {
+        "id": 5057,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "553",
+        "to": "514"
+      },
+      {
+        "id": 5058,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "555",
+        "to": "554"
+      },
+      {
+        "id": 5059,
+        "label": "照看",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "553",
+        "to": "554"
+      },
+      {
+        "id": 5060,
+        "label": "保护",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "506",
+        "to": "554"
+      },
+      {
+        "id": 5061,
+        "label": "替身\t",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "557",
+        "to": "556"
+      },
+      {
+        "id": 5062,
+        "label": "老板",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "556",
+        "to": "514"
+      },
+      {
+        "id": 5063,
+        "label": "父亲",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "556",
+        "to": "554"
+      },
+      {
+        "id": 5064,
+        "label": "母亲",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "554",
+        "from": "558"
+      },
+      {
+        "id": 5065,
+        "label": "配偶",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "558",
+        "to": "556"
+      },
+      {
+        "id": 5066,
+        "label": "出场",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "303",
+        "to": "5"
+      },
+      {
+        "id": 5067,
+        "label": "出场",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "300",
+        "to": "5"
+      },
+      {
+        "id": 5068,
+        "label": "出场",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "401",
+        "to": "5"
+      },
+      {
+        "id": 5069,
+        "label": "持有",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "303",
+        "to": "14"
+      },
+      {
+        "id": 5070,
+        "label": "他人格",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "559",
+        "to": "556"
+      },
+      {
+        "id": 5071,
+        "label": "副指挥",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "559",
+        "to": "549"
+      },
+      {
+        "id": 5072,
+        "label": "指挥",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "556",
+        "to": "549"
+      },
+      {
+        "id": 5073,
+        "label": "仇人",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "556",
+        "to": "303"
+      },
+      {
+        "id": 5074,
+        "label": "伙伴",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "303",
+        "to": "506"
+      },
+      {
+        "id": 5075,
+        "label": "互换灵魂",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "303",
+        "to": "551"
+      },
+      {
+        "id": 5076,
+        "label": "进化型",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "311",
+        "from": "560"
+      },
+      {
+        "id": 5077,
+        "label": "击败",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "508",
+        "to": "556"
+      },
+      {
+        "id": 5078,
+        "label": "背叛",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "506",
+        "to": "556"
+      },
+      {
+        "id": 5079,
+        "label": "替身",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "562",
+        "to": "561"
+      },
+      {
+        "id": 5080,
+        "label": "拒绝",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "501",
+        "to": "562"
+      },
+      {
+        "id": 5081,
+        "label": "好友",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "504",
+        "to": "505"
+      },
+      {
+        "id": 5082,
+        "label": "崇拜",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "504",
+        "to": "501"
+      },
+      {
+        "id": 5083,
+        "label": "新老板",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "500",
+        "to": "514"
+      },
+      {
+        "id": 5084,
+        "label": "击败",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "506",
+        "to": "515"
+      },
+      {
+        "id": 5085,
+        "label": "击败",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "506",
+        "to": "549"
+      },
+      {
+        "id": 5601,
+        "label": "出场",
+        "direction": true,
+        "from": 501,
+        "to": 5
+      },
+      {
+        "id": 5602,
+        "label": "出场",
+        "direction": true,
+        "from": 502,
+        "to": 5
+      },
+      {
+        "id": 5603,
+        "label": "出场",
+        "direction": true,
+        "from": 503,
+        "to": 5
+      },
+      {
+        "id": 5604,
+        "label": "出场",
+        "direction": true,
+        "from": 504,
+        "to": 5
+      },
+      {
+        "id": 5605,
+        "label": "出场",
+        "direction": true,
+        "from": 505,
+        "to": 5
+      },
+      {
+        "id": 5616,
+        "label": "出场",
+        "direction": true,
+        "from": 516,
+        "to": 5
+      },
+      {
+        "id": 5618,
+        "label": "出场",
+        "direction": true,
+        "from": 518,
+        "to": 5
+      },
+      {
+        "id": 5620,
+        "label": "出场",
+        "direction": true,
+        "from": 520,
+        "to": 5
+      },
+      {
+        "id": 5622,
+        "label": "出场",
+        "direction": true,
+        "from": 522,
+        "to": 5
+      },
+      {
+        "id": 5624,
+        "label": "出场",
+        "direction": true,
+        "from": 524,
+        "to": 5
+      },
+      {
+        "id": 5626,
+        "label": "出场",
+        "direction": true,
+        "from": 526,
+        "to": 5
+      },
+      {
+        "id": 5628,
+        "label": "出场",
+        "direction": true,
+        "from": 528,
+        "to": 5
+      },
+      {
+        "id": 5630,
+        "label": "出场",
+        "direction": true,
+        "from": 530,
+        "to": 5
+      },
+      {
+        "id": 5631,
+        "label": "出场",
+        "direction": true,
+        "from": 531,
+        "to": 5
+      },
+      {
+        "id": 5632,
+        "label": "出场",
+        "direction": true,
+        "from": 532,
+        "to": 5
+      },
+      {
+        "id": 5633,
+        "label": "出场",
+        "direction": true,
+        "from": 533,
+        "to": 5
+      },
+      {
+        "id": 5635,
+        "label": "出场",
+        "direction": true,
+        "from": 535,
+        "to": 5
+      },
+      {
+        "id": 5637,
+        "label": "出场",
+        "direction": true,
+        "from": 537,
+        "to": 5
+      },
+      {
+        "id": 5639,
+        "label": "出场",
+        "direction": true,
+        "from": 539,
+        "to": 5
+      },
+      {
+        "id": 5641,
+        "label": "出场",
+        "direction": true,
+        "from": 541,
+        "to": 5
+      },
+      {
+        "id": 5643,
+        "label": "出场",
+        "direction": true,
+        "from": 543,
+        "to": 5
+      },
+      {
+        "id": 5645,
+        "label": "出场",
+        "direction": true,
+        "from": 545,
+        "to": 5
+      },
+      {
+        "id": 5647,
+        "label": "出场",
+        "direction": true,
+        "from": 547,
+        "to": 5
+      },
+      {
+        "id": 5650,
+        "label": "出场",
+        "direction": true,
+        "from": 550,
+        "to": 5
+      },
+      {
+        "id": 5651,
+        "label": "出场",
+        "direction": true,
+        "from": 551,
+        "to": 5
+      },
+      {
+        "id": 5653,
+        "label": "出场",
+        "direction": true,
+        "from": 553,
+        "to": 5
+      },
+      {
+        "id": 5654,
+        "label": "出场",
+        "direction": true,
+        "from": 554,
+        "to": 5
+      },
+      {
+        "id": 5656,
+        "label": "出场",
+        "direction": true,
+        "from": 556,
+        "to": 5
+      },
+      {
+        "id": 5658,
+        "label": "出场",
+        "direction": true,
+        "from": 558,
+        "to": 5
+      },
+      {
+        "id": 5659,
+        "label": "出场",
+        "direction": true,
+        "from": 559,
+        "to": 5
+      },
+      {
+        "id": 5661,
+        "label": "出场",
+        "direction": true,
+        "from": 561,
+        "to": 5
       }
     ]
   }
