@@ -8,7 +8,7 @@
   "data": {
     "nodes": [
       {
-        "label": "A",
+        "label": "B",
         "image": "",
         "id": 0,
         "categorie": "person",
@@ -19,3 +19,4 @@
     "edges": []
   }
 }
+

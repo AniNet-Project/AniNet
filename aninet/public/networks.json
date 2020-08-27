@@ -1,17 +1,31 @@
 [
     {
         "name": "魔法使之夜",
-        "title_img": "imgs/MahouTsukaiNoYoru/title.webp",
+        "titleImg": "imgs/MahouTsukaiNoYoru/title.webp",
         "url": "data/MahouTsukaiNoYoru.json"
     },
     {
         "name": "空之境界",
-        "title_img": "imgs/KaraNoKyoukai/title.jpg",
+        "titleImg": "imgs/KaraNoKyoukai/title.jpg",
         "url": "data/KaraNoKyoukai.json"
     },
     {
         "name": "JoJo的奇妙冒险",
-        "title_img": "imgs/JoJo/title.svg",
+        "titleImg": "imgs/JoJo/title.svg",
         "url": "data/JoJo.json"
+    },
+    {
+        "name": "吹响!上低音号",
+        "titleImg": "imgs/SoundEuphonium/title.jpg",
+        "url": [
+            {
+                "label": "久一年",
+                "url": "data/SoundEuphonium/01.json"
+            },
+            {
+                "label": "久二年",
+                "url": "data/SoundEuphonium/02.json"
+            }
+        ]
     }
 ]

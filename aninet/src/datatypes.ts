@@ -1,13 +1,18 @@
 export type NetItem = {
   name: string,
-  title_img: string,
-  url: string
+  titleImg: string,
+  url: string | Array<TimePoint>,
+}
+
+export type TimePoint = {
+  label: string,
+  url: string,
 }
 
 export type NodeType = {
+  id: number,
   label: string,
   image: string,
-  id: number,
   categorie: string,
   info: string,
   link: string,
@@ -18,7 +23,7 @@ export type EdgeType = {
   label: string,
   from: number,
   to: number,
-  direction?: boolean,
+  direction: boolean,
 }
 
 export type ItemInfo = {

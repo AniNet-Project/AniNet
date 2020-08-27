@@ -23,7 +23,7 @@ class Card extends React.Component<CardProps, object> {
     return (
       <a href={"#/network/"+item.name}>
       <div className="card">
-        <img className="titleImg" src={item.title_img} alt={item.name}></img>
+        <img className="titleImg" src={item.titleImg} alt={item.name}></img>
         <p className="name">{item.name}</p>
       </div>
       </a>
@@ -124,7 +124,7 @@ class App extends React.Component<AppProps, AppState> {
 
   render() {
     let { error, isLoaded, items } = this.state
-    const emptyItem = {name: "新建网络", title_img: "", url: "data/empty.json"}
+    const emptyItem = {name: "新建网络", titleImg: "", url: "data/empty.json"}
     items = items.concat([emptyItem])
     if (error) {
       return <div>Error: {error.message}</div>

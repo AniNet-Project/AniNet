@@ -152,19 +152,22 @@
         "id": 1000,
         "label": "同居人",
         "from": 1,
-        "to": 2
+        "to": 2,
+        "direction": false
       },
       {
         "id": 1001,
         "label": "同居人",
         "from": 1,
-        "to": 3
+        "to": 3,
+        "direction": false
       },
       {
         "id": 1002,
         "label": "同居人",
         "from": 2,
-        "to": 3
+        "to": 3,
+        "direction": false
       },
       {
         "id": 1003,
@@ -184,7 +187,8 @@
         "id": 1005,
         "label": "朋友",
         "from": 5,
-        "to": 3
+        "to": 3,
+        "direction": false
       },
       {
         "id": 1006,
@@ -225,7 +229,8 @@
         "id": 1011,
         "label": "朋友",
         "from": 6,
-        "to": 3
+        "to": 3,
+        "direction": false
       },
       {
         "id": 1013,
@@ -259,7 +264,8 @@
         "id": 1019,
         "label": "朋友",
         "from": 12,
-        "to": 2
+        "to": 2,
+        "direction": false
       },
       {
         "id": 1020,
@@ -272,7 +278,8 @@
         "id": 1021,
         "label": "笔友",
         "from": 14,
-        "to": 2
+        "to": 2,
+        "direction": false
       },
       {
         "id": 1022,

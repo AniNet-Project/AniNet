@@ -178,5 +178,14 @@ img {
   z-index: 10;
   top: 46%;
   left: 48%;
+}
 
+.timeSlider {
+  margin-left: 35%;
+  margin-top: 1em;
+}
+
+.timeSlider .label {
+  font-weight: 300;
+  font-size: 16px;
 }
