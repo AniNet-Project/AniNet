@@ -149,6 +149,7 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
               </TabPanel>
             </Tabs>
           </div>
+
           <TimeSlider
             time={this.state.currentTime}
             timePoints={this.state.timePoints}

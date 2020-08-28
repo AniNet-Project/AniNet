@@ -27,6 +27,7 @@ type TimeSliderProps = {
 }
 
 export default (props: TimeSliderProps) => {
+  if (props.timePoints.length < 2) { return (<></>) }
   const classes = useStyles();
 
   let i = -1;

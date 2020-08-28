@@ -1,0 +1,21 @@
+{
+  "categories": {
+    "person": {
+      "label": "人物",
+      "color": "#66bbff"
+    }
+  },
+  "data": {
+    "nodes": [
+      {
+        "label": "C",
+        "image": "",
+        "id": 0,
+        "categorie": "person",
+        "info": "",
+        "link": ""
+      }
+    ],
+    "edges": []
+  }
+}

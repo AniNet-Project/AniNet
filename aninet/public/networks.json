@@ -25,6 +25,10 @@
             {
                 "label": "久二年",
                 "url": "data/SoundEuphonium/02.json"
+            },
+            {
+                "label": "久三年",
+                "url": "data/SoundEuphonium/03.json"
             }
         ]
     }

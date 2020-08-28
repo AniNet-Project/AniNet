@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { exportToJson } from './utils'
-import {NetItem, TimePoint, ItemInfo, NodeType, EdgeType, CatType} from './datatypes'
+import { ItemInfo } from './datatypes'
 
 type setInfoMth = (info: ItemInfo) => void
 
