@@ -10,6 +10,7 @@ import NetView from './NetView'
 import TimeSlider from './TimeSlider'
 import {NetItem, TimePoint, ItemInfo, NodeType, EdgeType, CatType} from './datatypes'
 import { NodeGrid, EdgeGrid, CatGrid } from './EditGrid'
+import Comments from './Comments'
 
 
 
@@ -155,6 +156,9 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
             timePoints={this.state.timePoints}
             setTime={this.setCurrentTime.bind(this)}
           />
+
+          <Comments issueTerm={item.name}/>
+
           </div>
           <Footer/>
         </div>

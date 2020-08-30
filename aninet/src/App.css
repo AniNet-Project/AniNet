@@ -132,3 +132,15 @@ h1 {
   font-size: 14px;
   font-weight: 300;
 }
+
+.comments {
+  margin-top: 1.2em;
+}
+
+#comments-content {
+  display: block;
+}
+
+.utterances {
+  max-width: 1160px;
+}
