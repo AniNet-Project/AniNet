@@ -1,7 +1,7 @@
 <img src=./aninet/public/logo-banner.png height=100 />
 
 AniNet 是一个用来可视化展示各种AGC（动画、漫画、游戏）作品中人物关系网络的静态开源网站，
-你可以借助于它自由地制作与展示你所喜爱的作品中的人物关系网络图：[主页](https://aninet-project.github.io/)
+你可以借助于它自由地制作与展示你所喜爱的作品中的人物关系网络图：[主页](https://aninet-project.github.io/)，[Gitee 镜像](https://ani-net-project.gitee.io/)
 
 ### 目前包括的作品
 
