@@ -40,7 +40,7 @@ export default (props: infoBoardProps) => {
             { shorterString(node.info, 80) }
           </div>
           {
-            'link' in node ?
+            ('link' in node) && (node['link'] !== "") ?
             <a className="link" href={node.link}>链接</a> :
             null
           }

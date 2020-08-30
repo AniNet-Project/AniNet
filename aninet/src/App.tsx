@@ -138,8 +138,8 @@ class App extends React.Component<AppProps, AppState> {
             <Route key={item.name} path={"/network/"+item.name}
                    component={() => <NetPage item={item}/>} />
           ))}
-          <Route key="help" path={"/help"}
-                 component={() => <DocPage title="帮助" sourceUrl={"docs/help.md"}/>} />
+          <Route key="contribute" path={"/contribute"}
+                 component={() => <DocPage title="如何贡献" sourceUrl={"docs/contribute.md"}/>} />
           <Route key="about" path={"/about"}
                  component={() => <DocPage title="关于" sourceUrl={"docs/about.md"}/>}
                  />

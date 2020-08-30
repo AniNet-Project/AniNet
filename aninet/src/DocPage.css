@@ -23,12 +23,15 @@
 }
 
 #for-you {
-  text-align: center;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 #logo {
   display: block;
   width: 400px;
   margin: auto;
+}
+
+.center {
+  text-align: center;
 }
