@@ -237,18 +237,10 @@
       },
       {
         "id": 6,
-        "label": "中音萨克斯",
+        "label": "萨克斯",
         "categorie": "organization",
         "info": "",
-        "image": "imgs/SoundEuphonium/zhongyinsakesi.png",
-        "link": ""
-      },
-      {
-        "id": 7,
-        "label": "次中音萨克斯",
-        "categorie": "organization",
-        "info": "",
-        "image": "imgs/SoundEuphonium/cizhongyinsakesi.png",
+        "image": "imgs/SoundEuphonium/sakesi.png",
         "link": ""
       },
       {
@@ -298,6 +290,406 @@
         "info": "久美子所在班级",
         "image": "",
         "link": ""
+      },
+      {
+        "id": 42,
+        "label": "鸟冢弘音",
+        "categorie": "person",
+        "info": "高中三年级，单簧管声部领队，乐队首席。",
+        "image": "imgs/SoundEuphonium/niaozhonghongyin.png",
+        "link": "https://www.bilibili.com/read/cv6080250/?from=readlist"
+      },
+      {
+        "id": 43,
+        "label": "岛理惠\t",
+        "categorie": "person",
+        "info": "高中二年级，单簧管。狂热宇宙迷，痴迷于ヒロネ前辈。",
+        "image": "imgs/SoundEuphonium/daolihui.png",
+        "link": ""
+      },
+      {
+        "id": 44,
+        "label": "植田日和子\t",
+        "categorie": "person",
+        "info": "植田日和子（1年级），心醉于泷老师带来的风潮中，两眼发出闪闪发光的视线。",
+        "image": "imgs/SoundEuphonium/zhitianherizi.png",
+        "link": ""
+      },
+      {
+        "id": 45,
+        "label": "松崎洋子\t",
+        "categorie": "person",
+        "info": "松崎洋子（1年级），喜欢绘画。",
+        "image": "imgs/SoundEuphonium/songqiyangzi.png",
+        "link": ""
+      },
+      {
+        "id": 46,
+        "label": "萩原笙子\t",
+        "categorie": "person",
+        "info": "萩原笙子（3年级），以“和谐气氛”为座右铭，擅长照顾人，温柔地指导1年级，与3年级同学同样关系很好，与铃鹿咲子（3年级）一起流行青蛙饰品。",
+        "image": "imgs/SoundEuphonium/diyuanshengzi.png",
+        "link": ""
+      },
+      {
+        "id": 47,
+        "label": "铃鹿咲子\t",
+        "categorie": "person",
+        "info": "铃鹿咲子（3年级），以“和谐气氛”为座右铭，擅长照顾人，温柔地指导1年级，与3年级同学同样关系良好。",
+        "image": "imgs/SoundEuphonium/xiaolulingzi.png",
+        "link": ""
+      },
+      {
+        "id": 48,
+        "label": "田中须加实\t",
+        "categorie": "person",
+        "info": "田中须加实（3年级），总是无法冷静下来思考，经常迟到。",
+        "image": "imgs/SoundEuphonium/tianzhongxujiashi.png",
+        "link": ""
+      },
+      {
+        "id": 49,
+        "label": "高野久惠\t",
+        "categorie": "person",
+        "info": "高野久惠（1年级），向前看的努力人士，但是是个笨拙的人。",
+        "image": "imgs/SoundEuphonium/gaoyejiuhui.png",
+        "link": ""
+      },
+      {
+        "id": 50,
+        "label": "大口弓菜\t",
+        "categorie": "person",
+        "info": "高中三年级，单簧管。",
+        "image": "imgs/SoundEuphonium/dakougongcai.png",
+        "link": ""
+      },
+      {
+        "id": 51,
+        "label": "越川纯子\t",
+        "categorie": "person",
+        "info": "高中三年级，低音单簧管。",
+        "image": "imgs/SoundEuphonium/yuechuanchunzi.png",
+        "link": ""
+      },
+      {
+        "id": 52,
+        "label": "冈美贵乃\t",
+        "categorie": "person",
+        "info": "高中三年级，大管。",
+        "image": "imgs/SoundEuphonium/gangmeiguinai.png",
+        "link": "https://www.bilibili.com/read/cv7159606/?from=readlist"
+      },
+      {
+        "id": 53,
+        "label": "喜多村来南\t",
+        "categorie": "person",
+        "info": "高中三年级，大管，双簧管&大管声部领队。",
+        "image": "imgs/SoundEuphonium/xiduocunlainan.png",
+        "link": "https://www.bilibili.com/read/cv5125604/?from=readlist"
+      },
+      {
+        "id": 54,
+        "label": "渡边恒\t",
+        "categorie": "person",
+        "info": "（3年级）：喜欢摸头发，一直在编别人的头发。",
+        "image": "imgs/SoundEuphonium/dubianheng.png",
+        "link": ""
+      },
+      {
+        "id": 55,
+        "label": "姬神琴子\t",
+        "categorie": "person",
+        "info": "姬神琴子（3年级），长笛&短笛声部领队，面不改色完成任务的类型，讨厌麻烦的事情。",
+        "image": "imgs/SoundEuphonium/jishenqinzi.png",
+        "link": ""
+      },
+      {
+        "id": 56,
+        "label": "高桥沙里\t",
+        "categorie": "person",
+        "info": "高中一年级，长笛。",
+        "image": "imgs/SoundEuphonium/gaoqiaoshali.png",
+        "link": ""
+      },
+      {
+        "id": 57,
+        "label": "小田芽衣子\t",
+        "categorie": "person",
+        "info": "高中一年级，长笛",
+        "image": "imgs/SoundEuphonium/xiaotianyayizi.png",
+        "link": ""
+      },
+      {
+        "id": 58,
+        "label": "三原京子\t",
+        "categorie": "person",
+        "info": "三原京子（3年级），一直在吹长笛，负责新人中野蕾实的教育。",
+        "image": "imgs/SoundEuphonium/sanyuanjingzi.png",
+        "link": ""
+      },
+      {
+        "id": 59,
+        "label": "中野蕾实\t",
+        "categorie": "person",
+        "info": "中野蕾实（1年级），长笛新手，纯朴又可爱。",
+        "image": "imgs/SoundEuphonium/zhongyeleishi.png",
+        "link": ""
+      },
+      {
+        "id": 60,
+        "label": "井上调\t",
+        "categorie": "person",
+        "info": "井上调（2年级），负责指导一年级，坚强可靠",
+        "image": "imgs/SoundEuphonium/jingshangdiao.png",
+        "link": ""
+      },
+      {
+        "id": 61,
+        "label": "杂贺赖子\t",
+        "categorie": "person",
+        "info": "杂贺赖子（3年级），短笛，擅长钢琴的森女系，希望将来在欧洲的乡村居住。",
+        "image": "imgs/SoundEuphonium/zahelaizi.png",
+        "link": "https://www.bilibili.com/read/cv5346517/?from=readlist"
+      },
+      {
+        "id": 62,
+        "label": "宫桐子\t",
+        "categorie": "person",
+        "info": "（3年级），与 桥弘江（3年级），平尾澄子（2年级）关系很好，三人对于音乐杂志和偶像的话题的讨论热火朝天。",
+        "image": "imgs/SoundEuphonium/gongtongzi.png",
+        "link": ""
+      },
+      {
+        "id": 63,
+        "label": "桥弘江",
+        "categorie": "person",
+        "info": "桥弘江（3年级），与宫桐子（3年级），平尾澄子（2年级）关系很好，三人对于音乐杂志和偶像的话题的讨论热火朝天。",
+        "image": "imgs/SoundEuphonium/qiaohongjiang.png",
+        "link": ""
+      },
+      {
+        "id": 64,
+        "label": "平尾澄子\t",
+        "categorie": "person",
+        "info": "平尾澄子（2年级），与宫桐子（3年级），桥弘江（3年级）关系很好，三人对于音乐杂志和偶像的话题的讨论热火朝天。",
+        "image": "imgs/SoundEuphonium/pingweichengzi.png",
+        "link": ""
+      },
+      {
+        "id": 65,
+        "label": "冈本来梦\t",
+        "categorie": "person",
+        "info": "冈本来梦（3年级），saxophone is fashion，虽然讨厌严酷的练习，但对于泷老师的策略很感兴趣。",
+        "image": "imgs/SoundEuphonium/laimeng.png",
+        "link": ""
+      },
+      {
+        "id": 66,
+        "label": "森田忍\t",
+        "categorie": "person",
+        "info": "（2年级），经常表现的像没有余裕一样，感情表现丰富。",
+        "image": "imgs/SoundEuphonium/sentianren.png",
+        "link": ""
+      },
+      {
+        "id": 67,
+        "label": "牧誓\t",
+        "categorie": "person",
+        "info": "牧誓（1年级），憧憬着上低音萨克斯而入部。",
+        "image": "imgs/SoundEuphonium/mushi.png",
+        "link": "https://www.bilibili.com/read/cv6098932/?from=readlist"
+      },
+      {
+        "id": 68,
+        "label": "泷川近夫\t",
+        "categorie": "person",
+        "info": "（1年级），与秀一关系良好，放学经常一起走。",
+        "image": "imgs/SoundEuphonium/longchuanjinfu.png",
+        "link": ""
+      },
+      {
+        "id": 69,
+        "label": "加部友惠",
+        "categorie": "person",
+        "info": "加部友惠（2年），跟着吉川优子形成香织亲卫队，不太擅长吹小号。",
+        "image": "imgs/SoundEuphonium/jiabuyouhui.png",
+        "link": "https://zh.moegirl.org.cn/%E5%8A%A0%E9%83%A8%E5%8F%8B%E6%83%A0"
+      },
+      {
+        "id": 70,
+        "label": "吉泽秋子\t",
+        "categorie": "person",
+        "info": "吉泽秋子（1年），注视着明日香和香织的关系，正在“嗯哈.....\"中。",
+        "image": "imgs/SoundEuphonium/jizeqiuzi.png",
+        "link": ""
+      },
+      {
+        "id": 71,
+        "label": "笠野沙菜\t",
+        "categorie": "person",
+        "info": "笠野沙菜（3年级），在组内算是小号吹的不错的，在他人注意不到的地方努力支持着大家，喜欢照料植物。",
+        "image": "imgs/SoundEuphonium/liyeshacai.png",
+        "link": ""
+      },
+      {
+        "id": 72,
+        "label": "泷野纯一\t",
+        "categorie": "person",
+        "info": "泷野纯一（2年级），因为憧憬香织而入部，当然是在谁也没注意到的情况下。心中“咚...咚...\"。",
+        "image": "imgs/SoundEuphonium/longyechunyi.png",
+        "link": ""
+      },
+      {
+        "id": 73,
+        "label": "野口日照\t",
+        "categorie": "person",
+        "info": "野口日照（3年），长号声部领队，最近开始与田浦爱衣（3年）交往，两人世界如此开心以至于两人难以投入身心练习。",
+        "image": "imgs/SoundEuphonium/yekourizhao.png",
+        "link": "https://www.bilibili.com/read/cv6727911/?from=readlist"
+      },
+      {
+        "id": 74,
+        "label": "田浦爱衣\t",
+        "categorie": "person",
+        "info": "田浦爱衣（3年级），最近开始与野口日照（3年级）交往，两人世界如此开心以至于两人难以投入身心练习。",
+        "image": "imgs/SoundEuphonium/tianpuaiyi.png",
+        "link": "https://www.bilibili.com/read/cv6727911/?from=readlist"
+      },
+      {
+        "id": 75,
+        "label": "赤松麻纪\t",
+        "categorie": "person",
+        "info": "赤松麻纪（1年级），中学时吹长号，从中学时与吹圆号的森本关系就很好，想专心练习。",
+        "image": "imgs/SoundEuphonium/chisongmaji.png",
+        "link": ""
+      },
+      {
+        "id": 76,
+        "label": "福井沙耶香\t",
+        "categorie": "person",
+        "info": "福井沙耶香（1年级），高中开始加入吹奏部，憧憬着明日香而入部，喜欢海豹。",
+        "image": "imgs/SoundEuphonium/fujingshayexiang.png",
+        "link": ""
+      },
+      {
+        "id": 77,
+        "label": "岩田慧菜\t",
+        "categorie": "person",
+        "info": "岩田慧菜（2年级），正在努力指导1年级学生。",
+        "image": "imgs/SoundEuphonium/yantianhuicai.png",
+        "link": ""
+      },
+      {
+        "id": 78,
+        "label": "泽田树里\t",
+        "categorie": "person",
+        "info": "泽田树理（3年级），组长，中学时开始吹圆号，因为一直都是组内最优秀，所以没怎么努力过。",
+        "image": "imgs/SoundEuphonium/zetianshuli.png",
+        "link": ""
+      },
+      {
+        "id": 79,
+        "label": "加桥比吕\t",
+        "categorie": "person",
+        "info": "加桥比吕（3年级），高中开始加入吹奏部，因为曾与泽田树理（3年级）同班而吹圆号。",
+        "image": "imgs/SoundEuphonium/jiaqiaobilv.png",
+        "link": ""
+      },
+      {
+        "id": 80,
+        "label": "森本美千代\t",
+        "categorie": "person",
+        "info": "森本美千代（1年级），中学时就吹圆号，教瞳拉拉（1年级）基础。",
+        "image": "imgs/SoundEuphonium/senbenmeiqiandai.png",
+        "link": ""
+      },
+      {
+        "id": 81,
+        "label": "瞳拉拉",
+        "categorie": "person",
+        "info": "瞳拉拉（1年级），憧憬圆号的形状入部，因为前辈没怎么教过她，所以她还没注意到自己吹的烂。",
+        "image": "imgs/SoundEuphonium/tonglala.png",
+        "link": ""
+      },
+      {
+        "id": 82,
+        "label": "岸部海松\t",
+        "categorie": "person",
+        "info": "岸部海松（2年级），高中开始加入吹奏部，早已经习惯了懒散的气氛。",
+        "image": "imgs/SoundEuphonium/anbuhaisong.png",
+        "link": "https://www.bilibili.com/read/cv5346517/?from=readlist"
+      },
+      {
+        "id": 83,
+        "label": "田边名来\t",
+        "categorie": "person",
+        "info": "田边名来（3年级），组长，喜欢恐龙。以“music is heart\"为座右铭，为了能让组内人人都能享受演奏的乐趣而兴致冲冲地努力。",
+        "image": "imgs/SoundEuphonium/tianbianminglai.png",
+        "link": ""
+      },
+      {
+        "id": 84,
+        "label": "加山沙希\t",
+        "categorie": "person",
+        "info": "加山沙希（3年级），组内的努力人士，掌舵防止组长田边名来（3年级）失控暴走。",
+        "image": "imgs/SoundEuphonium/jiashanshaxi.png",
+        "link": ""
+      },
+      {
+        "id": 85,
+        "label": "大野美代子\t",
+        "categorie": "person",
+        "info": "大野美代子（2年级），善于观察照顾别人，性格开朗能活跃大家的气氛。",
+        "image": "imgs/SoundEuphonium/dayemeidaizi.png",
+        "link": ""
+      },
+      {
+        "id": 86,
+        "label": "堺万纱子\t",
+        "categorie": "person",
+        "info": "堺万纱子（1年级），非常喜欢音乐，认为最有意思的乐器是打击乐器而加入打击乐器组。",
+        "image": "imgs/SoundEuphonium/jiewanshazi.png",
+        "link": ""
+      },
+      {
+        "id": 87,
+        "label": "井上顺菜\t",
+        "categorie": "person",
+        "info": "井上顺菜（1年级），从中学开始一直都是打击乐。",
+        "image": "imgs/SoundEuphonium/jingshangshuncai.png",
+        "link": ""
+      },
+      {
+        "id": 88,
+        "label": "釜屋燕",
+        "categorie": "person",
+        "info": "釜屋燕（1年级），因为想敲鼓而加入吹奏部，但是本人没什么节奏感。也不擅长北宇治的“迷步”。",
+        "image": "imgs/SoundEuphonium/fuwuyan.png",
+        "link": ""
+      },
+      {
+        "id": 89,
+        "label": "近藤正和",
+        "categorie": "person",
+        "info": "著名的音乐家，与明日香的母亲离婚。",
+        "image": "",
+        "link": ""
+      },
+      {
+        "id": 90,
+        "label": "黄前健太郎",
+        "categorie": "person",
+        "info": "久美子的父亲。",
+        "image": "imgs/SoundEuphonium/huangqianjiantailang.png",
+        "link": "https://bgm.tv/character/48895"
+      },
+      {
+        "id": 91,
+        "label": "黄前明子",
+        "categorie": "person",
+        "info": "久美子的母亲。",
+        "image": "imgs/SoundEuphonium/huangqianmingzi.png",
+        "link": "https://www.v2anime.com/wiki/character/752/"
       }
     ],
     "edges": [
@@ -344,7 +736,7 @@
       {
         "id": 4,
         "label": "学生",
-        "direction": false,
+        "direction": true,
         "info": "",
         "image": "",
         "link": "",
@@ -354,7 +746,7 @@
       {
         "id": 5,
         "label": "学生",
-        "direction": false,
+        "direction": true,
         "info": "",
         "image": "",
         "link": "",
@@ -364,7 +756,7 @@
       {
         "id": 6,
         "label": "学生",
-        "direction": false,
+        "direction": true,
         "info": "",
         "image": "",
         "link": "",
@@ -459,16 +851,6 @@
         "image": "",
         "link": "",
         "from": "6",
-        "to": "1"
-      },
-      {
-        "id": 16,
-        "label": "乐部",
-        "direction": true,
-        "info": "",
-        "image": "",
-        "link": "",
-        "from": "7",
         "to": "1"
       },
       {
@@ -589,7 +971,7 @@
         "image": "",
         "link": "",
         "from": "25",
-        "to": "7"
+        "to": "6"
       },
       {
         "id": 29,
@@ -729,7 +1111,7 @@
         "image": "",
         "link": "",
         "from": "34",
-        "to": "7"
+        "to": "6"
       },
       {
         "id": 43,
@@ -890,6 +1272,756 @@
         "link": "",
         "from": "41",
         "to": "3"
+      },
+      {
+        "id": 61,
+        "label": "领队",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "42",
+        "to": "3"
+      },
+      {
+        "id": 62,
+        "label": "乐队首席",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "42",
+        "to": "1"
+      },
+      {
+        "id": 63,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "43",
+        "to": "3"
+      },
+      {
+        "id": 64,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "44",
+        "to": "3"
+      },
+      {
+        "id": 65,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "45",
+        "to": "3"
+      },
+      {
+        "id": 66,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "46",
+        "to": "3"
+      },
+      {
+        "id": 67,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "47",
+        "to": "3"
+      },
+      {
+        "id": 68,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "48",
+        "to": "3"
+      },
+      {
+        "id": 69,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "49",
+        "to": "3"
+      },
+      {
+        "id": 70,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "50",
+        "to": "3"
+      },
+      {
+        "id": 71,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "51",
+        "to": "3"
+      },
+      {
+        "id": 72,
+        "label": "好友",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "50",
+        "to": "51"
+      },
+      {
+        "id": 73,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "52",
+        "to": "4"
+      },
+      {
+        "id": 74,
+        "label": "领队",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "53",
+        "to": "4"
+      },
+      {
+        "id": 75,
+        "label": "好友",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "52",
+        "to": "53"
+      },
+      {
+        "id": 76,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "54",
+        "to": "5"
+      },
+      {
+        "id": 77,
+        "label": "领队",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "55",
+        "to": "5"
+      },
+      {
+        "id": 78,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "56",
+        "to": "5"
+      },
+      {
+        "id": 79,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "57",
+        "to": "5"
+      },
+      {
+        "id": 80,
+        "label": "好友",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "56",
+        "to": "57"
+      },
+      {
+        "id": 81,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "58",
+        "to": "5"
+      },
+      {
+        "id": 82,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "59",
+        "to": "5"
+      },
+      {
+        "id": 83,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "60",
+        "to": "5"
+      },
+      {
+        "id": 84,
+        "label": "指导",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "58",
+        "to": "59"
+      },
+      {
+        "id": 85,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "61",
+        "to": "5"
+      },
+      {
+        "id": 86,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "62",
+        "to": "6"
+      },
+      {
+        "id": 87,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "63",
+        "to": "6"
+      },
+      {
+        "id": 88,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "64",
+        "to": "6"
+      },
+      {
+        "id": 89,
+        "label": "好友",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "62",
+        "to": "63"
+      },
+      {
+        "id": 90,
+        "label": "好友",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "62",
+        "to": "64"
+      },
+      {
+        "id": 91,
+        "label": "好友",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "63",
+        "to": "64"
+      },
+      {
+        "id": 92,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "65",
+        "to": "6"
+      },
+      {
+        "id": 93,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "66",
+        "to": "6"
+      },
+      {
+        "id": 94,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "67",
+        "to": "6"
+      },
+      {
+        "id": 95,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "68",
+        "to": "6"
+      },
+      {
+        "id": 96,
+        "label": "好友",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "68",
+        "to": "24"
+      },
+      {
+        "id": 97,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "69",
+        "to": "8"
+      },
+      {
+        "id": 98,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "70",
+        "to": "8"
+      },
+      {
+        "id": 99,
+        "label": "支持",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "69",
+        "to": "27"
+      },
+      {
+        "id": 100,
+        "label": "憧憬",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "72",
+        "to": "27"
+      },
+      {
+        "id": 101,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "72",
+        "to": "8"
+      },
+      {
+        "id": 102,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "71",
+        "to": "8"
+      },
+      {
+        "id": 103,
+        "label": "领队",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "73",
+        "to": "9"
+      },
+      {
+        "id": 104,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "74",
+        "to": "9"
+      },
+      {
+        "id": 105,
+        "label": "恋爱",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "74",
+        "to": "73"
+      },
+      {
+        "id": 106,
+        "label": "暗恋",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "21",
+        "to": "35"
+      },
+      {
+        "id": 107,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "75",
+        "to": "9"
+      },
+      {
+        "id": 108,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "76",
+        "to": "9"
+      },
+      {
+        "id": 109,
+        "label": "憧憬",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "to": "26",
+        "from": "76"
+      },
+      {
+        "id": 110,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "77",
+        "to": "9"
+      },
+      {
+        "id": 111,
+        "label": "领队",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "78",
+        "to": "12"
+      },
+      {
+        "id": 112,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "79",
+        "to": "12"
+      },
+      {
+        "id": 113,
+        "label": "同班",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "78",
+        "to": "79"
+      },
+      {
+        "id": 114,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "80",
+        "to": "12"
+      },
+      {
+        "id": 115,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "81",
+        "to": "12"
+      },
+      {
+        "id": 116,
+        "label": "教导",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "80",
+        "to": "81"
+      },
+      {
+        "id": 117,
+        "label": "领队",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "83",
+        "to": "11"
+      },
+      {
+        "id": 118,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "84",
+        "to": "11"
+      },
+      {
+        "id": 119,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "85",
+        "to": "11"
+      },
+      {
+        "id": 120,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "86",
+        "to": "11"
+      },
+      {
+        "id": 121,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "87",
+        "to": "11"
+      },
+      {
+        "id": 122,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "88",
+        "to": "11"
+      },
+      {
+        "id": 123,
+        "label": "成员",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "82",
+        "to": "12"
+      },
+      {
+        "id": 124,
+        "label": "父亲",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "89",
+        "to": "26"
+      },
+      {
+        "id": 125,
+        "label": "父亲",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "90",
+        "to": "20"
+      },
+      {
+        "id": 126,
+        "label": "父亲",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "90",
+        "to": "39"
+      },
+      {
+        "id": 127,
+        "label": "夫妻",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "91",
+        "to": "90"
+      },
+      {
+        "id": 128,
+        "label": "母亲",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "91",
+        "to": "39"
+      },
+      {
+        "id": 129,
+        "label": "母亲",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "91",
+        "to": "20"
+      },
+      {
+        "id": 130,
+        "label": "幼驯染",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "24",
+        "to": "39"
+      },
+      {
+        "id": 131,
+        "label": "好前辈",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "26",
+        "to": "20"
+      },
+      {
+        "id": 132,
+        "label": "好友",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "27",
+        "to": "25"
+      },
+      {
+        "id": 133,
+        "label": "搭档",
+        "direction": false,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "25",
+        "to": "26"
+      },
+      {
+        "id": 134,
+        "label": "憧憬",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "27",
+        "to": "26"
+      },
+      {
+        "id": 135,
+        "label": "喜欢",
+        "direction": true,
+        "info": "",
+        "image": "",
+        "link": "",
+        "from": "23",
+        "to": "24"
       }
     ]
   }
