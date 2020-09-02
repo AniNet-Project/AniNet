@@ -28,7 +28,8 @@
 
 #logo {
   display: block;
-  width: 400px;
+  max-width: 400px;
+  width: auto;
   margin: auto;
 }
 

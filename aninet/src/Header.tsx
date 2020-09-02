@@ -11,15 +11,17 @@ export default class Header extends React.Component<HeaderProps, object> {
         <div className="page-title">
           <div className="container">
             <div className="topbar">
-              <a href="https://github.com/AniNet-Project">
-                GitHub
-              </a>
-              <a href="#/about">
-                关于
-              </a>
-              <a href="#/contribute">
-                如何贡献
-              </a>
+              <div className="links">
+                <a href="#/contribute">
+                  如何贡献
+                </a>
+                <a href="#/about">
+                  关于
+                </a>
+                <a href="https://github.com/AniNet-Project">
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
           <div className="container title">

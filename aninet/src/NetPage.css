@@ -1,7 +1,6 @@
 .netView canvas {
   max-width: 99.7%;
-  min-height: 30em;
-  border: 1px solid #BFBFBF;
+  min-height: 600px;
 }
 
 canvas {
@@ -9,10 +8,19 @@ canvas {
   background-color: white;
 }
 
+#full-screen-region:not(:fullscreen) {
+  border: 1px solid #BFBFBF;
+  max-height: 600px;
+}
+
+#full-screen-region:fullscreen {
+  background-color: white;
+}
+
 .toolbar {
   height: 1em;
   margin-top: 2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
 }
 
 button:focus {outline:0;}
@@ -121,6 +129,9 @@ img {
 
 .react-tabs__tab-list {
   margin-bottom: 0;
+  overflow-x: hidden;
+  height: 46px;
+  border-bottom: none;
 }
 
 .viewControl {
