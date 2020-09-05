@@ -1,5 +1,5 @@
 .netView canvas {
-  max-width: 99.7%;
+  max-width: 100%;
   min-height: 600px;
 }
 
@@ -19,8 +19,8 @@ canvas {
 
 .toolbar {
   height: 1em;
-  margin-top: 2em;
-  margin-bottom: 0.8em;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 button:focus {outline:0;}
@@ -123,14 +123,11 @@ img {
 }
 
 .react-tabs__tab {
-  font-size: 1.1em;
   font-weight: 200;
 }
 
 .react-tabs__tab-list {
   margin-bottom: 0;
-  overflow-x: hidden;
-  height: 46px;
   border-bottom: none;
 }
 
