@@ -157,7 +157,8 @@ img {
 }
 
 #edit-options-content {
-  font-size: 1.1em;
+  width: 550px;
+  font-size: 16px;
   resize: none;
 }
 
@@ -174,11 +175,15 @@ img {
 }
 
 #filterDialog > div > input {
-  width: 25em;
+  width: 400px;
 }
 
 #tuneDialog {
-  width: 20em;
+  width: 400px;
+}
+
+.MuiInputBase-input {
+  font-size: 16px !important;
 }
 
 #progressBar {
@@ -196,4 +201,12 @@ img {
 .timeSlider .label {
   font-weight: 300;
   font-size: 16px;
+}
+
+#importDialog {
+  width: 400px;
+}
+
+#importDialog > div.MuiInputBase-root > input {
+  width: 380px;
 }

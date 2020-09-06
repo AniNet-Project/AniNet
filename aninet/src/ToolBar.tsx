@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { exportToJson } from './utils'
+import { ImportDialog } from './Dialogs'
 import { ItemInfo } from './datatypes'
 
 type setInfoMth = (info: ItemInfo) => void
@@ -60,6 +61,7 @@ export default class ToolBar extends React.Component<ToolBarProps, object> {
     return (
       <div className="toolbar">
         <div className="rightside">
+          <ImportDialog info={this.props.info} setInfo={this.props.setInfo}/>
           <UploadBtn setInfo={this.props.setInfo}/>
           <button onClick={() => {exportToJson(this.props.info, "export.json")}}>保存文件 (JSON)</button>
         </div>

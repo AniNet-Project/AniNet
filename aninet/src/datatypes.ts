@@ -43,3 +43,9 @@ export type Pos2d = {
   x: number,
   y: number
 }
+
+export type SourceItem = {
+  id: string,
+  name: string,
+  data: string,
+}
