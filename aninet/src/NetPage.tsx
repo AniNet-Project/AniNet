@@ -35,6 +35,7 @@ type NetPageState = {
   timesInfo: Array<ItemInfo>,
   currentTime: number,
   timePoints: Array<TimePoint>,
+  nodeCache: Array<Record<number, NodeType>>
 }
 
 
@@ -47,6 +48,7 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
       timesInfo: [],
       currentTime: 0,
       timePoints: [],
+      nodeCache: [],
     }
   }
 
@@ -62,11 +64,19 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
     Promise.all(
       timepoints.map((t) => fetch(t.url).then(resp => resp.json()))
     )
-    .then( infos => {
+    .then( infos_ => {
+      const infos = infos_ as [ItemInfo]
       this.setState({
         isLoaded: true,
         timesInfo: infos.map(info => preProcessInfo(info)),
         timePoints: timepoints,
+        nodeCache: infos.map(info => {
+          let cache: Record<number, NodeType> = {}
+          for (const n of info.data.nodes) {
+            cache[n.id] = n
+          }
+          return cache
+        })
       })
     },
     (error) => {
@@ -114,6 +124,48 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
     this.setState({currentTime: t})
   }
 
+  queryNodes(q:string, reverse:boolean = false) {
+    let query_type = "label"
+    let query_text = ""
+    const items = q.split(":")
+    if (items.length === 1) {
+      query_text = items[0]
+    } else if (items.length === 2) {
+      query_type = items[0]
+      query_text = items[1].trim()
+    } else {
+      return []
+    }
+    let res = []
+
+    const times = this.state.timesInfo
+    const info = times[this.state.currentTime]
+    const nodeCache = this.state.nodeCache[this.state.currentTime]
+    const nodes = info.data.nodes
+    const toggle = (cond: boolean) => reverse ? (!cond) : cond
+    try {
+      if (query_type === "id") {
+        const n = nodeCache[parseInt(query_text)]
+        if (n !== undefined) {
+          res.push(n)
+        }
+      } else {
+        const pattern = new RegExp(query_text)
+        for (let n of nodes) {
+          if (!(query_type in n)) {continue}
+          const val = (n as any)[query_type]
+          if (toggle(pattern.test(String(val)))) {
+            res.push(n)
+          }
+        }
+      }
+      return res
+    } catch(e) {
+      console.log(e)
+      return []
+    }
+  }
+
   render() {
     let item = this.props.item
     const { error, isLoaded, timesInfo, currentTime } = this.state
@@ -127,7 +179,11 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
         <div>
           <Header title={item.name}/>
           <div className="container">
-          <ToolBar info={info} setInfo={this.setInfo.bind(this)}/>
+          <ToolBar
+            info={info}
+            setInfo={this.setInfo.bind(this)}
+            queryNodes={this.queryNodes.bind(this)}
+            />
           <div className="tabs">
             <Tabs>
               <TabList>
@@ -137,7 +193,11 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
                 <Tab>节点类别</Tab>
               </TabList>
               <TabPanel forceRender={true}>
-                <NetView info={info} setNodes={this.setNodes.bind(this)} />
+                <NetView
+                  info={info}
+                  setNodes={this.setNodes.bind(this)}
+                  queryNodes={this.queryNodes.bind(this)}
+                  />
               </TabPanel>
               <TabPanel forceRender={true}>
                 <NodeGrid nodes={info.data.nodes} setNodes={this.setNodes.bind(this)}/>

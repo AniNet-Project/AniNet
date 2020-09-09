@@ -210,3 +210,13 @@ img {
 #importDialog > div.MuiInputBase-root > input {
   width: 380px;
 }
+
+.mark-syntax-error {
+  position: absolute;
+  background-color: #f50909;
+}
+
+.mark-query-error {
+  position: absolute;
+  background-color: yellow
+}

@@ -1,8 +1,9 @@
 import React from 'react'
 
 import { exportToJson } from './utils'
-import { ImportDialog } from './Dialogs'
-import { ItemInfo } from './datatypes'
+import ImportDialog from './ImportDialog'
+import EdgeMarkDialog from './EdgeMarkDialog'
+import { ItemInfo, NodeType } from './datatypes'
 
 type setInfoMth = (info: ItemInfo) => void
 
@@ -46,13 +47,14 @@ class UploadBtn extends React.Component<UploadBtnProps, UploadBtnState> {
   }
   
   render(){
-    return <button onClick={this.handleFileSelect}>打开文件 (JSON)</button>
+    return <button onClick={this.handleFileSelect}>打开文件</button>
   }
 }
 
 type ToolBarProps = {
   info: ItemInfo,
   setInfo: setInfoMth,
+  queryNodes: (q: string, reverse: boolean) => Array<NodeType>
 }
 
 
@@ -62,8 +64,9 @@ export default class ToolBar extends React.Component<ToolBarProps, object> {
       <div className="toolbar">
         <div className="rightside">
           <ImportDialog info={this.props.info} setInfo={this.props.setInfo}/>
+          <EdgeMarkDialog info={this.props.info} setInfo={this.props.setInfo} queryNodes={this.props.queryNodes} />
           <UploadBtn setInfo={this.props.setInfo}/>
-          <button onClick={() => {exportToJson(this.props.info, "export.json")}}>保存文件 (JSON)</button>
+          <button onClick={() => {exportToJson(this.props.info, "export.json")}}>保存文件</button>
         </div>
       </div>
     )

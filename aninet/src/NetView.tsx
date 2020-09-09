@@ -6,7 +6,7 @@ import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 import { Network as NetworkType, IdType } from 'vis/index'
 
 
-import { EditOptionsDialog, SearchDialog, FilterDialog, TuneDialog, SettingDialog } from './Dialogs'
+import { EditOptionsDialog, SearchDialog, FilterDialog, TuneDialog, SettingDialog } from './ViewDialogs'
 import { Network, Node, Edge } from 'react-vis-network'
 import { ItemInfo, NodeType, EdgeType, CatType, Pos2d } from './datatypes'
 import InfoBoard from './InfoBoard'
@@ -148,6 +148,7 @@ const DEFAULT_NETWORK_OPTIONS = {
 type NetViewProps = {
   info: ItemInfo,
   setNodes: (nodes: Array<NodeType>) => void,
+  queryNodes: (q: string, reverse: boolean) => Array<NodeType>,
 }
 
 type NetworkRef = {
@@ -309,45 +310,8 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     document.body.removeChild(a);
   }
 
-  queryNodes(q:string, reverse:boolean = false) {
-    let query_type = "label"
-    let query_text = ""
-    const items = q.split(":")
-    if (items.length === 1) {
-      query_text = items[0]
-    } else if (items.length === 2) {
-      query_type = items[0]
-      query_text = items[1].trim()
-    } else {
-      return []
-    }
-    let res = []
-    const nodes = this.props.info.data.nodes
-    const toggle = (cond: boolean) => reverse ? (!cond) : cond
-    try {
-      const pattern = new RegExp(query_text)
-      for (let n of nodes) {
-        if (!(query_type in n)) {continue}
-        const val = (n as any)[query_type]
-        if (query_type === "id") {
-          if (toggle(val === parseInt(query_text))) {
-            res.push(n)
-          }
-        } else {
-          if (toggle(pattern.test(String(val)))) {
-            res.push(n)
-          }
-        }
-      }
-      return res
-    } catch(e) {
-      console.log(e)
-      return []
-    }
-  }
-
   queryNodesAndFocus(q:string) {
-    const nodes = this.queryNodes(q)
+    const nodes = this.props.queryNodes(q, false)
     if (nodes.length <= 0) {return}
     const network = (this.state.netRef.current as NetworkRef).network
     network.selectNodes([])
@@ -361,7 +325,7 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
   }
 
   queryNodesAndFilter(q:string, reverse:boolean) {
-    const nodes = this.queryNodes(q, reverse)
+    const nodes = this.props.queryNodes(q, reverse)
     this.props.setNodes(nodes)
   }
 
