@@ -218,5 +218,10 @@ img {
 
 .mark-query-error {
   position: absolute;
+  background-color: rgb(238, 129, 4)
+}
+
+.mark-query-ambiguous {
+  position: absolute;
   background-color: yellow
 }

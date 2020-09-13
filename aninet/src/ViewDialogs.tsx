@@ -75,7 +75,6 @@ class EditOptionsDialog extends React.Component<EditOptionsDialogProps, EditOpti
         ta.style.border = "2px solid #ff3333"
       }
       let tip = document.getElementById("edit-options-tips")
-      console.log(tip)
       if (tip !== null) {
         tip.innerHTML = "JSON 解析失败，请检查。"
         tip.style.color = "#ff3333"

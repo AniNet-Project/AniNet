@@ -89,6 +89,8 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
     let edges = []
     let markers = []
     let idx = 0
+    let tipText = ""
+
     for (const line of lines) {
       if (line.replace(/^\s+|\s+$/g, '').length === 0) {
         continue
@@ -100,6 +102,18 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
         const nodes_from = this.props.queryNodes(e.from, false)
         const nodes_to = this.props.queryNodes(e.to, false)
         if ((nodes_from.length >= 1) && (nodes_to.length >= 1)) {
+          if ((nodes_from.length > 1) || (nodes_to.length > 1)) {
+            // ambiguous label
+            markers.push({
+              startRow: idx,
+              endRow: idx,
+              startCol: 0,
+              endCol: line.length,
+              className: 'mark-query-ambiguous',
+              type: "text",
+            })
+            tipText += "含有带有歧义的标签。"
+          }
           const n_from = nodes_from[0]
           const n_to = nodes_to[0]
           const edge = {
@@ -120,6 +134,7 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
             className: 'mark-query-error',
             type: "text",
           })
+          tipText += "含有无法匹配的标签。"
         }
       } else {
         // syntax error
@@ -131,6 +146,7 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
           className: 'mark-syntax-error',
           type: "text",
         })
+        tipText += "含有错误的语法。"
       }
       idx += 1;
     }
@@ -140,6 +156,14 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
     this.setState({
       markers: markers
     })
+
+    if (tipText.length > 0) { tipText+="请检查！" }
+    let tip = document.getElementById("edit-edgemark-tips")
+    if (tip !== null) {
+      tip.innerHTML = tipText
+      tip.style.color = "#ff3333"
+      tip.style.fontSize = "10px"
+    }
   }
 
   refresh() {
@@ -178,7 +202,7 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
           </DialogTitle>
           <DialogContent>
             <DialogContentText>
-              通过简单的标记语言对边进行描述, 语法见<a>帮助</a>
+              通过简单的标记语言对边进行描述, 语法见<a href="/#contribute">如何贡献页面 1.1.1 小节</a>。
             </DialogContentText>
 
             <FormControlLabel
