@@ -10,9 +10,10 @@ import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-github";
 
-
 import { ItemInfo, NodeType } from './datatypes'
 import { LineParser } from './edgeMarkup'
+import DraggablePaper from './DraggablePaper'
+
 
 type Props = {
   info: ItemInfo,
@@ -24,6 +25,7 @@ type State = {
   content: string,
   markers: Array<any>,
 }
+
 
 export default class EdgeMarkDialog extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -54,7 +56,7 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
     let texts = ""
     for (const e of this.props.info.data.edges) {
       texts += "(id:" + e.from + ")" +
-               "--" + e.label + (e.direction == false ? "--" : "-->" ) +
+               "--" + e.label + (e.direction === false ? "--" : "-->" ) +
                "(id:" + e.to + ")\n"
     }
     this.setState({
@@ -120,7 +122,7 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
     })
   }
 
-  handleClickConfirm() {
+  refresh() {
     try {
       this.processLines()
     } catch(err) {
@@ -128,12 +130,32 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
     }
   }
 
+  handleClickConfirm() {
+    this.refresh()
+    this.handleClose()
+  }
+
+  handleClickRefersh() {
+    this.refresh()
+  }
+
+
   render() {
     return (
       <div className="EditOptionsDialog">
         <button onClick={() => this.handleClickOpen()}>描述边(Edges)</button>
-        <Dialog open={this.state.open} onClose={() => {this.handleClose()}} aria-labelledby="form-dialog-title">
-          <DialogTitle id="form-dialog-title">描述边(Edges)</DialogTitle>
+        <Dialog
+          open={this.state.open}
+          onClose={() => {this.handleClose()}}
+          PaperComponent={DraggablePaper}
+          aria-labelledby="draggable-dialog-title"
+        >
+          <DialogTitle
+            id="draggable-dialog-title"
+            style={{ cursor: 'move' }}
+          >
+            描述边(Edges)
+          </DialogTitle>
           <DialogContent>
             <DialogContentText>
               通过简单的标记语言对边进行描述, 语法见<a>帮助</a>
@@ -154,6 +176,9 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
           <DialogActions>
             <Button onClick={() => {this.handleClose()}} color="primary">
               取消
+            </Button>
+            <Button onClick={() => {this.handleClickRefersh()}} color="primary">
+              刷新
             </Button>
             <Button onClick={() => {this.handleClickConfirm()}} color="primary">
               确定

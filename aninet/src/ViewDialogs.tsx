@@ -21,6 +21,8 @@ import { withStyles } from '@material-ui/core/styles';
 import SettingsIcon from '@material-ui/icons/Settings';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
+import DraggablePaper from './DraggablePaper'
+
 
 type EditOptionsDialogProps = {
   setOpt: (opt: any) => void,
@@ -89,8 +91,18 @@ class EditOptionsDialog extends React.Component<EditOptionsDialogProps, EditOpti
         <Tooltip title="编辑视图配置" placement="top">
           <EditIcon onClick={() => {this.handleClickOpen()}}/>
         </Tooltip>
-        <Dialog open={this.state.open} onClose={() => {this.handleClose()}} aria-labelledby="form-dialog-title">
-          <DialogTitle id="form-dialog-title">编辑网络视图配置</DialogTitle>
+        <Dialog
+          open={this.state.open}
+          onClose={() => {this.handleClose()}}
+          PaperComponent={DraggablePaper}
+          aria-labelledby="draggable-dialog-title"
+        >
+          <DialogTitle
+            id="draggable-dialog-title"
+            style={{ cursor: 'move' }}
+          >
+              编辑网络视图配置
+          </DialogTitle>
           <DialogContent>
             <DialogContentText>
               直接通过 JSON 对网络视图进行配置，可配置项目细节可以参考
@@ -471,8 +483,17 @@ class TuneDialog extends React.Component<TuneDialogProps, TuneDialogState> {
         <Tooltip title="视图调整" placement="top">
           <TuneIcon onClick={() => this.handleClickOpen()}/>
         </Tooltip>
-        <Dialog open={this.state.open} onClose={() => {this.handleClose()}} aria-labelledby="form-dialog-title">
-          <DialogTitle id="form-dialog-title">网络视图调整</DialogTitle>
+        <Dialog
+          open={this.state.open}
+          onClose={() => {this.handleClose()}}
+          PaperComponent={DraggablePaper}
+          aria-labelledby="draggable-dialog-title"
+        >
+          <DialogTitle
+            id="draggable-dialog-title"
+            style={{ cursor: 'move' }}
+          >
+            网络视图调整</DialogTitle>
           <DialogContent id="tuneDialog">
             <PhysicsSwitch
               setOpt={this.props.setOpt}
@@ -560,8 +581,18 @@ class SettingDialog extends React.Component<SettingDialogProps, SettingDialogSta
         <Tooltip title="设置" placement="top">
           <SettingsIcon onClick={() => this.handleClickOpen()}/>
         </Tooltip>
-        <Dialog open={this.state.open} onClose={() => {this.handleClose()}} aria-labelledby="form-dialog-title">
-          <DialogTitle id="form-dialog-title">设置</DialogTitle>
+        <Dialog
+          open={this.state.open}
+          onClose={() => {this.handleClose()}}
+          PaperComponent={DraggablePaper}
+          aria-labelledby="draggable-dialog-title"
+        >
+          <DialogTitle
+            id="draggable-dialog-title"
+            style={{ cursor: 'move' }}
+          >
+            设置
+          </DialogTitle>
           <DialogContent id="tuneDialog">
             <InforBoardSwitch
               switchState={this.props.inforBoardSwitch}

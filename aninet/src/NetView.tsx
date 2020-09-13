@@ -195,7 +195,6 @@ export default class NetView extends React.Component<NetViewProps, NetViewState>
     const network = (this.state.netRef.current as NetworkRef).network
     const node_id = network.getNodeAt(params.pointer.DOM)
     const select_node = (typeof node_id !== "undefined")
-    console.log(node_id)
     const pos: Pos2d = {x: 20, y: 20}
 
     const create_board = () => {
