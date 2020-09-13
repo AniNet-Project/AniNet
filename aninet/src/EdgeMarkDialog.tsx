@@ -5,6 +5,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import AceEditor from "react-ace";
 
 import "ace-builds/src-noconflict/mode-java";
@@ -13,6 +14,7 @@ import "ace-builds/src-noconflict/theme-github";
 import { ItemInfo, NodeType } from './datatypes'
 import { LineParser } from './edgeMarkup'
 import DraggablePaper from './DraggablePaper'
+import { CustomSwitch } from './Customs'
 
 
 type Props = {
@@ -24,6 +26,7 @@ type State = {
   open: boolean,
   content: string,
   markers: Array<any>,
+  showId: boolean,
 }
 
 
@@ -34,6 +37,7 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
       open: false,
       content: "",
       markers: [],
+      showId: false,
     }
   }
 
@@ -55,12 +59,28 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
   setText() {
     let texts = ""
     for (const e of this.props.info.data.edges) {
-      texts += "(id:" + e.from + ")" +
-               "--" + e.label + (e.direction === false ? "--" : "-->" ) +
-               "(id:" + e.to + ")\n"
+      if (this.state.showId === true) {
+        texts += "(id:" + e.from + ")" +
+                 "--" + e.label + (e.direction === false ? "--" : "-->" ) +
+                 "(id:" + e.to + ")\n"
+      } else {
+        const label_from = this.props.queryNodes("id:"+e.from, false)[0].label
+        const label_to = this.props.queryNodes("id:"+e.to, false)[0].label
+        texts += label_from +
+                 "--" + e.label + (e.direction === false ? "--" : "-->" ) +
+                 label_to + "\n"
+      }
     }
     this.setState({
       content: texts
+    })
+  }
+
+  showIdChange(e: any) {
+    this.setState({
+      showId: e.target.checked
+    }, () => {
+      this.setText()
     })
   }
 
@@ -160,6 +180,19 @@ export default class EdgeMarkDialog extends React.Component<Props, State> {
             <DialogContentText>
               通过简单的标记语言对边进行描述, 语法见<a>帮助</a>
             </DialogContentText>
+
+            <FormControlLabel
+              control={
+                <CustomSwitch
+                  checked={this.state.showId}
+                  onChange={(e) => {this.showIdChange(e)}}
+                  name="showIdCheck"
+                />
+              }
+              label="显示节点ID"
+              labelPlacement="start"
+            />
+
             <p id="edit-edgemark-tips"> </p>
             <AceEditor
               value={this.state.content}

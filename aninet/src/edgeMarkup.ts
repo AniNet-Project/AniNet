@@ -30,7 +30,7 @@ export type QueryEdge = {
   directed: boolean,
 }
 
-const puncs = "！？｡＂＃＄％＆＇（）＊＋，－／：；＜＝＞＠［＼］＾＿｀｛｜｝～｟｠｢｣､、〃》「」『』【】〔〕〖〗〘〙〚〛〜〝〞〟〰〾〿–—‘’‛“”„‟…‧﹏.	"
+const puncs = "\/,\.·!@#$%^&*！？｡＂＃＄％＆＇（）＊＋，－／：；＜＝＞＠［＼］＾＿｀｛｜｝～｟｠｢｣､、〃》「」『』【】〔〕〖〗〘〙〚〛〜〝〞〟〰〾〿–—‘’‛“”„‟…‧﹏.	"
 const symbols = new RegExp("[a-zA-Z0-9\u4e00-\u9fa5"+puncs+"]+")
 
 const Label: P.Parser<QueryHint> =

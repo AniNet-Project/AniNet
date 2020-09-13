@@ -16,12 +16,11 @@ import Checkbox from '@material-ui/core/Checkbox';
 import TuneIcon from '@material-ui/icons/Tune';
 import Slider from '@material-ui/core/Slider';
 import Typography from '@material-ui/core/Typography';
-import Switch from '@material-ui/core/Switch';
-import { withStyles } from '@material-ui/core/styles';
 import SettingsIcon from '@material-ui/icons/Settings';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 import DraggablePaper from './DraggablePaper'
+import { CustomSwitch } from './Customs'
 
 
 type EditOptionsDialogProps = {
@@ -386,21 +385,6 @@ const SpringConstantSlider = (props: sliderProps) => {
     </>
   )
 }
-
-const CustomSwitch = withStyles({
-  switchBase: {
-    color: "#3f51b5",
-    '&$checked': {
-      color: "#3f51b5",
-    },
-    '&$checked + $track': {
-      backgroundColor: "#3f51b5",
-    },
-  },
-  checked: {},
-  track: {},
-})(Switch);
-
 
 const PhysicsSwitch = (props: sliderProps) => {
   const opt = defaultOpt(props.getOpt())
