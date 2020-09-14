@@ -11,6 +11,7 @@ import TimeSlider from './TimeSlider'
 import {NetItem, TimePoint, ItemInfo, NodeType, EdgeType, CatType} from './datatypes'
 import { NodeGrid, EdgeGrid, CatGrid } from './EditGrid'
 import Comments from './Comments'
+import { nodes2cache } from './utils'
 
 
 
@@ -71,11 +72,7 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
         timesInfo: infos.map(info => preProcessInfo(info)),
         timePoints: timepoints,
         nodeCache: infos.map(info => {
-          let cache: Record<number, NodeType> = {}
-          for (const n of info.data.nodes) {
-            cache[n.id] = n
-          }
-          return cache
+          return nodes2cache(info.data.nodes)
         })
       })
     },
@@ -89,10 +86,16 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
 
   setNodes(nodes: Array<NodeType>) {
     let times = this.state.timesInfo
-    let info = times[this.state.currentTime]
+    const current = this.state.currentTime
+    let info = times[current]
+    let ncache = this.state.nodeCache
     if (info !== null) {
       info.data.nodes = nodes
-      this.setState({timesInfo: times})
+      ncache[current] = nodes2cache(nodes)
+      this.setState({
+        timesInfo: times,
+        nodeCache: ncache
+      })
     }
   }
 
@@ -115,9 +118,15 @@ class NetPage extends React.Component<NetPageProps, NetPageState> {
   }
 
   setInfo(info: ItemInfo) {
+    const current = this.state.currentTime
     let times = this.state.timesInfo
-    times[this.state.currentTime] = info
-    this.setState({timesInfo: times})
+    times[current] = info
+    let ncache = this.state.nodeCache
+    ncache[current] = nodes2cache(info.data.nodes)
+    this.setState({
+      timesInfo: times,
+      nodeCache: ncache,
+    })
   }
 
   setCurrentTime(t: number) {

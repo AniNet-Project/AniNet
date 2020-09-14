@@ -47,4 +47,13 @@ const mergeInfo = (info_a: ItemInfo, info_b: ItemInfo) => {
 }
 
 
-export {exportToJson, shorterString, mergeInfo}
+const nodes2cache = (nodes: Array<NodeType>) => {
+  let cache: Record<number, NodeType> = {}
+  for (const n of nodes) {
+    cache[n.id] = n
+  }
+  return cache
+}
+
+
+export {exportToJson, shorterString, mergeInfo, nodes2cache}
