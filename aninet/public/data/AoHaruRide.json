@@ -1,0 +1,206 @@
+{
+  "categories": {
+    "person": {
+      "label": "人物",
+      "color": "#66ccff"
+    }
+  },
+  "data": {
+    "nodes": [
+      {
+        "id": 25131,
+        "label": "吉冈双叶",
+        "info": "对初恋对象“田中”无法忘怀。",
+        "image": "https://lain.bgm.tv/pic/crt/m/d4/c6/25131_crt_c3TIi.jpg?r=1473063466",
+        "link": "https://bgm.tv/character/25131",
+        "categorie": "person"
+      },
+      {
+        "id": 25132,
+        "label": "马渕洸",
+        "info": "旧姓田中，因为双亲离婚而在国中一年级的暑假转学，双叶的初恋对象。",
+        "image": "https://lain.bgm.tv/pic/crt/m/63/95/25132_crt_ozs07.jpg?r=1473063390",
+        "link": "https://bgm.tv/character/25132",
+        "categorie": "person"
+      },
+      {
+        "id": 25900,
+        "label": "槙田悠里",
+        "info": "9月10日生まれ、おとめ座B型。身長155センチメートル、体重44キログラム。得意科目は国語、苦手科目は体育。好きな食べ物はラザニア、嫌いな食べ物はレーズン。好きなミュージシャンはねごと。",
+        "image": "https://lain.bgm.tv/pic/crt/m/7a/cf/25900_crt_hbh8R.jpg?r=1404941029",
+        "link": "https://bgm.tv/character/25900",
+        "categorie": "person"
+      },
+      {
+        "id": 25986,
+        "label": "田中阳一",
+        "info": "洸的哥哥，特进班的导师，知道修子对自己抱持的好感，都以委婉的方式拒绝。",
+        "image": "https://lain.bgm.tv/pic/crt/m/63/2b/25986_crt_cuV1u.jpg?r=1411419632",
+        "link": "https://bgm.tv/character/25986",
+        "categorie": "person"
+      },
+      {
+        "id": 26065,
+        "label": "村尾修子",
+        "info": "11月20日生。A型。身高167cm，体重49kg。",
+        "image": "https://lain.bgm.tv/pic/crt/m/f8/64/26065_crt_wO000.jpg?r=1473063570",
+        "link": "https://bgm.tv/character/26065",
+        "categorie": "person"
+      },
+      {
+        "id": 26220,
+        "label": "小凑亚耶",
+        "info": "12月3日生まれ、いて座A型、身長178センチメートル 63キログラム。得意科目は数学、苦手科目は美術。好きな食べ物は焼肉、嫌いな食べ物は高野豆腐。好きなミュージシャンはONE OK ROCK、フランス人とのクォーター、エロ本をよく持ってくる。",
+        "image": "https://lain.bgm.tv/pic/crt/m/df/73/26220_crt_EUbB1.jpg?r=1473063670",
+        "link": "https://bgm.tv/character/26220",
+        "categorie": "person"
+      },
+      {
+        "id": 26949,
+        "label": "菊池冬马",
+        "info": "就读其他班的男生，乐团一份子，会弹贝斯，因为与双叶在图书馆发生“事故”而相识，是个很会为他人着想和害羞的男生，经常脸红，但也极度缺乏安全感。",
+        "image": "https://lain.bgm.tv/pic/crt/m/cb/87/26949_crt_Dk47S.jpg?r=1473063290",
+        "link": "https://bgm.tv/character/26949",
+        "categorie": "person"
+      },
+      {
+        "id": 45743,
+        "label": "明日美",
+        "info": "1年のときの双葉のクラスメイトで双葉の友達だった。悠里が孤立する原因を作った張本人。悠里みたいなタイプが嫌いである。双葉の本音を聞いたときに自分たちとは合わないと思い、双葉が嫌いなわけではないが、双葉から離れる。",
+        "image": "https://lain.bgm.tv/pic/crt/m/f8/ba/45743_crt_neyy6.jpg",
+        "link": "https://bgm.tv/character/45743",
+        "categorie": "person"
+      },
+      {
+        "id": 45744,
+        "label": "千绘",
+        "info": "1年のときの双葉のクラスメイトで双葉の友達だった。明日美の方が仲がいいため、双葉と明日美が決別したときに明日美の方につき、双葉から離れる。",
+        "image": "https://lain.bgm.tv/pic/crt/m/7f/ca/45744_crt_BZ3fW.jpg",
+        "link": "https://bgm.tv/character/45744",
+        "categorie": "person"
+      },
+      {
+        "id": 48679,
+        "label": "内藤",
+        "info": "中学生のときの洸の友達。双葉が嫌いなタイプの男子。",
+        "image": "https://lain.bgm.tv/pic/crt/m/4d/00/48679_crt_7pD87.jpg",
+        "link": "https://bgm.tv/character/48679",
+        "categorie": "person"
+      }
+    ],
+    "edges": [
+      {
+        "id": 0,
+        "from": 25131,
+        "to": 25132,
+        "label": "互相喜欢",
+        "direction": false
+      },
+      {
+        "id": 1,
+        "from": 25900,
+        "to": 25131,
+        "label": "好朋友",
+        "direction": false
+      },
+      {
+        "id": 2,
+        "from": 25900,
+        "to": 25132,
+        "label": "喜欢",
+        "direction": true
+      },
+      {
+        "id": 3,
+        "from": 25986,
+        "to": 25132,
+        "label": "哥哥",
+        "direction": true
+      },
+      {
+        "id": 4,
+        "from": 26065,
+        "to": 25986,
+        "label": "喜欢",
+        "direction": true
+      },
+      {
+        "id": 5,
+        "from": 26220,
+        "to": 26065,
+        "label": "喜欢",
+        "direction": true
+      },
+      {
+        "id": 6,
+        "from": 45743,
+        "to": 25131,
+        "label": "旧友",
+        "direction": false
+      },
+      {
+        "id": 7,
+        "from": 45744,
+        "to": 25131,
+        "label": "旧友",
+        "direction": false
+      },
+      {
+        "id": 8,
+        "from": 25132,
+        "to": 48679,
+        "label": "初中时的朋友",
+        "direction": false
+      },
+      {
+        "id": 9,
+        "from": 45744,
+        "to": 45743,
+        "label": "好友",
+        "direction": false
+      },
+      {
+        "id": 10,
+        "from": 45743,
+        "to": 25900,
+        "label": "排挤",
+        "direction": true
+      },
+      {
+        "id": 11,
+        "from": 26949,
+        "to": 25131,
+        "label": "图书馆事件",
+        "direction": false
+      },
+      {
+        "id": 12,
+        "from": 26220,
+        "to": 25132,
+        "label": "朋友",
+        "direction": false
+      },
+      {
+        "id": 13,
+        "from": 26065,
+        "to": 25131,
+        "label": "朋友",
+        "direction": false
+      },
+      {
+        "id": 14,
+        "from": 26065,
+        "to": 25900,
+        "label": "朋友",
+        "direction": false
+      },
+      {
+        "id": 15,
+        "from": 25131,
+        "to": 48679,
+        "label": "初中时讨厌",
+        "direction": true
+      }
+    ]
+  }
+}

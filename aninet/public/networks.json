@@ -31,5 +31,10 @@
                 "url": "data/SoundEuphonium/03.json"
             }
         ]
+    },
+    {
+        "name": "青春之旅",
+        "titleImg": "imgs/AoHaruRide/title.jpg",
+        "url": "data/AoHaruRide.json"
     }
 ]
