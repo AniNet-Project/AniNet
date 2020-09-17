@@ -225,3 +225,11 @@ img {
   position: absolute;
   background-color: yellow
 }
+
+.MuiSlider-root {
+  max-width: 400px;
+  min-width: 130px;
+  width: 50% !important;
+  margin-left: auto;
+  margin-right: auto;
+}

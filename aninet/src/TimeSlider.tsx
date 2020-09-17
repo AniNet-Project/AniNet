@@ -12,7 +12,6 @@ import { TimePoint } from './datatypes';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      width: 400,
     },
     margin: {
       height: theme.spacing(3),
